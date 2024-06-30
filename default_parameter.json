@@ -1,0 +1,63 @@
+{
+    "runopt" : [
+        "full inv",
+        "PARA-E"
+        ],
+    "testopt" : [
+        "ie"
+        ],
+    "LMAX": 3,
+    "NSPIN": 1,
+    "NATYP": "None",
+    "KMT": 3,
+    "general": {
+        "LMAX": 3,
+        "NSPIN": 1,
+        "KMT": 3
+    },
+    "k-points": {
+        "K_MAX": [32, 32, 32],
+        "K_MIN": [5, 5, 5],
+        "MESHDECAY": 20
+        },
+    "scf-cycle": {
+        "NSTEPS": 400,
+        "IMIX": 4,
+        "STRMIX": 0.1,
+        "FCM": 5.0,
+        "QBOUND": 1e-6,
+        "BRYMIX": 0.3,
+        "ITDBRY": 50
+        },
+    "cluster": {
+        "RCLUSTZ": 2.0,
+        "RCLUSTXY": 2.0
+    },
+    "lattice": {
+        "bravais-lattice": [[1, 0, 0], [0, 1, 0], [0, 0, 1]],
+        "lattice-constant": 1.0,
+        "lattice-scaling": [1, 1, 1],
+        "atom-basis": [0, 0, 0],
+        "CARTESIAN": "F",
+        "NEMB": 0,
+        "NEMBZ": 0,
+        "KAOEZ": 0,
+        "basis-scaling": [1, 1, 1] 
+    },
+    "atominfo": {
+        "CLS": 1,
+        "REFPOT": 1,
+        "NTC": 1,
+        "FAC": 1.00,
+        "IRNS": 208,
+        "SCALD": 2.0,
+        "WEIGHT": 1.0
+        },
+    "energy-contour": {
+        "EMIN": -1.0,
+        "EMAX": 1.0,
+        "TEMPR": 800,
+        "NPOL": 10,
+        "NPTS": [10, 50, 10]
+    }
+}
