@@ -1,7 +1,8 @@
 {
     "runopt" : [
         "full inv",
-        "PARA-E"
+        "PARA-E",
+        "JELLDATA"
         ],
     "testopt" : [
         "ie"
@@ -59,5 +60,13 @@
         "TEMPR": 800,
         "NPOL": 10,
         "NPTS": [10, 50, 10]
+    },
+    "voro-opts": {
+        "DetermineWeights": 0,
+        "FindEmptySpheres": 0,
+        "SuggestEmptySpheres": 0,
+        "OutputJelliumPotentials": 0,
+        "CustomPotentialInterpolation": 0,
+        "MinimumSpaceFilling":0.65
     }
 }
