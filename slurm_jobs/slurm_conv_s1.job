@@ -1,0 +1,69 @@
+#!/bin/bash -l
+#SBATCH --job-name=conv_step1-InN
+#SBATCH --time=12:00:00
+#SBATCH --partition=serial
+#SBATCH --qos=short
+#SBATCH --error=slurm_logs/slurm_log_%j.err
+#SBATCH --output=slurm_logs/slurm_log_%j.out
+#SBATCH --ntasks-per-core=1
+
+# set up array
+#SBATCH --array=0-CHANGE
+
+PRE_PY='/home/agHeiliger/lauerm/bin/kkr_workflows/inputcard-converter/scf_pre.py'
+POST_PY='/home/agHeiliger/lauerm/bin/kkr_workflows/inputcard-converter/scf_post.py'
+
+SER_KKR=/home/agHeiliger/lauerm/bin/kkr/kkr.x
+PARA_KKR=/home/agHeiliger/lauerm/bin/kkr/parakkr.x
+
+# default parameter
+use_para=false
+out_file="kkr.out"
+
+while getopts "p:e:w:out_file:para:" opt
+do
+  case $opt in 
+    p) path="$OPTARG"
+    ;;
+    e) en_points="$OPTARG"
+    ;;
+    w) weight_rel="$OPTARG"
+    ;;
+    out_file) out_file="$OPTARG"
+    ;;
+    para) use_para=true
+    ;;
+    \?) echo "Invalid option -$OPTARG" >&2
+    ;;
+  esac
+done
+
+# split the weight_relation into an array
+IFS=',' read -r -a weight_rel_array <<< "$weight_rel"
+
+# determine task ID
+grp_idx=$(($SLURM_ARRAY_TASK_ID / $en_points))
+tsk_idx=$(($SLURM_ARRAY_TASK_ID % $en_points))
+
+#determine groups and tasks
+groups=($(ls $path))
+group=${groups[$grp_idx]}
+
+tasks=($(ls $path/$group))
+task=${tasks[$tsk_idx]}
+
+task_path=$path/$group/$task
+
+#echo "python $PRE_PY -p $path -i $input -w ${weight_rel_array[@]}"
+calc_path=`python $PRE_PY -p $task_path -i $task_path"/inputcard.json" -w ${weight_rel_array[@]}`
+
+# copy as an example
+cp example/kkr.out $calc_path/kkr.out
+cd $calc_path
+echo "srun $kkr_bin > $out_file" > TEST
+cd - > /dev/null
+
+#echo "python $POST_PY -p $calc_path -i $input"
+exit_code=`python $POST_PY -p $calc_path -i $task_path"/inputcard.json"`
+
+exit $exit_code

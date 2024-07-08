@@ -1,0 +1,1 @@
+python /home/agHeiliger/lauerm/bin/kkr_workflows/inputcard-converter/scf_pre.py -p calc/test2/conv_2/n -i calc/test2/conv_2/n/inputcard.json -w 0 1

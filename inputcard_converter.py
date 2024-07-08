@@ -4,15 +4,17 @@ import pathlib as pl
 
 from hardcoded import interface, zperiodl, linpol, mmin, decimation, ewald, constant_block
 
+default_path = '/home/agHeiliger/lauerm/bin/kkr_workflows/inputcard-converter/default_parameter.json'
 # default values for Inputcard
-with open("default_parameter.json", 'r') as jfile:
+with open(default_path, 'r') as jfile:
     default = json.load(jfile)
 
+# this still lacks a way to read out an inputcard
 
 class Inputcard:
 
-    _DEFAULT_REFPOT = 'Constant.pot'
-    _DEFAULT_STARTPOT = 'output.pot'
+    _DEFAULT_REFPOT = 'ref.pot'
+    _DEFAULT_STARTPOT = 'start.pot'
 
     _DEFAULT_JELLPATH = pl.Path('/home/agHeiliger/shared/atomic-start-potentials/')
 
@@ -42,6 +44,7 @@ class Inputcard:
         self.cluster = default['cluster']
         self.energy_contour = default['energy-contour']
         self.scf_cyc = default['scf-cycle']
+        self.k_points = default['k-points']
 
         # this is temporary - need to exchange this with real functionality
         self.lattice = default['lattice']
@@ -57,10 +60,37 @@ class Inputcard:
 
         # until here
 
+    def read_in_json(self, file_path): # can only be used to replace the current stuff .. 
+        with open(file_path, 'r') as jfile:
+            inputcard_dict = json.load(jfile) # I have to change this later on this needs to be done better
+
+        for key in inputcard_dict.keys():
+            if key not in  ['atominfo', 'testopt', 'runopt']:
+                self.change_parameter(key, inputcard_dict[key], 'a')
+            else:
+                self.change_parameter(key, inputcard_dict[key], 'r')
+
 
     def write_to(self, out_filepath):
         with open(out_filepath, 'w') as out_file:
             out_file.write(self.__str__())
+
+    def write_to_json(self, out_filepath): # this has to be reworked .. I need to structure it a little differently .. maybe have all in one giant dict?
+        out_dict = {
+            'testopt': self.testopts,
+            'runopt': self.runopts,
+            'general': self.gen_parameters,
+            'lattice': self.lattice,
+            'atominfo': self.atominfo,
+            'cluster': self.cluster,
+            'scf-cycle': self.scf_cyc,
+            'energy-contour': self.energy_contour,
+            'voro-opts': self.voro_opts,
+            'k-points': self.k_points
+        }
+
+        with open(out_filepath, 'w') as out_file:
+            json.dump(out_dict, out_file, indent=4)
 
     ## write to file
     def __str__(self):
@@ -159,7 +189,7 @@ class Inputcard:
         
         # Energy contoure
         output_string += f"{"EMIN":<5}{"":<3}{"EMAX":<5}{"":<3}{"TEMPR":<5}{"":<3}{"NPOL":<5}{"":<3}{"NPT1":<5}{"":<3}{"NPT2":<5}{"":<3}{"NPT3":<5}{"":<3}\n"
-        output_string += f"{self.energy_contour['EMIN']:<5.2f}{"":<3}{self.energy_contour['EMAX']:<5.2f}{"":<3}{int(self.energy_contour['TEMPR']):<5}{"":<3}{int(self.energy_contour['NPOL']):<5}{"":<3}{int(self.energy_contour['NPTS'][0]):<5}{"":<3}{int(self.energy_contour['NPTS'][0]):<5}{"":<3}{int(self.energy_contour['NPTS'][0]):<5}{"":<3}\n"
+        output_string += f"{self.energy_contour['EMIN']:<5.2f}{"":<3}{self.energy_contour['EMAX']:<5.2f}{"":<3}{int(self.energy_contour['TEMPR']):<5}{"":<3}{int(self.energy_contour['NPOL']):<5}{"":<3}{int(self.energy_contour['NPTS'][0]):<5}{"":<3}{int(self.energy_contour['NPTS'][1]):<5}{"":<3}{int(self.energy_contour['NPTS'][2]):<5}{"":<3}\n"
         output_string += f"{"+-------" * 7}+\n"
 
         # scf-cycle
@@ -173,6 +203,18 @@ class Inputcard:
         #output_string += f"RCLUSTZ={format(self.cluster['RCLUSTZ'], f".{self.cluster_prec}E").replace('E', 'd')}"
         for clus in self.cluster.keys():
             output_string += f"{clus}={self.cluster[clus]:.{self.cluster_prec}f}d0     "
+        output_string += f"\n{"+-------" * 7}+\n"
+
+        # print the k-point information
+        output_string += f"BZDIVIDE={"":<2}"
+        # append k_max
+        for k_max in self.k_points['KMAX']:
+            output_string += f"{k_max:<5}"
+        # append k_min
+        output_string += f"{"":<2}"
+        for k_min in self.k_points['KMIN']:
+            output_string += f"{k_min:<5}"
+        output_string += f"\nMESHDECAY= {self.k_points['MESHDECAY']}"
         output_string += f"\n{"+-------" * 7}+\n"
 
         ## This part is hardcoded for now
@@ -205,8 +247,13 @@ class Inputcard:
     # setting meta settings (precision, files)
     def set_refpot(self, file_path):
         self.refpot = file_path
+    def get_refpot(self):
+        return self.refpot
     def set_startpot(self, file_path):
         self.startpot = file_path
+    def get_startpot(self):
+        return self.startpot
+    
     def set_shapefunc(self, file_path):
         self.shapefunc = file_path
     def set_scoef(self, file_path):
@@ -230,6 +277,9 @@ class Inputcard:
         self.testopts += options
     def remove_testopt(self,option):
         self.testopts.remove(option)
+
+    def get_atomnum(self):
+        return len(self.atominfo)
 
     def change_atominfo(self, new_atominfo, mode = 'a'):
         """            
@@ -324,7 +374,21 @@ class Inputcard:
 
         elif key == 'voro-opts':
             self.voro_opts = change_dictionary(self.voro_opts, value, mode)
-        
+
+        elif key == 'k-points':
+            self.k_points = change_dictionary(self.k_points, value, mode)
+
+        elif key == 'testopt':
+            if mode == 'a':
+                self.testopts += value
+            elif mode == 'r':
+                self.testopts = value
+        elif key == 'runopt':
+            if mode == 'a':
+                self.testopts += value
+            elif mode == 'r':
+                self.runopts = value
+
         else:
             raise KeyError(f'There is no Parameter associated with key: {key}')
 
@@ -377,9 +441,15 @@ if __name__ == '__main__':
         ]
     }
 
-    inp = Inputcard(dict)
+    inp = Inputcard()
+    inp.read_in_json('inputcard_InN.json')
 
-    # inp.add_runopt('asb')
-    # inp.remove_runopt('asb')
-    # print(inp.get_testopts())
     print(inp)
+
+    # inp.write_to('test_1')
+
+    # inp.write_to_json('test_2.json')
+
+    # inp_2 = Inputcard()
+    # inp_2.read_in_json('test_2.json')
+    # inp_2.write_to('test_2')

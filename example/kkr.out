@@ -1,0 +1,3692 @@
+**********************************************************************
+*                                                                    *
+*  TB-KKR Code                                                       *
+*  Revision: 48                                                      *
+*  Last Changed Date: 2021-03-30 14:54:23 +0200 (Di, 30 Mär 2021)    *
+*                                                                    *
+*  Started at 19.06.2024 14:03:35                                    *
+*                                                                    *
+*  Number of proc : 12                                               *
+*    This is proc :  0                                               *
+*                                                                    *
+*         on host : node021                                          *
+*                                                                    *
+**********************************************************************
+            Reading inputcard: inputcard.scf                           
+ number of lines in inputcard:          92
+ 
+ NSTEPS
+ 400
+---+---------------------------------------------------------------------------
+ NSPIN 
+   1
+---+---------------------------------------------------------------------------
+ NATYP 
+   4
+   Z lmx     KFG pot ntc  irns
+---+---------------------------------------------------------------------------
+ 49.   2    4430   1   1   1
+  7.   0    1000   1   1   1
+  0.   0    0000   1   1   1
+  0.   0    0000   1   1   1
+---+---+-------+---+---+---+-------+---+---------------------------------------
+ NO FP-Calc. Please ignore IRNS and NTCELL.These are dummy variables.
+ lmax
+   3
+---+---------------------------------------------------------------------------
+          E1          E2          TK
+   -1.000000    1.000000  800.000000
+-----------+-----------+-----------+-------------------------------------------
+   NPOL  NPNT1  NPNT2  NPNT3
+     15     10     50     10
+------+------+------+------+---------------------------------------------------
+ IRNUMX ITCCOR IPRCOR
+     10     40      0
+------+------+------+----------------------------------------------------------
+ ISHIFT
+      0
+------+------+------+-----------+----------------------------------------------
+ KSHAPE    IRM    INS   ICST INSREF
+      0    353      0      2      0
+------+------+------+------+------+--------------------------------------------
+  KVREL    KWS   KHYP    KXC
+      0      2      0      2
+------+------+------+------+------+------+-------------------------------------
+    KTE
+      1
+------+------+------+------+------+--------------------------------------------
+   IMIX    IGF    ICC
+      4      0      0
+------+------+------+------+---------------------------------------------------
+ ITDBRY
+     50
+------+------------------------------------------------------------------------
+      STRMIX        FCM       QBOUND
+    0.100000    5.000000    0.000001
+-----------+-----------+-----------+-------------------------------------------
+      BRYMIX
+    0.300000
+-----------+-------------------------------------------------------------------
+ VCONST                       :       0.000000
+ mixing factor used           :       0.300000
+ convergence quality required :       1.00D-06
+ 
+                    non-spin polarized calculation
+                      non relativistic calculation              
+                      calculation with full ws-potential
+                      Vosko,Wilk,Nusair      exchange-correlation potential
+    NAEZ    NEMB   NEMBZ
+       4       0       0
+-------+-------+-------+-------------------------------------------------------
+ NZ    
+   0
+---+---------------------------------------------------------------------------
+ Parameters used for the cluster calculation
+ Clusters inside spheres with radius R =    1.80000000000000     
+ RBASIS
+     0.00000000     0.00000000     0.00000000     1
+     0.35355339     0.35355339     0.35355339     2
+     0.70710678     0.70710678     0.70710678     3
+    -0.35355339    -0.35355339    -0.35355339     4
+
+---+--------------+--------------+--------------+------------------------------
+ KAOEZ 
+   1   2   3   4
+---+---+---+---+---+---+---+---+---+---+---------------------------------------
+         ABASIS         BBASIS         CBASIS
+     1.00000000     1.00000000     1.00000000
+--------------+--------------+--------------+----------------------------------
+ LATT  
+   1
+---+---------------------------------------------------------------------------
+          ALATC          BLATC          CLATC
+     6.50000000     6.50000000     6.50000000
+--------------+--------------+--------------+----------------------------------
+   INTERVX   INTERVY   INTERVZ
+        12        12        12
+   INTERMX   INTERMY   INTERMZ
+        12        12        12
+   10.0000000000000     
+---------+---------+---------+-------------------------------------------------
+    NREF   NINEQ
+       1       4
+-------+-------+-------+-------------------------------------------------------
+---+---+---+---+---+---+---+---+---+---+---------------------------------------
+    SINN    SOUT     RIN    ROUT
+       0       0       0       0
+-------+-------+-------+-------+-------+-------+-------+-----------------------
+-------------------------------------------------------------------------------
+ TEST OPTIONS:
+ ie      //VBCZERO //        //        //        //        //        //        
+         //        //        //        //        //        //        //        
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+ EXECUTION OPTIONS:
+ full inv//        //PARA-E  //  ...   //        //        //        //        
+-------------------------------------------------------------------------------
+ I12="Constant.pot                            "
+ I13="output.pot                              "
+ I19="                                        "
+ I25="                                        "
+-------------------------------------------------------------------------------
+-------+-------+-------+-------------------------------------------------------
+ >>>>>>>> lattice2d/3d 
+
+  lattice constant :    6.50000
+        rmax :    7.00000 gmax :   65.00000
+  >>>>>>>>> RINPUT EXITS NOW <<<<<<<<<< 
+ Dimension and Input Data CHECK
+-------------------------------------------------------------------------------
+ True basis vectors (not normalized):
+    4.59619407    4.59619407    0.00000000
+    4.59619407    0.00000000    4.59619407
+    0.00000000    4.59619407    4.59619407
+ Reciprocal lattice vectors, in units 2pi/a:
+    0.70710678    0.70710678   -0.70710678
+    0.70710678   -0.70710678    0.70710678
+   -0.70710678    0.70710678    0.70710678
+  Before rrgen in lattix
+ >>> RRGEN: generation of real space mesh rr(nr)
+ r        :      9.23
+ r**2     :     85.23
+ n1,n2,n3 :    9    9    9
+  4206 real space vectors created.
+  After rrgen in lattix
+ position of atoms in unit cell :
+     0.00000000     0.00000000     0.00000000     1
+     0.35355339     0.35355339     0.35355339     2
+     0.70710678     0.70710678     0.70710678     3
+    -0.35355339    -0.35355339    -0.35355339     4
+
+  no. of lattice vectors   :     2093
+  no. of rec. lat. vectors :     3287
+  volume of the unit cell  :      194.18920
+ >>>>>>>>> STRMAT3D
+ >>>>>> In STRMAT3D
+ >>> CLSGEN: generation of cluster coordinates
+ RCUTZ =    1.80000000000000       RCUTXY =    1.80000000000000     
+ Spherical Clusters are created
+ Atom            1  has cluster            1   with          137  sites
+ Atom            2  has cluster            1   with          137  sites
+ Atom            3  has cluster            1   with          137  sites
+ Atom            4  has cluster            1   with          137  sites
+   1 1111
+   2 1111
+   3 1111
+   4 1111
+ 
+  NCLS=           1
+ 
+ Checking sparsity of TAU matrix
+ >> S P A R S I T Y :   0.00 %      <<--------    <<
+ * Please ignore any principal layer warnings  
+  NGAU,IEND:         492         692
+  4 crystal sorts found:
+  1  2  3  4
+ Symmetries found for this lattice: 24
+ 1: ( 1)E          2: ( 2)C3alfa     3: ( 3)C3beta     4: ( 4)C3gamma   
+ 5: ( 5)C3delta    6: ( 6)C3alfa-1   7: ( 7)C3beta-1   8: ( 8)C3gamma-1 
+ 9: ( 9)C3delta-1 10: (10)C2x       11: (11)C2y       12: (12)C2z       
+13: (37)IC4x      14: (38)IC4y      15: (39)IC4z      16: (40)IC4x-1    
+17: (41)IC4y-1    18: (42)IC4z-1    19: (43)IC2a      20: (44)IC2b      
+21: (45)IC2c      22: (46)IC2d      23: (47)IC2e      24: (48)IC2f      
+ICC =  0
+ Different shells for GF calculation NSHELL :  4
+ SHELL CITE1 CITE2
+     1      1    1         0.000      0.000      0.000       1   0.000
+     2      2    2         0.000      0.000      0.000       1   0.000
+     3      3    3         0.000      0.000      0.000       1   0.000
+     4      4    4         0.000      0.000      0.000       1   0.000
+ ICC     =            0
+ >>>>>>>>>>> ================ <<<<<<<<<<<
+ >>    F U L L   I N V E R S I O N     <<
+ >>>>>>>>>>> ================ <<<<<<<<<<<
+ bzirr3d:         116        1728 lsurf: F
+ VOLBZ=   1.4142135695, TEST:    1.4142135695
+ MAXMESH :             1
+ < In49 POTENTIAL                      exc: Vosko,Wilk,Nusair                      
+######################################################################
+##                                                                  ##
+##  WARNING !!!                                                     ##
+##                                                                  ##
+ There are more corestates in the potential            1  than expected.
+ # of corestates in the potential            9
+ # of corestates from inputcard              8
+ # increasing array sizes to #Corestates:           14
+######################################################################
+ < N_07 POTENTIAL                      exc: Vosko,Wilk,Nusair                      
+ < Vac0 POTENTIAL                      exc: Vosko,Wilk,Nusair                      
+ < Vac0 POTENTIAL                      exc: Vosko,Wilk,Nusair                      
+ < Constant shift 4 Ry                 exc:                                        
+ TIME FOR INITIALISATION   :      0.16
+ >>> NUMBER OF ITERATION :            1
+ EFERMI(file = output.pot ) .NE. E2(inputcard) .AND. NPOL.NE.0 <<<<<<
+ E2IN =       0.409241  E2 =       1.000000
+ FERMI ENERGY =      0.40924
+     1  NUCLEAR CHARGE   49.000000         CORE CHARGE =    36.000000
+     2  NUCLEAR CHARGE    7.000000         CORE CHARGE =     2.000000
+     3  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+     4  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+ >>> EMESHT: generates a complex E contour
+ The calculations are done with  85 points.
+ The temperature used is    800.000000 K.
+  15 poles and  10 and  50 and  10 points on the contours are used.
+ IE    =   1, E = ( -1.000000D+00 ,  6.230425D-03)
+ TIME FOR REF.SYS. (GLL)   :      1.74
+ TIME IN KLOOP             :      0.07
+ IE    =  13, E = ( -9.907933D-01 ,  4.775466D-01)
+ IE    =  25, E = ( -7.533956D-01 ,  4.775466D-01)
+ IE    =  37, E = ( -3.128122D-01 ,  4.775466D-01)
+ IE    =  49, E = (  9.661806D-02 ,  4.775466D-01)
+ IE    =  61, E = (  2.597487D-01 ,  4.775466D-01)
+ IE    =  73, E = (  4.092410D-01 ,  3.979555D-01)
+ IE    =  85, E = (  4.092410D-01 ,  1.591822D-02)
+ 
+ wait on MPI_REDUCE:  1.044988632202148E-003
+ 
+
+  ws-sphere valence-charges
+   1 sum= 11.16008783  s=  0.64404745  p=  0.54145953  d=  9.91479434  f=  0.05978652
+   2 sum=  4.46951744  s=  1.65947914  p=  2.75339519  d=  0.04221054  f=  0.01443258
+   3 sum=  0.73926739  s=  0.24456851  p=  0.29873342  d=  0.14226567  f=  0.05369979
+   4 sum=  0.29195403  s=  0.13176251  p=  0.10751910  d=  0.03825883  f=  0.01441358
+ TIME IN E-LOOP            :     13.78
+   1 charge in wigner seitz sphere = 47.160088
+   2 charge in wigner seitz sphere =  6.469517
+   3 charge in wigner seitz sphere =  0.739267
+   4 charge in wigner seitz sphere =  0.291954
+   1 ******   charge neutrality in unit cell =    -1.339173
+   1 E FERMI     0.459241          DEN OF ST     6.101832
+ spherically averaged madelung-potential for atom  1 :  1.319075D+00
+ spherically averaged madelung-potential for atom  2 : -2.095701D-01
+ spherically averaged madelung-potential for atom  3 : -5.936121D-01
+ spherically averaged madelung-potential for atom  4 : -3.213975D-01
+ Vacancies are ignored for VBC
+  VOL INT.    57.366537948  VAV INT.   -45.894724343  VMT ZERO     0.800026043
+      rms-error for cell  1 :v+ + v- =  6.2834D-01
+      rms-error for cell  2 :v+ + v- =  4.5534D-01
+      rms-error for cell  3 :v+ + v- =  1.5804D-01
+      rms-error for cell  4 :v+ + v- =  1.8164D-01
+          iteration no.:   1 average rms-error : v+ + v- =  4.0624D-01
+   1 Mixing Factor used :     3.00D-01
+ broyden"s 2nd method used 
+
+ ------------------------------ total energies ------------------------------
+
+             fermi energy in ryd :   0.459241
+ >
+ >
+   total energy of the   1-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s = -4630.20387922 p = -1916.14205013
+                                d =  -315.52222613 f =     0.00000000
+       valence  contribution :  s =     0.18890696 p =     0.10155130
+                                d =    -7.07620689 f =     0.00455639
+       total contribution of the single particle energies :  -6868.64934770
+       coulomb  contribution :   0   4641.55540419  1      0.00000000
+                                 2     -0.00000000  3      0.01306024
+                                 4      0.00082088  5      0.00000000
+                                 6      0.00008282
+       tot. coublomb contribution :   4641.56936814
+       ex.-cor. contribution :   0   -301.76291973  1     -0.00000000
+                                 2      0.00000000  3     -0.01861898
+                                 4     -0.00209590  5     -0.00000000
+                                 6      0.00001979
+       tot. ex.-cor. contribution :   -301.78361482
+       eff. pot. contribution     :  -8945.42650623
+       total double counting contribution                 :  -4605.64075290
+
+   total contribution of the atom : -11474.29010061
+
+   total energy of the   2-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =   -53.99978624 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =    -0.57648943 p =     0.74800739
+                                d =    -0.01513273 f =    -0.00934202
+       total contribution of the single particle energies :    -53.85274303
+       coulomb  contribution :   0     59.72449733  1     -0.00000000
+                                 2      0.00000000  3     -0.00831875
+                                 4      0.00015961  5      0.00000000
+                                 6      0.00001222
+       tot. coublomb contribution :     59.71635041
+       ex.-cor. contribution :   0    -13.48119573  1     -0.00000000
+                                 2      0.00000000  3     -0.00701340
+                                 4     -0.00013409  5     -0.00000000
+                                 6      0.00000219
+       tot. ex.-cor. contribution :    -13.48834103
+       eff. pot. contribution     :   -100.90379145
+       total double counting contribution                 :    -54.67578208
+
+   total contribution of the atom :   -108.52852511
+
+   total energy of the   3-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.14990728 p =     0.01137372
+                                d =    -0.00067276 f =    -0.00473627
+       total contribution of the single particle energies :      0.15587197
+       coulomb  contribution :   0      0.06809535  1      0.00000000
+                                 2     -0.00000000  3      0.00500147
+                                 4      0.00046775  5      0.00000000
+                                 6     -0.00001986
+       tot. coublomb contribution :      0.07354471
+       ex.-cor. contribution :   0     -0.37542047  1      0.00000000
+                                 2      0.00000000  3     -0.01533849
+                                 4      0.00004931  5     -0.00000000
+                                 6      0.00002609
+       tot. ex.-cor. contribution :     -0.39068356
+       eff. pot. contribution     :     -0.42268627
+       total double counting contribution                 :     -0.73982512
+
+   total contribution of the atom :     -0.58395315
+
+   total energy of the   4-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.14403108 p =    -0.00150326
+                                d =    -0.00968554 f =    -0.00703119
+       total contribution of the single particle energies :      0.12581110
+       coulomb  contribution :   0      0.00516039  1     -0.00000000
+                                 2      0.00000000  3     -0.00494940
+                                 4     -0.00008522  5      0.00000000
+                                 6     -0.00001148
+       tot. coublomb contribution :      0.00011429
+       ex.-cor. contribution :   0     -0.12524032  1      0.00000000
+                                 2     -0.00000000  3     -0.00382550
+                                 4      0.00001007  5     -0.00000000
+                                 6      0.00000695
+       tot. ex.-cor. contribution :     -0.12904879
+       eff. pot. contribution     :     -0.15923597
+       total double counting contribution                 :     -0.28817047
+
+   total contribution of the atom :     -0.16235937
+
+
+   total energy in ryd. :   -11583.56493824
+                    eV  :  -157603.66783673
+
+   band  energy in ryd. :       -6.35246596
+                    eV  :      -86.43038130
+ ----------------------------------------------------------------------------------
+ TIME IN ITERATION       1 :     14.03
+ >>> NUMBER OF ITERATION :            2
+     1  NUCLEAR CHARGE   49.000000         CORE CHARGE =    36.000000
+     2  NUCLEAR CHARGE    7.000000         CORE CHARGE =     2.000000
+     3  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+     4  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+ >>> EMESHT: generates a complex E contour
+ The calculations are done with  85 points.
+ The temperature used is    800.000000 K.
+  15 poles and  10 and  50 and  10 points on the contours are used.
+ IE    =   3, E = ( -1.000000D+00 ,  7.654844D-02)
+ IE    =  55, E = (  2.658309D-01 ,  4.775466D-01)
+ IE    =  61, E = (  3.097487D-01 ,  4.775466D-01)
+ IE    =  72, E = (  4.592410D-01 ,  4.297920D-01)
+ IE    =  14, E = ( -9.822637D-01 ,  4.775466D-01)
+ IE    =  28, E = ( -6.403843D-01 ,  4.775466D-01)
+ IE    =  10, E = ( -1.000000D+00 ,  4.713162D-01)
+ 
+ wait on MPI_REDUCE:   1.72712993621826     
+ 
+
+  ws-sphere valence-charges
+   1 sum= 10.70925965  s=  0.59542140  p=  0.27744053  d=  9.80334754  f=  0.03305017
+   2 sum=  2.82936591  s=  1.60713586  p=  1.17041528  d=  0.03787587  f=  0.01393891
+   3 sum=  0.59533090  s=  0.22367194  p=  0.23149839  d=  0.10376948  f=  0.03639108
+   4 sum=  0.27791632  s=  0.14597332  p=  0.08577138  d=  0.03288084  f=  0.01329077
+ TIME IN E-LOOP            :     13.77
+   1 charge in wigner seitz sphere = 46.709260
+   2 charge in wigner seitz sphere =  4.829366
+   3 charge in wigner seitz sphere =  0.595331
+   4 charge in wigner seitz sphere =  0.277916
+   2 ******   charge neutrality in unit cell =    -3.588127
+   2 E FERMI     0.509241          DEN OF ST     3.738623
+ spherically averaged madelung-potential for atom  1 :  2.209672D+00
+ spherically averaged madelung-potential for atom  2 :  1.952166D+00
+ spherically averaged madelung-potential for atom  3 :  3.714860D-02
+ spherically averaged madelung-potential for atom  4 :  3.022084D-01
+ Vacancies are ignored for VBC
+  VOL INT.    57.366537948  VAV INT.   -28.083167317  VMT ZERO     0.489539169
+      rms-error for cell  1 :v+ + v- =  5.4585D-01
+      rms-error for cell  2 :v+ + v- =  5.9023D-01
+      rms-error for cell  3 :v+ + v- =  1.9415D-01
+      rms-error for cell  4 :v+ + v- =  2.1864D-01
+          iteration no.:   2 average rms-error : v+ + v- =  4.2773D-01
+   2 Mixing Factor used :     3.00D-01
+ broyden"s 2nd method used 
+      amj , ---> j=2,  1
+
+
+ ------------------------------ total energies ------------------------------
+
+             fermi energy in ryd :   0.509241
+ >
+ >
+   total energy of the   1-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s = -4628.04736481 p = -1911.42333824
+                                d =  -312.81481975 f =     0.00000000
+       valence  contribution :  s =     0.52506077 p =     0.03627794
+                                d =    -4.96986234 f =     0.00084889
+       total contribution of the single particle energies :  -6856.69319755
+       coulomb  contribution :   0   4602.22862621  1     -0.00000000
+                                 2      0.00000000  3     -0.02069352
+                                 4     -0.00249561  5      0.00000000
+                                 6     -0.00002290
+       tot. coublomb contribution :   4602.20541417
+       ex.-cor. contribution :   0   -300.76600009  1     -0.00000000
+                                 2      0.00000000  3     -0.00882706
+                                 4     -0.00066808  5     -0.00000000
+                                 6      0.00000605
+       tot. ex.-cor. contribution :   -300.77548918
+       eff. pot. contribution     :  -8919.44378643
+       total double counting contribution                 :  -4618.01386143
+
+   total contribution of the atom : -11474.70705898
+
+   total energy of the   2-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =   -53.36286887 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =    -0.03624247 p =     0.32794206
+                                d =    -0.01112285 f =    -0.00678512
+       total contribution of the single particle energies :    -53.08907725
+       coulomb  contribution :   0     35.33902438  1     -0.00000000
+                                 2      0.00000000  3     -0.00854711
+                                 4     -0.00015103  5      0.00000000
+                                 6      0.00000362
+       tot. coublomb contribution :     35.33032986
+       ex.-cor. contribution :   0    -10.60736739  1      0.00000000
+                                 2      0.00000000  3     -0.00466072
+                                 4     -0.00012305  5     -0.00000000
+                                 6      0.00000184
+       tot. ex.-cor. contribution :    -10.61214932
+       eff. pot. contribution     :    -79.02320410
+       total double counting contribution                 :    -54.30502356
+
+   total contribution of the atom :   -107.39410081
+
+   total energy of the   3-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.43209983 p =     0.00545909
+                                d =    -0.00386114 f =    -0.00640733
+       total contribution of the single particle energies :      0.42729046
+       coulomb  contribution :   0      0.23395505  1     -0.00000000
+                                 2     -0.00000000  3     -0.01457487
+                                 4     -0.00018284  5      0.00000000
+                                 6     -0.00012135
+       tot. coublomb contribution :      0.21907599
+       ex.-cor. contribution :   0     -0.29325747  1      0.00000000
+                                 2      0.00000000  3     -0.00719933
+                                 4     -0.00011224  5     -0.00000000
+                                 6      0.00001251
+       tot. ex.-cor. contribution :     -0.30055653
+       eff. pot. contribution     :     -0.32731018
+       total double counting contribution                 :     -0.40879073
+
+   total contribution of the atom :      0.01849973
+
+   total energy of the   4-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.43281875 p =    -0.00265264
+                                d =    -0.00818046 f =    -0.00549686
+       total contribution of the single particle energies :      0.41648879
+       coulomb  contribution :   0      0.10552245  1     -0.00000000
+                                 2     -0.00000000  3     -0.00524390
+                                 4     -0.00002085  5      0.00000000
+                                 6     -0.00001273
+       tot. coublomb contribution :      0.10024497
+       ex.-cor. contribution :   0     -0.12474285  1     -0.00000000
+                                 2      0.00000000  3     -0.00319131
+                                 4     -0.00001925  5     -0.00000000
+                                 6      0.00000485
+       tot. ex.-cor. contribution :     -0.12794856
+       eff. pot. contribution     :     -0.14306603
+       total double counting contribution                 :     -0.17076962
+
+   total contribution of the atom :      0.24571917
+
+
+   total energy in ryd. :   -11581.83694089
+                    eV  :  -157580.15705034
+
+   band  energy in ryd. :       -3.29010387
+                    eV  :      -44.76449530
+ ----------------------------------------------------------------------------------
+ TIME IN ITERATION       2 :     14.02
+ >>> NUMBER OF ITERATION :            3
+     1  NUCLEAR CHARGE   49.000000         CORE CHARGE =    36.000000
+     2  NUCLEAR CHARGE    7.000000         CORE CHARGE =     2.000000
+     3  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+     4  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+ >>> EMESHT: generates a complex E contour
+ The calculations are done with  85 points.
+ The temperature used is    800.000000 K.
+  15 poles and  10 and  50 and  10 points on the contours are used.
+ IE    =  78, E = (  5.092410D-01 ,  2.387733D-01)
+ IE    =  60, E = (  3.564639D-01 ,  4.775466D-01)
+ IE    =  54, E = (  2.982469D-01 ,  4.775466D-01)
+ IE    =  35, E = ( -3.424873D-01 ,  4.775466D-01)
+ IE    =  33, E = ( -4.264947D-01 ,  4.775466D-01)
+ IE    =  66, E = (  4.666326D-01 ,  4.775466D-01)
+ IE    =  67, E = (  4.920229D-01 ,  4.775466D-01)
+ 
+ wait on MPI_REDUCE:   1.67866992950439     
+ 
+
+  ws-sphere valence-charges
+   1 sum= 10.99204978  s=  0.53586286  p=  0.50587050  d=  9.88712348  f=  0.06319294
+   2 sum=  4.87759292  s=  1.67237464  p=  3.15073805  d=  0.04015363  f=  0.01432660
+   3 sum=  0.80543564  s=  0.26484427  p=  0.32609384  d=  0.15658135  f=  0.05791620
+   4 sum=  0.30854181  s=  0.14113403  p=  0.11247324  d=  0.04031984  f=  0.01461469
+ TIME IN E-LOOP            :     13.73
+   1 charge in wigner seitz sphere = 46.992050
+   2 charge in wigner seitz sphere =  6.877593
+   3 charge in wigner seitz sphere =  0.805436
+   4 charge in wigner seitz sphere =  0.308542
+   3 ******   charge neutrality in unit cell =    -1.016380
+   3 E FERMI     0.551441          DEN OF ST     6.021162
+ spherically averaged madelung-potential for atom  1 :  1.472607D+00
+ spherically averaged madelung-potential for atom  2 : -4.644711D-01
+ spherically averaged madelung-potential for atom  3 : -6.357036D-01
+ spherically averaged madelung-potential for atom  4 : -3.660943D-01
+ Vacancies are ignored for VBC
+  VOL INT.    57.366537948  VAV INT.   -45.718032295  VMT ZERO     0.796945989
+      rms-error for cell  1 :v+ + v- =  2.8714D-01
+      rms-error for cell  2 :v+ + v- =  5.3134D-01
+      rms-error for cell  3 :v+ + v- =  1.2308D-01
+      rms-error for cell  4 :v+ + v- =  1.9119D-01
+          iteration no.:   3 average rms-error : v+ + v- =  3.2267D-01
+   3 Mixing Factor used :     3.00D-01
+ broyden"s 2nd method used 
+      amj , ---> j=2,  2
+          -1.04D+00
+
+ ------------------------------ total energies ------------------------------
+
+             fermi energy in ryd :   0.551441
+ >
+ >
+   total energy of the   1-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s = -4627.66793249 p = -1910.51876317
+                                d =  -312.33436743 f =     0.00000000
+       valence  contribution :  s =     0.22871663 p =     0.14183503
+                                d =    -4.31405635 f =     0.01263075
+       total contribution of the single particle energies :  -6854.45193703
+       coulomb  contribution :   0   4622.67302457  1      0.00000000
+                                 2      0.00000000  3      0.01571452
+                                 4      0.00112636  5      0.00000000
+                                 6      0.00008097
+       tot. coublomb contribution :   4622.68994642
+       ex.-cor. contribution :   0   -301.25976621  1     -0.00000000
+                                 2      0.00000000  3     -0.01657832
+                                 4     -0.00191937  5     -0.00000000
+                                 6      0.00001712
+       tot. ex.-cor. contribution :   -301.27824678
+       eff. pot. contribution     :  -8941.46437444
+       total double counting contribution                 :  -4620.05267479
+
+   total contribution of the atom : -11474.50461183
+
+   total energy of the   2-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =   -53.88662810 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =    -0.46263089 p =     1.17762255
+                                d =    -0.00881667 f =    -0.00569401
+       total contribution of the single particle energies :    -53.18614711
+       coulomb  contribution :   0     63.41159127  1     -0.00000000
+                                 2     -0.00000000  3     -0.00868150
+                                 4      0.00004804  5      0.00000000
+                                 6      0.00000856
+       tot. coublomb contribution :     63.40296637
+       ex.-cor. contribution :   0    -13.92344557  1     -0.00000000
+                                 2      0.00000000  3     -0.00423960
+                                 4     -0.00003748  5     -0.00000000
+                                 6      0.00000088
+       tot. ex.-cor. contribution :    -13.92772178
+       eff. pot. contribution     :   -104.64541655
+       total double counting contribution                 :    -55.17017196
+
+   total contribution of the atom :   -108.35631907
+
+   total energy of the   3-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.16954028 p =     0.04980532
+                                d =     0.01966520 f =     0.00260903
+       total contribution of the single particle energies :      0.24161984
+       coulomb  contribution :   0      0.07201330  1      0.00000000
+                                 2      0.00000000  3      0.00961370
+                                 4      0.00145796  5      0.00000000
+                                 6     -0.00001034
+       tot. coublomb contribution :      0.08307463
+       ex.-cor. contribution :   0     -0.40118701  1     -0.00000000
+                                 2     -0.00000000  3     -0.01724331
+                                 4      0.00002888  5     -0.00000000
+                                 6      0.00002911
+       tot. ex.-cor. contribution :     -0.41837233
+       eff. pot. contribution     :     -0.43286271
+       total double counting contribution                 :     -0.76816040
+
+   total contribution of the atom :     -0.52654057
+
+   total energy of the   4-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.15144344 p =     0.01241929
+                                d =    -0.00318677 f =    -0.00411425
+       total contribution of the single particle energies :      0.15656170
+       coulomb  contribution :   0     -0.00010633  1      0.00000000
+                                 2     -0.00000000  3     -0.00501875
+                                 4     -0.00002536  5      0.00000000
+                                 6     -0.00000969
+       tot. coublomb contribution :     -0.00516013
+       ex.-cor. contribution :   0     -0.12994897  1      0.00000000
+                                 2     -0.00000000  3     -0.00314259
+                                 4      0.00000362  5     -0.00000000
+                                 6      0.00000470
+       tot. ex.-cor. contribution :     -0.13308324
+       eff. pot. contribution     :     -0.15538157
+       total double counting contribution                 :     -0.29362494
+
+   total contribution of the atom :     -0.13706323
+
+
+   total energy in ryd. :   -11583.52453470
+                    eV  :  -157603.11811419
+
+   band  energy in ryd. :       -2.83221141
+                    eV  :      -38.53450204
+ ----------------------------------------------------------------------------------
+ TIME IN ITERATION       3 :     13.98
+ >>> NUMBER OF ITERATION :            4
+     1  NUCLEAR CHARGE   49.000000         CORE CHARGE =    36.000000
+     2  NUCLEAR CHARGE    7.000000         CORE CHARGE =     2.000000
+     3  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+     4  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+ >>> EMESHT: generates a complex E contour
+ The calculations are done with  85 points.
+ The temperature used is    800.000000 K.
+  15 poles and  10 and  50 and  10 points on the contours are used.
+ IE    =  43, E = (  1.445378D-02 ,  4.775466D-01)
+ IE    =  53, E = (  3.196434D-01 ,  4.775466D-01)
+ IE    =  24, E = ( -7.592250D-01 ,  4.775466D-01)
+ IE    =  69, E = (  5.770964D-01 ,  4.775466D-01)
+ IE    =  63, E = (  4.302903D-01 ,  4.775466D-01)
+ IE    =  14, E = ( -9.810128D-01 ,  4.775466D-01)
+ IE    =  68, E = (  5.540920D-01 ,  4.775466D-01)
+ 
+ wait on MPI_REDUCE:   1.67644190788269     
+ 
+
+  ws-sphere valence-charges
+   1 sum= 10.89426329  s=  0.51358346  p=  0.46819155  d=  9.85467368  f=  0.05781460
+   2 sum=  4.59391371  s=  1.66793091  p=  2.87267924  d=  0.03915836  f=  0.01414520
+   3 sum=  0.80836317  s=  0.27682104  p=  0.32697102  d=  0.14894576  f=  0.05562534
+   4 sum=  0.31893763  s=  0.15130333  p=  0.11418159  d=  0.03903629  f=  0.01441642
+ TIME IN E-LOOP            :     13.73
+   1 charge in wigner seitz sphere = 46.894263
+   2 charge in wigner seitz sphere =  6.593914
+   3 charge in wigner seitz sphere =  0.808363
+   4 charge in wigner seitz sphere =  0.318938
+   4 ******   charge neutrality in unit cell =    -1.384522
+   4 E FERMI     0.601441          DEN OF ST     6.058236
+ spherically averaged madelung-potential for atom  1 :  1.550211D+00
+ spherically averaged madelung-potential for atom  2 : -3.082956D-01
+ spherically averaged madelung-potential for atom  3 : -6.234957D-01
+ spherically averaged madelung-potential for atom  4 : -3.387657D-01
+ Vacancies are ignored for VBC
+  VOL INT.    57.366537948  VAV INT.   -45.027595933  VMT ZERO     0.784910464
+      rms-error for cell  1 :v+ + v- =  1.8960D-01
+      rms-error for cell  2 :v+ + v- =  4.1568D-01
+      rms-error for cell  3 :v+ + v- =  9.2770D-02
+      rms-error for cell  4 :v+ + v- =  1.4714D-01
+          iteration no.:   4 average rms-error : v+ + v- =  2.4443D-01
+   4 Mixing Factor used :     3.00D-01
+ broyden"s 2nd method used 
+      amj , ---> j=2,  3
+           1.16D-01 -8.19D-02
+
+ ------------------------------ total energies ------------------------------
+
+             fermi energy in ryd :   0.601441
+ >
+ >
+   total energy of the   1-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s = -4626.98316702 p = -1908.94241209
+                                d =  -311.46766802 f =     0.00000000
+       valence  contribution :  s =     0.31233492 p =     0.14770237
+                                d =    -3.40815964 f =     0.01351756
+       total contribution of the single particle energies :  -6850.32785191
+       coulomb  contribution :   0   4618.14361993  1      0.00000000
+                                 2      0.00000000  3      0.01116903
+                                 4      0.00055862  5      0.00000000
+                                 6      0.00006410
+       tot. coublomb contribution :   4618.15541168
+       ex.-cor. contribution :   0   -301.15098218  1      0.00000000
+                                 2     -0.00000000  3     -0.01481900
+                                 4     -0.00169038  5     -0.00000000
+                                 6      0.00001383
+       tot. ex.-cor. contribution :   -301.16747774
+       eff. pot. contribution     :  -8941.22663128
+       total double counting contribution                 :  -4624.23869733
+
+   total contribution of the atom : -11474.56654925
+
+   total energy of the   2-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =   -53.72742711 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =    -0.31233297 p =     1.18754339
+                                d =    -0.00631544 f =    -0.00436958
+       total contribution of the single particle energies :    -52.86290171
+       coulomb  contribution :   0     61.33092416  1     -0.00000000
+                                 2      0.00000000  3     -0.00843261
+                                 4      0.00001848  5      0.00000000
+                                 6      0.00000716
+       tot. coublomb contribution :     61.32251719
+       ex.-cor. contribution :   0    -13.67433531  1      0.00000000
+                                 2     -0.00000000  3     -0.00340122
+                                 4     -0.00001825  5     -0.00000000
+                                 6      0.00000060
+       tot. ex.-cor. contribution :    -13.67775418
+       eff. pot. contribution     :   -103.23636733
+       total double counting contribution                 :    -55.59160432
+
+   total contribution of the atom :   -108.45450602
+
+   total energy of the   3-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.24648652 p =     0.06384276
+                                d =     0.02301412 f =     0.00444339
+       total contribution of the single particle energies :      0.33778679
+       coulomb  contribution :   0      0.09220473  1      0.00000000
+                                 2      0.00000000  3      0.00710691
+                                 4      0.00144778  5      0.00000000
+                                 6     -0.00001359
+       tot. coublomb contribution :      0.10074582
+       ex.-cor. contribution :   0     -0.41707746  1     -0.00000000
+                                 2     -0.00000000  3     -0.01653872
+                                 4      0.00001574  5     -0.00000000
+                                 6      0.00002493
+       tot. ex.-cor. contribution :     -0.43357551
+       eff. pot. contribution     :     -0.44091102
+       total double counting contribution                 :     -0.77374070
+
+   total contribution of the atom :     -0.43595392
+
+   total energy of the   4-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.22271654 p =     0.01849740
+                                d =    -0.00153767 f =    -0.00309872
+       total contribution of the single particle energies :      0.23657756
+       coulomb  contribution :   0      0.00831598  1      0.00000000
+                                 2     -0.00000000  3     -0.00505378
+                                 4     -0.00000284  5      0.00000000
+                                 6     -0.00000888
+       tot. coublomb contribution :      0.00325048
+       ex.-cor. contribution :   0     -0.13913889  1      0.00000000
+                                 2      0.00000000  3     -0.00289356
+                                 4      0.00000026  5     -0.00000000
+                                 6      0.00000376
+       tot. ex.-cor. contribution :     -0.14202844
+       eff. pot. contribution     :     -0.15838057
+       total double counting contribution                 :     -0.29715852
+
+   total contribution of the atom :     -0.06058096
+
+
+   total energy in ryd. :   -11583.51759015
+                    eV  :  -157603.02362808
+
+   band  energy in ryd. :       -1.49571504
+                    eV  :      -20.35039968
+ ----------------------------------------------------------------------------------
+ TIME IN ITERATION       4 :     13.98
+ >>> NUMBER OF ITERATION :            5
+     1  NUCLEAR CHARGE   49.000000         CORE CHARGE =    36.000000
+     2  NUCLEAR CHARGE    7.000000         CORE CHARGE =     2.000000
+     3  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+     4  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+ >>> EMESHT: generates a complex E contour
+ The calculations are done with  85 points.
+ The temperature used is    800.000000 K.
+  15 poles and  10 and  50 and  10 points on the contours are used.
+ IE    =  48, E = (  2.331436D-01 ,  4.775466D-01)
+ IE    =  79, E = (  6.014413D-01 ,  2.069369D-01)
+ IE    =  76, E = (  6.014413D-01 ,  3.024462D-01)
+ IE    =  66, E = (  5.588329D-01 ,  4.775466D-01)
+ IE    =   1, E = ( -1.000000D+00 ,  6.230425D-03)
+ IE    =  14, E = ( -9.803344D-01 ,  4.775466D-01)
+ IE    =  28, E = ( -6.012654D-01 ,  4.775466D-01)
+ 
+ wait on MPI_REDUCE:   1.68525791168213     
+ 
+
+  ws-sphere valence-charges
+   1 sum= 10.39397022  s=  0.42323691  p=  0.22874622  d=  9.71178781  f=  0.03019928
+   2 sum=  2.91063755  s=  1.63010526  p=  1.23295284  d=  0.03448231  f=  0.01309714
+   3 sum=  0.62638402  s=  0.24437287  p=  0.24346045  d=  0.10158641  f=  0.03696429
+   4 sum=  0.29296260  s=  0.16354361  p=  0.08452983  d=  0.03207206  f=  0.01281710
+ TIME IN E-LOOP            :     13.72
+   1 charge in wigner seitz sphere = 46.393970
+   2 charge in wigner seitz sphere =  4.910638
+   3 charge in wigner seitz sphere =  0.626384
+   4 charge in wigner seitz sphere =  0.292963
+   5 ******   charge neutrality in unit cell =    -3.776046
+   5 E FERMI     0.651441          DEN OF ST     3.855467
+ spherically averaged madelung-potential for atom  1 :  2.499434D+00
+ spherically averaged madelung-potential for atom  2 :  1.888395D+00
+ spherically averaged madelung-potential for atom  3 :  5.982221D-02
+ spherically averaged madelung-potential for atom  4 :  3.139557D-01
+ Vacancies are ignored for VBC
+  VOL INT.    57.366537948  VAV INT.   -25.782537592  VMT ZERO     0.449435133
+      rms-error for cell  1 :v+ + v- =  8.6948D-02
+      rms-error for cell  2 :v+ + v- =  6.2435D-01
+      rms-error for cell  3 :v+ + v- =  1.5426D-01
+      rms-error for cell  4 :v+ + v- =  2.1690D-01
+          iteration no.:   5 average rms-error : v+ + v- =  3.4213D-01
+   5 Mixing Factor used :     3.00D-01
+ broyden"s 2nd method used 
+      amj , ---> j=2,  4
+           9.95D-01 -8.59D-01  6.14D+00
+
+ ------------------------------ total energies ------------------------------
+
+             fermi energy in ryd :   0.651441
+ >
+ >
+   total energy of the   1-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s = -4625.40565670 p = -1905.27391025
+                                d =  -309.48034283 f =     0.00000000
+       valence  contribution :  s =     0.71555781 p =     0.05847040
+                                d =    -1.23473496 f =     0.00551246
+       total contribution of the single particle energies :  -6840.61510409
+       coulomb  contribution :   0   4581.39266992  1     -0.00000000
+                                 2     -0.00000000  3     -0.01754882
+                                 4     -0.00213749  5      0.00000000
+                                 6     -0.00002281
+       tot. coublomb contribution :   4581.37296080
+       ex.-cor. contribution :   0   -300.30840192  1      0.00000000
+                                 2     -0.00000000  3     -0.00696556
+                                 4     -0.00054163  5     -0.00000000
+                                 6      0.00000400
+       tot. ex.-cor. contribution :   -300.31590512
+       eff. pot. contribution     :  -8915.31803680
+       total double counting contribution                 :  -4634.26098112
+
+   total contribution of the atom : -11474.87608520
+
+   total energy of the   2-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =   -53.22368696 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.32045534 p =     0.53792837
+                                d =    -0.00149723 f =    -0.00149237
+       total contribution of the single particle energies :    -52.36829285
+       coulomb  contribution :   0     36.63817730  1     -0.00000000
+                                 2      0.00000000  3     -0.00712922
+                                 4     -0.00010923  5      0.00000000
+                                 6      0.00000124
+       tot. coublomb contribution :     36.63094009
+       ex.-cor. contribution :   0    -10.76825116  1     -0.00000000
+                                 2      0.00000000  3     -0.00200056
+                                 4     -0.00002490  5     -0.00000000
+                                 6      0.00000038
+       tot. ex.-cor. contribution :    -10.77027625
+       eff. pot. contribution     :    -80.85925060
+       total double counting contribution                 :    -54.99858675
+
+   total contribution of the atom :   -107.36687960
+
+   total energy of the   3-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.62939065 p =     0.04763873
+                                d =     0.01225395 f =     0.00078641
+       total contribution of the single particle energies :      0.69006974
+       coulomb  contribution :   0      0.26735051  1     -0.00000000
+                                 2      0.00000000  3     -0.01433621
+                                 4      0.00005621  5      0.00000000
+                                 6     -0.00010959
+       tot. coublomb contribution :      0.25296092
+       ex.-cor. contribution :   0     -0.31254291  1      0.00000000
+                                 2     -0.00000000  3     -0.00750780
+                                 4      0.00000798  5     -0.00000000
+                                 6      0.00001147
+       tot. ex.-cor. contribution :     -0.32003126
+       eff. pot. contribution     :     -0.34450746
+       total double counting contribution                 :     -0.41157779
+
+   total contribution of the atom :      0.27849194
+
+   total energy of the   4-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.61965553 p =     0.01348900
+                                d =    -0.00007368 f =    -0.00123503
+       total contribution of the single particle energies :      0.63183582
+       coulomb  contribution :   0      0.11649425  1      0.00000000
+                                 2     -0.00000000  3     -0.00478361
+                                 4     -0.00002586  5      0.00000000
+                                 6     -0.00000836
+       tot. coublomb contribution :      0.11167642
+       ex.-cor. contribution :   0     -0.13292632  1     -0.00000000
+                                 2     -0.00000000  3     -0.00198999
+                                 4     -0.00000252  5     -0.00000000
+                                 6      0.00000186
+       tot. ex.-cor. contribution :     -0.13491697
+       eff. pot. contribution     :     -0.13922039
+       total double counting contribution                 :     -0.16246095
+
+   total contribution of the atom :      0.46937487
+
+
+   total energy in ryd. :   -11581.49509798
+                    eV  :  -157575.50600415
+
+   band  energy in ryd. :        1.72210537
+                    eV  :       23.43062125
+ ----------------------------------------------------------------------------------
+ TIME IN ITERATION       5 :     13.97
+ >>> NUMBER OF ITERATION :            6
+     1  NUCLEAR CHARGE   49.000000         CORE CHARGE =    36.000000
+     2  NUCLEAR CHARGE    7.000000         CORE CHARGE =     2.000000
+     3  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+     4  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+ >>> EMESHT: generates a complex E contour
+ The calculations are done with  85 points.
+ The temperature used is    800.000000 K.
+  15 poles and  10 and  50 and  10 points on the contours are used.
+ IE    =  40, E = ( -4.314536D-02 ,  4.775466D-01)
+ IE    =  34, E = ( -3.201379D-01 ,  4.775466D-01)
+ IE    =  54, E = (  4.342670D-01 ,  4.775466D-01)
+ IE    =  77, E = (  6.514413D-01 ,  2.706098D-01)
+ IE    =  67, E = (  6.342233D-01 ,  4.775466D-01)
+ IE    =  52, E = (  3.910468D-01 ,  4.775466D-01)
+ IE    =  64, E = (  5.538682D-01 ,  4.775466D-01)
+ 
+ wait on MPI_REDUCE:   1.70670485496521     
+ 
+
+  ws-sphere valence-charges
+   1 sum= 10.87337827  s=  0.47932358  p=  0.47798380  d=  9.85562079  f=  0.06045009
+   2 sum=  4.81981297  s=  1.66557667  p=  3.10204479  d=  0.03829852  f=  0.01389299
+   3 sum=  0.88689257  s=  0.30247237  p=  0.36100571  d=  0.16461757  f=  0.05879692
+   4 sum=  0.35098553  s=  0.17052421  p=  0.12430464  d=  0.04161413  f=  0.01454255
+ TIME IN E-LOOP            :     13.76
+   1 charge in wigner seitz sphere = 46.873378
+   2 charge in wigner seitz sphere =  6.819813
+   3 charge in wigner seitz sphere =  0.886893
+   4 charge in wigner seitz sphere =  0.350986
+   6 ******   charge neutrality in unit cell =    -1.068931
+   6 E FERMI     0.697986          DEN OF ST     5.741371
+ spherically averaged madelung-potential for atom  1 :  1.554505D+00
+ spherically averaged madelung-potential for atom  2 : -4.458014D-01
+ spherically averaged madelung-potential for atom  3 : -7.033365D-01
+ spherically averaged madelung-potential for atom  4 : -3.994233D-01
+ Vacancies are ignored for VBC
+  VOL INT.    57.366537948  VAV INT.   -46.458176408  VMT ZERO     0.809848007
+      rms-error for cell  1 :v+ + v- =  2.0747D-02
+      rms-error for cell  2 :v+ + v- =  3.9981D-01
+      rms-error for cell  3 :v+ + v- =  8.3072D-02
+      rms-error for cell  4 :v+ + v- =  1.3861D-01
+          iteration no.:   6 average rms-error : v+ + v- =  2.1587D-01
+   6 Mixing Factor used :     3.00D-01
+ broyden"s 2nd method used 
+      amj , ---> j=2,  5
+          -9.72D-01  8.83D-01 -5.29D+00 -9.63D-01
+
+ ------------------------------ total energies ------------------------------
+
+             fermi energy in ryd :   0.697986
+ >
+ >
+   total energy of the   1-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s = -4626.06068920 p = -1906.77030651
+                                d =  -310.30942075 f =     0.00000000
+       valence  contribution :  s =     0.33017551 p =     0.19607589
+                                d =    -1.97940850 f =     0.02119734
+       total contribution of the single particle energies :  -6844.57237623
+       coulomb  contribution :   0   4616.92297050  1      0.00000000
+                                 2      0.00000000  3      0.01170246
+                                 4      0.00064386  5      0.00000000
+                                 6      0.00004862
+       tot. coublomb contribution :   4616.93536544
+       ex.-cor. contribution :   0   -301.15487829  1      0.00000000
+                                 2     -0.00000000  3     -0.01375009
+                                 4     -0.00165215  5     -0.00000000
+                                 6      0.00001044
+       tot. ex.-cor. contribution :   -301.17027008
+       eff. pot. contribution     :  -8945.85574126
+       total double counting contribution                 :  -4630.09064591
+
+   total contribution of the atom : -11474.66302213
+
+   total energy of the   2-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =   -53.49366654 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =    -0.18315667 p =     1.58385493
+                                d =    -0.00164498 f =    -0.00215274
+       total contribution of the single particle energies :    -52.09676600
+       coulomb  contribution :   0     62.80115855  1     -0.00000000
+                                 2      0.00000000  3     -0.00757844
+                                 4      0.00000239  5      0.00000000
+                                 6      0.00000598
+       tot. coublomb contribution :     62.79358847
+       ex.-cor. contribution :   0    -13.84905662  1     -0.00000000
+                                 2     -0.00000000  3     -0.00215210
+                                 4     -0.00000203  5     -0.00000000
+                                 6      0.00000023
+       tot. ex.-cor. contribution :    -13.85121052
+       eff. pot. contribution     :   -105.27906414
+       total double counting contribution                 :    -56.33668619
+
+   total contribution of the atom :   -108.43345219
+
+   total energy of the   3-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.26256364 p =     0.10908499
+                                d =     0.04544628 f =     0.01158217
+       total contribution of the single particle energies :      0.42867708
+       coulomb  contribution :   0      0.08946784  1      0.00000000
+                                 2     -0.00000000  3      0.00940676
+                                 4      0.00223339  5      0.00000000
+                                 6     -0.00000712
+       tot. coublomb contribution :      0.10110086
+       ex.-cor. contribution :   0     -0.45576738  1     -0.00000000
+                                 2      0.00000000  3     -0.01773767
+                                 4     -0.00007000  5     -0.00000000
+                                 6      0.00002333
+       tot. ex.-cor. contribution :     -0.47355171
+       eff. pot. contribution     :     -0.46821162
+       total double counting contribution                 :     -0.84066247
+
+   total contribution of the atom :     -0.41198539
+
+   total energy of the   4-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.22610613 p =     0.03403952
+                                d =     0.00411623 f =    -0.00109908
+       total contribution of the single particle energies :      0.26316280
+       coulomb  contribution :   0      0.00375921  1      0.00000000
+                                 2     -0.00000000  3     -0.00495783
+                                 4      0.00007125  5      0.00000000
+                                 6     -0.00000762
+       tot. coublomb contribution :     -0.00113498
+       ex.-cor. contribution :   0     -0.15353375  1      0.00000000
+                                 2      0.00000000  3     -0.00246647
+                                 4     -0.00001536  5     -0.00000000
+                                 6      0.00000264
+       tot. ex.-cor. contribution :     -0.15601294
+       eff. pot. contribution     :     -0.16174922
+       total double counting contribution                 :     -0.31889715
+
+   total contribution of the atom :     -0.05573435
+
+
+   total energy in ryd. :   -11583.56419406
+                    eV  :  -157603.65771156
+
+   band  energy in ryd. :        0.65678066
+                    eV  :        8.93602627
+ ----------------------------------------------------------------------------------
+ TIME IN ITERATION       6 :     14.01
+ >>> NUMBER OF ITERATION :            7
+     1  NUCLEAR CHARGE   49.000000         CORE CHARGE =    36.000000
+     2  NUCLEAR CHARGE    7.000000         CORE CHARGE =     2.000000
+     3  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+     4  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+ >>> EMESHT: generates a complex E contour
+ The calculations are done with  85 points.
+ The temperature used is    800.000000 K.
+  15 poles and  10 and  50 and  10 points on the contours are used.
+ IE    =  45, E = (  2.036667D-01 ,  4.775466D-01)
+ IE    =   3, E = ( -1.000000D+00 ,  7.654844D-02)
+ IE    =  53, E = (  4.578331D-01 ,  4.775466D-01)
+ IE    =  58, E = (  5.346575D-01 ,  4.775466D-01)
+ IE    =  68, E = (  7.006371D-01 ,  4.775466D-01)
+ IE    =   8, E = ( -1.000000D+00 ,  4.009982D-01)
+ IE    =  27, E = ( -6.169514D-01 ,  4.775466D-01)
+ 
+ wait on MPI_REDUCE:   1.67937707901001     
+ 
+
+  
+ wait on MPI_REDUCE:  1.049041748046875E-003
+ 
+
+  ws-sphere valence-charges
+   1 sum= 10.93982810  s=  0.48211770  p=  0.51262093  d=  9.87962951  f=  0.06545996
+   2 sum=  5.08273166  s=  1.66142587  p=  3.36868063  d=  0.03869798  f=  0.01392718
+   3 sum=  0.94609002  s=  0.31520440  p=  0.38637117  d=  0.18221449  f=  0.06229997
+   4 sum=  0.37204278  s=  0.18042109  p=  0.13182752  d=  0.04491820  f=  0.01487597
+ TIME IN E-LOOP            :     13.68
+   1 charge in wigner seitz sphere = 46.939828
+   2 charge in wigner seitz sphere =  7.082732
+   3 charge in wigner seitz sphere =  0.946090
+   4 charge in wigner seitz sphere =  0.372043
+   7 ******   charge neutrality in unit cell =    -0.659307
+   7 E FERMI     0.731191          DEN OF ST     4.964020
+ spherically averaged madelung-potential for atom  1 :  1.554027D+00
+ spherically avera spherically averaged madelung-potential for atom  3 : -7.193912D-01
+ spherically averaged madelung-potential for atom  4 : -4.067471D-01
+ Vacancies are ignored for VBC
+  VOL INT.    57.366537948  VAV INT.   -46.763608632  VMT ZERO     0.815172229
+      rms-error for cell  1 :v+ + v- =  4.9352D-02
+      rms-error for cell  2 :v+ + v- =  3.5672D-01
+      rms-error for cell  3 :v+ + v- =  7.7584D-02
+      rms-error for cell  4 :v+ + v- =  1.2362D-01
+          iteration no.:   7 average rms-error : v+ + v- =  1.9428D-01
+   7 Mixing Factor used :     3.00D-01
+ broyden"s 2nd method used 
+      amj , ---> j=2,  6
+           4.12D-02 -2.93D-02  3.63D-01  4.38D-02 -3.91D-02
+
+ ------------------------------ total energies ------------------------------
+
+             fermi energy in ryd :   0.731191
+ >
+ >
+   total energy of the   1-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s = -4625.84642432 p = -1906.28028774
+                                d =  -310.04485128 f =     0.00000000
+       valence  contribution :  s =     0.28572305 p =     0.23216911
+                                d =    -1.66624309 f =     0.02670422
+       total contribution of the single particle energies :  -6843.29321005
+       coulomb  contribution :   0   4617.22026637  1      0.00000000
+                                 2      0.00000000  3      0.01080168
+                                 4      0.00054428  5      0.00000000
+                                 6      0.00004279
+       tot. coublomb contribution :   4617.23165512
+       ex.-cor. contribution :   0   -301.16784985  1      0.00000000
+                                 2      0.00000000  3     -0.01347833
+                                 4     -0.00165073  5     -0.00000000
+                                 6      0.00000944
+       tot. ex.-cor. contribution :   -301.18296946
+       eff. pot. contribution     :  -8947.45464495
+       total double counting contribution                 :  -4631.40595930
+
+   total contribution of the atom : -11474.69916934
+
+   total energy of the   2-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =   -53.38555219 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =    -0.18786858 p =     1.86036351
+                                d =    -0.00016242 f =    -0.00161537
+       total contribution of the single particle energies :    -51.71483506
+       coulomb  contribution :   0     62.33018149  1     -0.00000000
+                                 2     -0.00000000  3     -0.00733154
+                                 4      0.00000054  5      0.00000000
+                                 6      0.00000579
+       tot. coublomb contribution :     62.32285628
+       ex.-cor. contribution :   0    -13.79172072  1      0.00000000
+                                 2      0.00000000  3     -0.00192626
+                                 4     -0.00000258  5     -0.00000000
+                                 6      0.00000018
+       tot. ex.-cor. contribution :    -13.79364937
+       eff. pot. contribution     :   -105.15618280
+       total double counting contribution                 :    -56.62697589
+
+   total contribution of the atom :   -108.34181095
+
+   total energy of the   3-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.21694253 p =     0.13383601
+                                d =     0.06165533 f =     0.01566007
+       total contribution of the single particle energies :      0.42809395
+       coulomb  contribution :   0      0.09250591  1      0.00000000
+                                 2      0.00000000  3      0.00902075
+                                 4      0.00237901  5      0.00000000
+                                 6     -0.00000741
+       tot. coublomb contribution :      0.10389825
+       ex.-cor. contribution :   0     -0.46766393  1     -0.00000000
+                                 2     -0.00000000  3     -0.01791949
+                                 4     -0.00009811  5     -0.00000000
+                                 6      0.00002283
+       tot. ex.-cor. contribution :     -0.48565870
+       eff. pot. contribution     :     -0.47574255
+       total double counting contribution                 :     -0.85750299
+
+   total contribution of the atom :     -0.42940904
+
+   total energy of the   4-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.17549846 p =     0.04156799
+                                d =     0.00738059 f =    -0.00043809
+       total contribution of the single particle energies :      0.22400896
+       coulomb  contribution :   0      0.00503010  1      0.00000000
+                                 2      0.00000000  3     -0.00494394
+                                 4      0.00008953  5      0.00000000
+                                 6     -0.00000751
+       tot. coublomb contribution :      0.00016818
+       ex.-cor. contribution :   0     -0.15949444  1      0.00000000
+                                 2     -0.00000000  3     -0.00237949
+                                 4     -0.00002078  5     -0.00000000
+                                 6      0.00000243
+       tot. ex.-cor. contribution :     -0.16189228
+       eff. pot. contribution     :     -0.16325070
+       total double counting contribution                 :     -0.32497480
+
+   total contribution of the atom :     -0.10096584
+
+
+   total energy in ryd. :   -11583.57135518
+                    eV  :  -157603.75514433
+
+   band  energy in ryd. :        1.20117333
+                    eV  :       16.34292415
+ ----------------------------------------------------------------------------------
+ TIME IN ITERATION       7 :     13.97
+ >>> NUMBER OF ITERATION :            8
+     1  NUCLEAR CHARGE   49.000000         CORE CHARGE =    36.000000
+     2  NUCLEAR CHARGE    7.000000         CORE CHARGE =     2.000000
+     3  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+     4  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+ >>> EMESHT: generates a complex E contour
+ The calculations are done with  85 points.
+ The temperature used is    800.000000 K.
+  15 poles and  10 and  50 and  10 points on the contours are used.
+ IE    =  42, E = (  1.002280D-01 ,  4.775466D-01)
+ IE    =  62, E = (  5.921845D-01 ,  4.775466D-01)
+ IE    =  58, E = (  5.676186D-01 ,  4.775466D-01)
+ IE    =  13, E = ( -9.884357D-01 ,  4.775466D-01)
+ IE    =  68, E = (  7.338414D-01 ,  4.775466D-01)
+ IE    =   5, E = ( -1.000000D+00 ,  2.032261D-01)
+ IE    =  72, E = (  7.311907D-01 ,  4.297920D-01)
+ IE    =  85, E = (  7.311907D-01 ,  1.591822D-02)
+ 
+ wait on MPI_REDUCE:  1.032114028930664E-003
+ 
+
+  ws-sphere valence-charges
+   1 sum= 10.71955909  s=  0.49534437  p=  0.39759070  d=  9.78458864  f=  0.04203539
+   2 sum=  3.60708831  s=  1.62144762  p=  1.93521162  d=  0.03702346  f=  0.01340561
+   3 sum=  0.85934998  s=  0.33283246  p=  0.34328043  d=  0.13586009  f=  0.04737700
+   4 sum=  0.39549335  s=  0.21672675  p=  0.12726237  d=  0.03758727  f=  0.01391696
+ TIME IN E-LOOP            :     13.70
+   1 charge in wigner seitz sphere = 46.719559
+   2 charge in wigner seitz sphere =  5.607088
+   3 charge in wigner seitz sphere =  0.859350
+   4 charge in wigner seitz sphere =  0.395493
+   8 ******   charge neutrality in unit cell =    -2.418509
+   8 E FERMI     0.781191          DEN OF ST     5.058767
+ spherically averaged madelung-potential for atom  1 :  1.910213D+00
+ spherically averaged madelung-potential for atom  2 :  8.842775D-01
+ spherically averaged madelung-potential for atom  3 : -4.513531D-01
+ spherically averaged madelung-potential for atom  4 : -1.115879D-01
+ Vacancies are ignored for VBC
+  VOL INT.    57.366537948  VAV INT.   -39.648046436  VMT ZERO     0.691135422
+      rms-error for cell  1 :v+ + v- =  1.9458D-02
+      rms-error for cell  2 :v+ + v- =  3.3231D-01
+      rms-error for cell  3 :v+ + v- =  6.6558D-02
+      rms-error for cell  4 :v+ + v- =  1.2746D-01
+          iteration no.:   8 average rms-error : v+ + v- =  1.8131D-01
+   8 Mixing Factor used :     3.00D-01
+ broyden"s 2nd method used 
+      amj , ---> j=2,  7
+           6.50D-01 -5.92D-01  3.57D+00  6.47D-01 -6.70D-01  9.44D+00
+
+ ------------------------------ total energies ------------------------------
+
+             fermi energy in ryd :   0.781191
+ >
+ >
+   total energy of the   1-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s = -4625.18439821 p = -1904.85141970
+                                d =  -309.23306120 f =     0.00000000
+       valence  contribution :  s =     0.65293140 p =     0.18401985
+                                d =    -1.08299263 f =     0.01631080
+       total contribution of the single particle energies :  -6839.49860969
+       coulomb  contribution :   0   4605.50719543  1     -0.00000000
+                                 2      0.00000000  3     -0.00972866
+                                 4     -0.00171368  5      0.00000000
+                                 6      0.00001100
+       tot. coublomb contribution :   4605.49576408
+       ex.-cor. contribution :   0   -300.86177950  1     -0.00000000
+                                 2      0.00000000  3     -0.00833518
+                                 4     -0.00088708  5     -0.00000000
+                                 6      0.00000480
+       tot. ex.-cor. contribution :   -300.87099695
+       eff. pot. contribution     :  -8939.84573649
+       total double counting contribution                 :  -4635.22096936
+
+   total contribution of the atom : -11474.71957905
+
+   total energy of the   2-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =   -52.92875561 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.33228696 p =     1.10893930
+                                d =     0.00141228 f =    -0.00089942
+       total contribution of the single particle energies :    -51.48701649
+       coulomb  contribution :   0     46.27742393  1     -0.00000000
+                                 2     -0.00000000  3     -0.00685063
+                                 4     -0.00000522  5      0.00000000
+                                 6      0.00000337
+       tot. coublomb contribution :     46.27057145
+       ex.-cor. contribution :   0    -11.87487289  1      0.00000000
+                                 2     -0.00000000  3     -0.00166125
+                                 4     -0.00000146  5     -0.00000000
+                                 6      0.00000018
+       tot. ex.-cor. contribution :    -11.87653542
+       eff. pot. contribution     :    -91.06144540
+       total double counting contribution                 :    -56.66740937
+
+   total contribution of the atom :   -108.15442586
+
+   total energy of the   3-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.57005712 p =     0.12442032
+                                d =     0.04049848 f =     0.00999377
+       total contribution of the single particle energies :      0.74496969
+       coulomb  contribution :   0      0.22016568  1     -0.00000000
+                                 2     -0.00000000  3     -0.00935564
+                                 4      0.00058849  5      0.00000000
+                                 6     -0.00003159
+       tot. coublomb contribution :      0.21136694
+       ex.-cor. contribution :   0     -0.45801405  1      0.00000000
+                                 2      0.00000000  3     -0.01072867
+                                 4      0.00000996  5     -0.00000000
+                                 6      0.00000981
+       tot. ex.-cor. contribution :     -0.46872295
+       eff. pot. contribution     :     -0.46162008
+       total double counting contribution                 :     -0.71897610
+
+   total contribution of the atom :      0.02599359
+
+   total energy of the   4-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.53153908 p =     0.04434707
+                                d =     0.00432777 f =    -0.00019889
+       total contribution of the single particle energies :      0.58001503
+       coulomb  contribution :   0      0.08449094  1      0.00000000
+                                 2     -0.00000000  3     -0.00500220
+                                 4      0.00001364  5      0.00000000
+                                 6     -0.00000647
+       tot. coublomb contribution :      0.07949591
+       ex.-cor. contribution :   0     -0.18791649  1     -0.00000000
+                                 2     -0.00000000  3     -0.00204741
+                                 4     -0.00000421  5     -0.00000000
+                                 6      0.00000147
+       tot. ex.-cor. contribution :     -0.18996664
+       eff. pot. contribution     :     -0.17220791
+       total double counting contribution                 :     -0.28267864
+
+   total contribution of the atom :      0.29733639
+
+
+   total energy in ryd. :   -11582.55067492
+                    eV  :  -157589.86797284
+
+   band  energy in ryd. :        2.53699326
+                    eV  :       34.51782292
+ ----------------------------------------------------------------------------------
+ TIME IN ITERATION       8 :     13.96
+ >>> NUMBER OF ITERATION :            9
+     1  NUCLEAR CHARGE   49.000000         CORE CHARGE =    36.000000
+     2  NUCLEAR CHARGE    7.000000         CORE CHARGE =     2.000000
+     3  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+     4  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+ >>> EMESHT: generates a complex E contour
+ The calculations are done with  85 points.
+ The temperature used is    800.000000 K.
+  15 poles and  10 and  50 and  10 points on the contours are used.
+ IE    =  44, E = (  2.255187D-01 ,  4.775466D-01)
+ IE    =  80, E = (  7.811907D-01 ,  1.751004D-01)
+ IE    =  64, E = (  6.836176D-01 ,  4.775466D-01)
+ IE    =  13, E = ( -9.880696D-01 ,  4.775466D-01)
+ IE    =  57, E = (  6.070785D-01 ,  4.775466D-01)
+ IE    =  77, E = (  7.811907D-01 ,  2.706098D-01)
+ IE    =  51, E = (  4.838452D-01 ,  4.775466D-01)
+ 
+ wait on MPI_REDUCE:   1.71131896972656     
+ 
+
+  ws-sphere valence-charges
+   1 sum= 11.07588801  s=  0.50692684  p=  0.57375056  d=  9.92205819  f=  0.07315242
+   2 sum=  5.38591747  s=  1.64952691  p=  3.68223424  d=  0.04004576  f=  0.01411056
+   3 sum=  1.04263279  s=  0.33756032  p=  0.42526934  d=  0.21197273  f=  0.06783041
+   4 sum=  0.41208008  s=  0.20061449  p=  0.14528089  d=  0.05025900  f=  0.01592570
+ TIME IN E-LOOP            :     13.74
+   1 charge in wigner seitz sphere = 47.075888
+   2 charge in wigner seitz sphere =  7.385917
+   3 charge in wigner seitz sphere =  1.042633
+   4 charge in wigner seitz sphere =  0.412080
+   9 ******   charge neutrality in unit cell =    -0.083482
+   9 E FERMI     0.789867          DEN OF ST     2.405562
+ spherically averaged madelung-potential for atom  1 :  1.514821D+00
+ spherically averaged madelung-potential for atom  2 : -3.271667D-01
+ spherically averaged madelung-potential for atom  3 : -7.587456D-01
+ spherically averaged madelung-potential for atom  4 : -4.229607D-01
+ Vacancies are ignored for VBC
+  VOL INT.    57.366537948  VAV INT.   -47.823134129  VMT ZERO     0.833641629
+      rms-error for cell  1 :v+ + v- =  5.2691D-02
+      rms-error for cell  2 :v+ + v- =  2.5199D-01
+      rms-error for cell  3 :v+ + v- =  6.0761D-02
+      rms-error for cell  4 :v+ + v- =  8.6948D-02
+          iteration no.:   9 average rms-error : v+ + v- =  1.3922D-01
+   9 Mixing Factor used :     3.00D-01
+ broyden"s 2nd method used 
+      amj , ---> j=2,  8
+          -5.53D-01  5.04D-01 -3.01D+00 -5.49D-01  5.70D-01 -7.94D+00 -8.50D-01
+
+ ------------------------------ total energies ------------------------------
+
+             fermi energy in ryd :   0.789867
+ >
+ >
+   total energy of the   1-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s = -4625.57209293 p = -1905.70980491
+                                d =  -309.70817800 f =     0.00000000
+       valence  contribution :  s =     0.21390998 p =     0.29236957
+                                d =    -1.43247951 f =     0.03562419
+       total contribution of the single particle energies :  -6841.88065160
+       coulomb  contribution :   0   4619.04640876  1      0.00000000
+                                 2      0.00000000  3      0.00835548
+                                 4      0.00026627  5      0.00000000
+                                 6      0.00003522
+       tot. coublomb contribution :   4619.05506573
+       ex.-cor. contribution :   0   -301.19481074  1     -0.00000000
+                                 2      0.00000000  3     -0.01309652
+                                 4     -0.00165146  5     -0.00000000
+                                 6      0.00000799
+       tot. ex.-cor. contribution :   -301.20955074
+       eff. pot. contribution     :  -8950.69449705
+       total double counting contribution                 :  -4632.84898206
+
+   total contribution of the atom : -11474.72963367
+
+   total energy of the   2-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =   -53.19399142 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =    -0.20086029 p =     2.24738704
+                                d =     0.00168017 f =    -0.00116929
+       total contribution of the single particle energies :    -51.14695378
+       coulomb  contribution :   0     60.62021844  1     -0.00000000
+                                 2     -0.00000000  3     -0.00723768
+                                 4     -0.00000075  5      0.00000000
+                                 6      0.00000584
+       tot. coublomb contribution :     60.61298585
+       ex.-cor. contribution :   0    -13.58512744  1      0.00000000
+                                 2     -0.00000000  3     -0.00185359
+                                 4     -0.00000333  5     -0.00000000
+                                 6      0.00000017
+       tot. ex.-cor. contribution :    -13.58698419
+       eff. pot. contribution     :   -104.11827252
+       total double counting contribution                 :    -57.09227086
+
+   total contribution of the atom :   -108.23922465
+
+   total energy of the   3-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.13873534 p =     0.17119225
+                                d =     0.08961134 f =     0.02210451
+       total contribution of the single particle energies :      0.42164345
+       coulomb  contribution :   0      0.09752277  1      0.00000000
+                                 2      0.00000000  3      0.00701548
+                                 4      0.00230185  5      0.00000000
+                                 6     -0.00000945
+       tot. coublomb contribution :      0.10683065
+       ex.-cor. contribution :   0     -0.49445241  1     -0.00000000
+                                 2     -0.00000000  3     -0.01765714
+                                 4     -0.00010925  5     -0.00000000
+                                 6      0.00002066
+       tot. ex.-cor. contribution :     -0.51219814
+       eff. pot. contribution     :     -0.49092916
+       total double counting contribution                 :     -0.89629665
+
+   total contribution of the atom :     -0.47465321
+
+   total energy of the   4-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.09142145 p =     0.05334511
+                                d =     0.01217742 f =     0.00062831
+       total contribution of the single particle energies :      0.15757229
+       coulomb  contribution :   0      0.00897578  1     -0.00000000
+                                 2     -0.00000000  3     -0.00502934
+                                 4      0.00010183  5      0.00000000
+                                 6     -0.00000765
+       tot. coublomb contribution :      0.00404063
+       ex.-cor. contribution :   0     -0.17493996  1      0.00000000
+                                 2      0.00000000  3     -0.00237160
+                                 4     -0.00002679  5     -0.00000000
+                                 6      0.00000229
+       tot. ex.-cor. contribution :     -0.17733606
+       eff. pot. contribution     :     -0.17049328
+       total double counting contribution                 :     -0.34378871
+
+   total contribution of the atom :     -0.18621642
+
+
+   total energy in ryd. :   -11583.62972794
+                    eV  :  -157604.54935243
+
+   band  energy in ryd. :        1.73567760
+                    eV  :       23.61528223
+ ----------------------------------------------------------------------------------
+ TIME IN ITERATION       9 :     14.00
+ >>> NUMBER OF ITERATION :           10
+     1  NUCLEAR CHARGE   49.000000         CORE CHARGE =    36.000000
+     2  NUCLEAR CHARGE    7.000000         CORE CHARGE =     2.000000
+     3  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+     4  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+ >>> EMESHT: generates a complex E contour
+ The calculations are done with  85 points.
+ The temperature used is    800.000000 K.
+  15 poles and  10 and  50 and  10 points on the contours are used.
+ IE    =  39, E = ( -4.175922D-03 ,  4.775466D-01)
+ IE    =  53, E = (  5.444746D-01 ,  4.775466D-01)
+ IE    =  31, E = ( -4.073311D-01 ,  4.775466D-01)
+ IE    =  58, E = (  6.258648D-01 ,  4.775466D-01)
+ IE    =  13, E = ( -9.880060D-01 ,  4.775466D-01)
+ IE    =  60, E = (  6.369305D-01 ,  4.775466D-01)
+ IE    =  78, E = (  7.898666D-01 ,  2.387733D-01)
+ 
+ wait on MPI_REDUCE:   1.66755700111389     
+ 
+
+  ws-sphere valence-charges
+   1 sum= 11.08703791  s=  0.51604103  p=  0.58236386  d=  9.91637314  f=  0.07225988
+   2 sum=  5.28680813  s=  1.64442908  p=  3.58775471  d=  0.04046072  f=  0.01416362
+   3 sum=  1.05529853  s=  0.34450800  p=  0.43163025  d=  0.21187611  f=  0.06728418
+   4 sum=  0.42337336  s=  0.20747053  p=  0.14913559  d=  0.05084630  f=  0.01592094
+ TIME IN E-LOOP            :     13.70
+   1 charge in wigner seitz sphere = 47.087038
+   2 charge in wigner seitz sphere =  7.286808
+   3 charge in wigner seitz sphere =  1.055299
+   4 charge in wigner seitz sphere =  0.423373
+  10 ******   charge neutrality in unit cell =    -0.147482
+  10 E FERMI     0.803529          DEN OF ST     2.698690
+ spherically averaged madelung-potential for atom  1 :  1.495917D+00
+ spherically averaged madelung-potential for atom  2 : -2.846262D-01
+ spherically averaged madelung-potential for atom  3 : -7.755835D-01
+ spherically averaged madelung-potential for atom  4 : -4.298428D-01
+ Vacancies are ignored for VBC
+  VOL INT.    57.366537948  VAV INT.   -48.303920439  VMT ZERO     0.842022583
+      rms-error for cell  1 :v+ + v- =  4.7293D-02
+      rms-error for cell  2 :v+ + v- =  2.1089D-01
+      rms-error for cell  3 :v+ + v- =  5.2622D-02
+      rms-error for cell  4 :v+ + v- =  7.1691D-02
+          iteration no.:  10 average rms-error : v+ + v- =  1.1685D-01
+  10 Mixing Factor used :     3.00D-01
+ broyden"s 2nd method used 
+      amj , ---> j=2,  9
+           3.85D-02 -3.61D-02  1.95D-01  3.80D-02 -4.01D-02  5.17D-01  5.99D-02
+          -7.04D-02
+
+ ------------------------------ total energies ------------------------------
+
+             fermi energy in ryd :   0.803529
+ >
+ >
+   total energy of the   1-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s = -4625.48887392 p = -1905.53790634
+                                d =  -309.60369335 f =     0.00000000
+       valence  contribution :  s =     0.23516674 p =     0.30326301
+                                d =    -1.38537177 f =     0.03596694
+       total contribution of the single particle energies :  -6841.44144868
+       coulomb  contribution :   0   4619.78172697  1      0.00000000
+                                 2      0.00000000  3      0.00724863
+                                 4      0.00013832  5      0.00000000
+                                 6      0.00002964
+       tot. coublomb contribution :   4619.78914356
+       ex.-cor. contribution :   0   -301.20266732  1     -0.00000000
+                                 2     -0.00000000  3     -0.01285366
+                                 4     -0.00163645  5     -0.00000000
+                                 6      0.00000687
+       tot. ex.-cor. contribution :   -301.21715056
+       eff. pot. contribution     :  -8951.85097851
+       total double counting contribution                 :  -4633.27898551
+
+   total contribution of the atom : -11474.72043419
+
+   total energy of the   2-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =   -53.13314439 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =    -0.16145007 p =     2.22388204
+                                d =     0.00215511 f =    -0.00107717
+       total contribution of the single particle energies :    -51.06963448
+       coulomb  contribution :   0     59.87002249  1     -0.00000000
+                                 2      0.00000000  3     -0.00725691
+                                 4     -0.00000104  5      0.00000000
+                                 6      0.00000583
+       tot. coublomb contribution :     59.86277037
+       ex.-cor. contribution :   0    -13.49471724  1     -0.00000000
+                                 2     -0.00000000  3     -0.00186851
+                                 4     -0.00000340  5      0.00000000
+                                 6      0.00000017
+       tot. ex.-cor. contribution :    -13.49658898
+       eff. pot. contribution     :   -103.59450098
+       total double counting contribution                 :    -57.22831959
+
+   total contribution of the atom :   -108.29795407
+
+   total energy of the   3-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.15763751 p =     0.17839707
+                                d =     0.09136211 f =     0.02239786
+       total contribution of the single particle energies :      0.44979455
+       coulomb  contribution :   0      0.09956929  1      0.00000000
+                                 2     -0.00000000  3      0.00602219
+                                 4      0.00218193  5      0.00000000
+                                 6     -0.00000985
+       tot. coublomb contribution :      0.10776356
+       ex.-cor. contribution :   0     -0.50585170  1      0.00000000
+                                 2     -0.00000000  3     -0.01735934
+                                 4     -0.00009917  5     -0.00000000
+                                 6      0.00001875
+       tot. ex.-cor. contribution :     -0.52329145
+       eff. pot. contribution     :     -0.49693290
+       total double counting contribution                 :     -0.91246079
+
+   total contribution of the atom :     -0.46266624
+
+   total energy of the   4-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.10900473 p =     0.05665368
+                                d =     0.01282784 f =     0.00067838
+       total contribution of the single particle energies :      0.17916462
+       coulomb  contribution :   0      0.01090903  1     -0.00000000
+                                 2      0.00000000  3     -0.00508484
+                                 4      0.00010142  5      0.00000000
+                                 6     -0.00000748
+       tot. coublomb contribution :      0.00591813
+       ex.-cor. contribution :   0     -0.18185387  1      0.00000000
+                                 2     -0.00000000  3     -0.00239191
+                                 4     -0.00002781  5     -0.00000000
+                                 6      0.00000224
+       tot. ex.-cor. contribution :     -0.18427136
+       eff. pot. contribution     :     -0.17417328
+       total double counting contribution                 :     -0.35252651
+
+   total contribution of the atom :     -0.17336189
+
+
+   total energy in ryd. :   -11583.65441638
+                    eV  :  -157604.88525842
+
+   band  energy in ryd. :        1.88149402
+                    eV  :       25.59923127
+ ----------------------------------------------------------------------------------
+ TIME IN ITERATION      10 :     13.95
+ >>> NUMBER OF ITERATION :           11
+     1  NUCLEAR CHARGE   49.000000         CORE CHARGE =    36.000000
+     2  NUCLEAR CHARGE    7.000000         CORE CHARGE =     2.000000
+     3  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+     4  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+ >>> EMESHT: generates a complex E contour
+ The calculations are done with  85 points.
+ The temperature used is    800.000000 K.
+  15 poles and  10 and  50 and  10 points on the contours are used.
+ IE    =  34, E = ( -2.511794D-01 ,  4.775466D-01)
+ IE    =  52, E = (  5.321408D-01 ,  4.775466D-01)
+ IE    =  17, E = ( -9.282237D-01 ,  4.775466D-01)
+ IE    =  30, E = ( -4.512823D-01 ,  4.775466D-01)
+ IE    =  53, E = (  5.573580D-01 ,  4.775466D-01)
+ IE    =  76, E = (  8.035290D-01 ,  3.024462D-01)
+ IE    =  65, E = (  7.330330D-01 ,  4.775466D-01)
+ 
+ wait on MPI_REDUCE:   1.66190409660339     
+ 
+
+  ws-sphere valence-charges
+   1 sum= 11.03603287  s=  0.55579484  p=  0.57088572  d=  9.85032158  f=  0.05903072
+   2 sum=  4.38415221  s=  1.61437533  p=  2.71348955  d=  0.04193840  f=  0.01434893
+   3 sum=  1.05565306  s=  0.37405442  p=  0.43657732  d=  0.18573041  f=  0.05929090
+   4 sum=  0.46686875  s=  0.24007658  p=  0.16294259  d=  0.04831666  f=  0.01553292
+ TIME IN E-LOOP            :     13.69
+   1 charge in wigner seitz sphere = 47.036033
+   2 charge in wigner seitz sphere =  6.384152
+   3 charge in wigner seitz sphere =  1.055653
+   4 charge in wigner seitz sphere =  0.466869
+  11 ******   charge neutrality in unit cell =    -1.057293
+  11 E FERMI     0.853529          DEN OF ST     4.590063
+ spherically averaged madelung-potential for atom  1 :  1.439369D+00
+ spherically averaged madelung-potential for atom  2 :  5.170625D-02
+ spherically averaged madelung-potential for atom  3 : -8.310140D-01
+ spherically averaged madelung-potential for atom  4 : -4.344473D-01
+ Vacancies are ignored for VBC
+  VOL INT.    57.366537948  VAV INT.   -49.958570703  VMT ZERO     0.870866057
+      rms-error for cell  1 :v+ + v- =  1.2341D-02
+      rms-error for cell  2 :v+ + v- =  4.4070D-02
+      rms-error for cell  3 :v+ + v- =  5.1450D-03
+      rms-error for cell  4 :v+ + v- =  2.4762D-02
+          iteration no.:  11 average rms-error : v+ + v- =  2.6144D-02
+  11 Mixing Factor used :     3.00D-01
+ broyden"s 2nd method used 
+      amj , ---> j=2, 10
+           2.41D-01 -2.27D-01  1.20D+00  2.37D-01 -2.51D-01  3.12D+00  3.74D-01
+          -4.41D-01  6.26D+00
+
+ ------------------------------ total energies ------------------------------
+
+             fermi energy in ryd :   0.853529
+ >
+ >
+   total energy of the   1-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s = -4625.09121652 p = -1904.69831385
+                                d =  -309.09655786 f =     0.00000000
+       valence  contribution :  s =     0.45509867 p =     0.31199779
+                                d =    -1.15793865 f =     0.02984111
+       total contribution of the single particle energies :  -6839.24708930
+       coulomb  contribution :   0   4621.71392688  1     -0.00000000
+                                 2      0.00000000  3     -0.00025379
+                                 4     -0.00074403  5      0.00000000
+                                 6      0.00000330
+       tot. coublomb contribution :   4621.71293236
+       ex.-cor. contribution :   0   -301.19514096  1     -0.00000000
+                                 2     -0.00000000  3     -0.01095270
+                                 4     -0.00142574  5     -0.00000000
+                                 6      0.00000109
+       tot. ex.-cor. contribution :   -301.20751830
+       eff. pot. contribution     :  -8955.90451916
+       total double counting contribution                 :  -4635.39910510
+
+   total contribution of the atom : -11474.64619440
+
+   total energy of the   2-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =   -52.85348085 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.14259268 p =     1.72547692
+                                d =     0.00391098 f =    -0.00073319
+       total contribution of the single particle energies :    -50.98223346
+       coulomb  contribution :   0     54.73158263  1     -0.00000000
+                                 2      0.00000000  3     -0.00741604
+                                 4     -0.00000042  5      0.00000000
+                                 6      0.00000539
+       tot. coublomb contribution :     54.72417156
+       ex.-cor. contribution :   0    -12.87590616  1     -0.00000000
+                                 2     -0.00000000  3     -0.00199357
+                                 4     -0.00000273  5      0.00000000
+                                 6      0.00000021
+       tot. ex.-cor. contribution :    -12.87790226
+       eff. pot. contribution     :    -99.51738920
+       total double counting contribution                 :    -57.67111989
+
+   total contribution of the atom :   -108.65335335
+
+   total energy of the   3-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.36660454 p =     0.19151598
+                                d =     0.07782967 f =     0.01901924
+       total contribution of the single particle energies :      0.65496943
+       coulomb  contribution :   0      0.12461964  1      0.00000000
+                                 2      0.00000000  3     -0.00092003
+                                 4      0.00129201  5      0.00000000
+                                 6     -0.00000959
+       tot. coublomb contribution :      0.12498203
+       ex.-cor. contribution :   0     -0.56113622  1      0.00000000
+                                 2     -0.00000000  3     -0.01479475
+                                 4     -0.00002240  5     -0.00000000
+                                 6      0.00000828
+       tot. ex.-cor. contribution :     -0.57594510
+       eff. pot. contribution     :     -0.52110671
+       total double counting contribution                 :     -0.97206977
+
+   total contribution of the atom :     -0.31710034
+
+   total energy of the   4-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.31492705 p =     0.06883195
+                                d =     0.01149337 f =     0.00055699
+       total contribution of the single particle energies :      0.39580936
+       coulomb  contribution :   0      0.03103341  1     -0.00000000
+                                 2     -0.00000000  3     -0.00540847
+                                 4      0.00007469  5      0.00000000
+                                 6     -0.00000621
+       tot. coublomb contribution :      0.02569342
+       ex.-cor. contribution :   0     -0.22010726  1     -0.00000000
+                                 2      0.00000000  3     -0.00250657
+                                 4     -0.00002602  5     -0.00000000
+                                 6      0.00000191
+       tot. ex.-cor. contribution :     -0.22263793
+       eff. pot. contribution     :     -0.19442628
+       total double counting contribution                 :     -0.39137079
+
+   total contribution of the atom :      0.00443857
+
+
+   total energy in ryd. :   -11583.61220952
+                    eV  :  -157604.31100027
+
+   band  energy in ryd. :        2.56102511
+                    eV  :       34.84479547
+ ----------------------------------------------------------------------------------
+ TIME IN ITERATION      11 :     13.95
+ >>> NUMBER OF ITERATION :           12
+     1  NUCLEAR CHARGE   49.000000         CORE CHARGE =    36.000000
+     2  NUCLEAR CHARGE    7.000000         CORE CHARGE =     2.000000
+     3  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+     4  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+ >>> EMESHT: generates a complex E contour
+ The calculations are done with  85 points.
+ The temperature used is    800.000000 K.
+  15 poles and  10 and  50 and  10 points on the contours are used.
+ IE    =  39, E = (  3.453103D-02 ,  4.775466D-01)
+ IE    =  49, E = (  4.841470D-01 ,  4.775466D-01)
+ IE    =  18, E = ( -9.029861D-01 ,  4.775466D-01)
+ IE    =  80, E = (  8.535290D-01 ,  1.751004D-01)
+ IE    =  76, E = (  8.535290D-01 ,  3.024462D-01)
+ IE    =  78, E = (  8.535290D-01 ,  2.387733D-01)
+ IE    =  60, E = (  7.005568D-01 ,  4.775466D-01)
+ 
+ wait on MPI_REDUCE:   1.66014599800110     
+ 
+
+  ws-sphere valence-charges
+   1 sum= 11.17942981  s=  0.55339336  p=  0.63510244  d=  9.91762797  f=  0.07330604
+   2 sum=  5.13488340  s=  1.62342874  p=  3.45404550  d=  0.04287007  f=  0.01453908
+   3 sum=  1.13488929  s=  0.37365501  p=  0.46655700  d=  0.22613020  f=  0.06854707
+   4 sum=  0.47363677  s=  0.23506024  p=  0.16692631  d=  0.05497965  f=  0.01667058
+ TIME IN E-LOOP            :     13.70
+   1 charge in wigner seitz sphere = 47.179430
+   2 charge in wigner seitz sphere =  7.134883
+   3 charge in wigner seitz sphere =  1.134889
+   4 charge in wigner seitz sphere =  0.473637
+  12 ******   charge neutrality in unit cell =    -0.077161
+  12 E FERMI     0.862888          DEN OF ST     2.061091
+ spherically averaged madelung-potential for atom  1 :  1.424735D+00
+ spherically averaged madelung-potential for atom  2 : -1.208055D-01
+ spherically averaged madelung-potential for atom  3 : -8.416084D-01
+ spherically averaged madelung-potential for atom  4 : -4.567342D-01
+ Vacancies are ignored for VBC
+  VOL INT.    57.366537948  VAV INT.   -50.162941888  VMT ZERO     0.874428607
+      rms-error for cell  1 :v+ + v- =  1.5699D-02
+      rms-error for cell  2 :v+ + v- =  5.3671D-02
+      rms-error for cell  3 :v+ + v- =  1.5875D-02
+      rms-error for cell  4 :v+ + v- =  1.5998D-02
+          iteration no.:  12 average rms-error : v+ + v- =  3.0145D-02
+  12 Mixing Factor used :     3.00D-01
+ broyden"s 2nd method used 
+      amj , ---> j=2, 11
+          -9.26D-02  8.73D-02 -4.63D-01 -9.12D-02  9.66D-02 -1.22D+00 -1.44D-01
+           1.70D-01 -2.42D+00 -3.85D-01
+
+ ------------------------------ total energies ------------------------------
+
+             fermi energy in ryd :   0.862888
+ >
+ >
+   total energy of the   1-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s = -4625.17758240 p = -1904.86872118
+                                d =  -309.20415305 f =     0.00000000
+       valence  contribution :  s =     0.25564885 p =     0.36054748
+                                d =    -1.13302175 f =     0.04067769
+       total contribution of the single particle energies :  -6839.72660436
+       coulomb  contribution :   0   4622.15444881  1      0.00000000
+                                 2      0.00000000  3      0.00311947
+                                 4     -0.00034472  5      0.00000000
+                                 6      0.00001431
+       tot. coublomb contribution :   4622.15723786
+       ex.-cor. contribution :   0   -301.22031764  1      0.00000000
+                                 2      0.00000000  3     -0.01200222
+                                 4     -0.00158375  5     -0.00000000
+                                 6      0.00000357
+       tot. ex.-cor. contribution :   -301.23390003
+       eff. pot. contribution     :  -8955.89080728
+       total double counting contribution                 :  -4634.96746946
+
+   total contribution of the atom : -11474.69407381
+
+   total energy of the   2-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =   -52.91678829 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =    -0.07452773 p =     2.29530054
+                                d =     0.00450122 f =    -0.00062790
+       total contribution of the single particle energies :    -50.69214216
+       coulomb  contribution :   0     57.04107194  1     -0.00000000
+                                 2      0.00000000  3     -0.00739592
+                                 4     -0.00000122  5      0.00000000
+                                 6      0.00000580
+       tot. coublomb contribution :     57.03368060
+       ex.-cor. contribution :   0    -13.15328852  1     -0.00000000
+                                 2     -0.00000000  3     -0.00196222
+                                 4     -0.00000296  5     -0.00000000
+                                 6      0.00000020
+       tot. ex.-cor. contribution :    -13.15525350
+       eff. pot. contribution     :   -101.56480559
+       total double counting contribution                 :    -57.68637850
+
+   total contribution of the atom :   -108.37852066
+
+   total energy of the   3-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.16946713 p =     0.21381865
+                                d =     0.10945641 f =     0.02600660
+       total contribution of the single particle energies :      0.51874880
+       coulomb  contribution :   0      0.10781105  1      0.00000000
+                                 2      0.00000000  3      0.00226029
+                                 4      0.00174711  5      0.00000000
+                                 6     -0.00001105
+       tot. coublomb contribution :      0.11180739
+       ex.-cor. contribution :   0     -0.55122680  1     -0.00000000
+                                 2     -0.00000000  3     -0.01631237
+                                 4     -0.00006368  5     -0.00000000
+                                 6      0.00001345
+       tot. ex.-cor. contribution :     -0.56758940
+       eff. pot. contribution     :     -0.51458425
+       total double counting contribution                 :     -0.97036626
+
+   total contribution of the atom :     -0.45161746
+
+   total energy of the   4-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.11557340 p =     0.07172007
+                                d =     0.01678324 f =     0.00145522
+       total contribution of the single particle energies :      0.20553194
+       coulomb  contribution :   0      0.01925967  1     -0.00000000
+                                 2      0.00000000  3     -0.00533531
+                                 4      0.00009462  5      0.00000000
+                                 6     -0.00000711
+       tot. coublomb contribution :      0.01401187
+       ex.-cor. contribution :   0     -0.20929838  1     -0.00000000
+                                 2     -0.00000000  3     -0.00250543
+                                 4     -0.00003078  5     -0.00000000
+                                 6      0.00000213
+       tot. ex.-cor. contribution :     -0.21183246
+       eff. pot. contribution     :     -0.18932506
+       total double counting contribution                 :     -0.38714565
+
+   total contribution of the atom :     -0.18161371
+
+
+   total energy in ryd. :   -11583.70582564
+                    eV  :  -157605.58472245
+
+   band  energy in ryd. :        2.47277913
+                    eV  :       33.64413834
+ ----------------------------------------------------------------------------------
+ TIME IN ITERATION      12 :     13.95
+ >>> NUMBER OF ITERATION :           13
+     1  NUCLEAR CHARGE   49.000000         CORE CHARGE =    36.000000
+     2  NUCLEAR CHARGE    7.000000         CORE CHARGE =     2.000000
+     3  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+     4  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+ >>> EMESHT: generates a complex E contour
+ The calculations are done with  85 points.
+ The temperature used is    800.000000 K.
+  15 poles and  10 and  50 and  10 points on the contours are used.
+ IE    =  41, E = (  1.424406D-01 ,  4.775466D-01)
+ IE    =  52, E = (  5.872092D-01 ,  4.775466D-01)
+ IE    =  13, E = ( -9.874713D-01 ,  4.775466D-01)
+ IE    =  81, E = (  8.628882D-01 ,  1.432640D-01)
+ IE    =  27, E = ( -5.760936D-01 ,  4.775466D-01)
+ IE    =  62, E = (  7.238820D-01 ,  4.775466D-01)
+ IE    =  29, E = ( -4.811022D-01 ,  4.775466D-01)
+ 
+ wait on MPI_REDUCE:   1.70553207397461     
+ 
+
+  ws-sphere valence-charges
+   1 sum= 11.19232580  s=  0.55762441  p=  0.64205526  d=  9.91899867  f=  0.07364746
+   2 sum=  5.12849829  s=  1.62095150  p=  3.44977312  d=  0.04318545  f=  0.01458823
+   3 sum=  1.14551169  s=  0.37707998  p=  0.47104206  d=  0.22852762  f=  0.06886203
+   4 sum=  0.47962091  s=  0.23817517  p=  0.16910867  d=  0.05553690  f=  0.01680017
+ TIME IN E-LOOP            :     13.74
+   1 charge in wigner seitz sphere = 47.192326
+   2 charge in wigner seitz sphere =  7.128498
+   3 charge in wigner seitz sphere =  1.145512
+   4 charge in wigner seitz sphere =  0.479621
+  13 ******   charge neutrality in unit cell =    -0.054043
+  13 E FERMI     0.870068          DEN OF ST     1.881893
+ spherically averaged madelung-potential for atom  1 :  1.416855D+00
+ spherically averaged madelung-potential for atom  2 : -1.024451D-01
+ spherically averaged madelung-potential for atom  3 : -8.491254D-01
+ spherically averaged madelung-potential for atom  4 : -4.597277D-01
+ Vacancies are ignored for VBC
+  VOL INT.    57.366537948  VAV INT.   -50.370684922  VMT ZERO     0.878049935
+      rms-error for cell  1 :v+ + v- =  1.1539D-02
+      rms-error for cell  2 :v+ + v- =  3.6188D-02
+      rms-error for cell  3 :v+ + v- =  1.1316D-02
+      rms-error for cell  4 :v+ + v- =  1.0045D-02
+          iteration no.:  13 average rms-error : v+ + v- =  2.0443D-02
+  13 Mixing Factor used :     3.00D-01
+ broyden"s 2nd method used 
+      amj , ---> j=2, 12
+           1.66D-02 -1.56D-02  8.02D-02  1.62D-02 -1.73D-02  2.05D-01  2.56D-02
+          -3.02D-02  4.29D-01  6.88D-02 -1.77D-01
+
+ ------------------------------ total energies ------------------------------
+
+             fermi energy in ryd :   0.870068
+ >
+ >
+   total energy of the   1-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s = -4625.15147855 p = -1904.80965849
+                                d =  -309.17052556 f =     0.00000000
+       valence  contribution :  s =     0.25453601 p =     0.36788048
+                                d =    -1.10231641 f =     0.04139003
+       total contribution of the single particle energies :  -6839.57017248
+       coulomb  contribution :   0   4622.45004668  1      0.00000000
+                                 2      0.00000000  3      0.00266874
+                                 4     -0.00039864  5      0.00000000
+                                 6      0.00001297
+       tot. coublomb contribution :   4622.45232975
+       ex.-cor. contribution :   0   -301.22378634  1     -0.00000000
+                                 2     -0.00000000  3     -0.01191258
+                                 4     -0.00157754  5     -0.00000000
+                                 6      0.00000327
+       tot. ex.-cor. contribution :   -301.23727319
+       eff. pot. contribution     :  -8956.33609769
+       total double counting contribution                 :  -4635.12104112
+
+   total contribution of the atom : -11474.69121360
+
+   total energy of the   2-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =   -52.89385489 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =    -0.06854480 p =     2.31093048
+                                d =     0.00479883 f =    -0.00057343
+       total contribution of the single particle energies :    -50.64724382
+       coulomb  contribution :   0     56.72957592  1     -0.00000000
+                                 2      0.00000000  3     -0.00741468
+                                 4     -0.00000114  5      0.00000000
+                                 6      0.00000579
+       tot. coublomb contribution :     56.72216590
+       ex.-cor. contribution :   0    -13.11564707  1     -0.00000000
+                                 2     -0.00000000  3     -0.00197458
+                                 4     -0.00000287  5     -0.00000000
+                                 6      0.00000020
+       tot. ex.-cor. contribution :    -13.11762431
+       eff. pot. contribution     :   -101.33597307
+       total double counting contribution                 :    -57.73143149
+
+   total contribution of the atom :   -108.37867530
+
+   total energy of the   3-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.16747345 p =     0.21825162
+                                d =     0.11217820 f =     0.02654932
+       total contribution of the single particle energies :      0.52445259
+       coulomb  contribution :   0      0.10877716  1      0.00000000
+                                 2      0.00000000  3      0.00184432
+                                 4      0.00170032  5      0.00000000
+                                 6     -0.00001115
+       tot. coublomb contribution :      0.11231064
+       ex.-cor. contribution :   0     -0.55645671  1     -0.00000000
+                                 2     -0.00000000  3     -0.01620113
+                                 4     -0.00005996  5     -0.00000000
+                                 6      0.00001299
+       tot. ex.-cor. contribution :     -0.57270481
+       eff. pot. contribution     :     -0.51607031
+       total double counting contribution                 :     -0.97646448
+
+   total contribution of the atom :     -0.45201189
+
+   total energy of the   4-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.11295930 p =     0.07358055
+                                d =     0.01731072 f =     0.00158159
+       total contribution of the single particle energies :      0.20543216
+       coulomb  contribution :   0      0.02027893  1     -0.00000000
+                                 2     -0.00000000  3     -0.00536468
+                                 4      0.00009350  5      0.00000000
+                                 6     -0.00000709
+       tot. coublomb contribution :      0.01500066
+       ex.-cor. contribution :   0     -0.21241727  1      0.00000000
+                                 2      0.00000000  3     -0.00251954
+                                 4     -0.00003106  5     -0.00000000
+                                 6      0.00000212
+       tot. ex.-cor. contribution :     -0.21496575
+       eff. pot. contribution     :     -0.19109212
+       total double counting contribution                 :     -0.39105720
+
+   total contribution of the atom :     -0.18562504
+
+
+   total energy in ryd. :   -11583.70752583
+                    eV  :  -157605.60785497
+
+   band  energy in ryd. :        2.53798595
+                    eV  :       34.53132917
+ ----------------------------------------------------------------------------------
+ TIME IN ITERATION      13 :     14.00
+ >>> NUMBER OF ITERATION :           14
+     1  NUCLEAR CHARGE   49.000000         CORE CHARGE =    36.000000
+     2  NUCLEAR CHARGE    7.000000         CORE CHARGE =     2.000000
+     3  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+     4  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+ >>> EMESHT: generates a complex E contour
+ The calculations are done with  85 points.
+ The temperature used is    800.000000 K.
+  15 poles and  10 and  50 and  10 points on the contours are used.
+ IE    =  38, E = ( -7.914470D-03 ,  4.775466D-01)
+ IE    =  68, E = (  8.727182D-01 ,  4.775466D-01)
+ IE    =  45, E = (  3.376455D-01 ,  4.775466D-01)
+ IE    =  75, E = (  8.700676D-01 ,  3.342826D-01)
+ IE    =  27, E = ( -5.743147D-01 ,  4.775466D-01)
+ IE    =   2, E = ( -1.000000D+00 ,  3.221927D-02)
+ IE    =  19, E = ( -8.758099D-01 ,  4.775466D-01)
+ 
+ wait on MPI_REDUCE:   1.70848798751831     
+ 
+
+  ws-sphere valence-charges
+   1 sum= 11.20551691  s=  0.56595697  p=  0.65227636  d=  9.91418871  f=  0.07309487
+   2 sum=  5.05170682  s=  1.61567176  p=  3.37754913  d=  0.04380219  f=  0.01468374
+   3 sum=  1.16039564  s=  0.38412784  p=  0.47819897  d=  0.22945412  f=  0.06861471
+   4 sum=  0.49075434  s=  0.24430854  p=  0.17327370  d=  0.05631566  f=  0.01685644
+ TIME IN E-LOOP            :     13.75
+   1 charge in wigner seitz sphere = 47.205517
+   2 charge in wigner seitz sphere =  7.051707
+   3 charge in wigner seitz sphere =  1.160396
+   4 charge in wigner seitz sphere =  0.490754
+  14 ******   charge neutrality in unit cell =    -0.091626
+  14 E FERMI     0.881126          DEN OF ST     2.071450
+ spherically averaged madelung-potential for atom  1 :  1.399546D+00
+ spherically averaged madelung-potential for atom  2 : -6.193869D-02
+ spherically averaged madelung-potential for atom  3 : -8.658805D-01
+ spherically averaged madelung-potential for atom  4 : -4.662655D-01
+ Vacancies are ignored for VBC
+  VOL INT.    57.366537948  VAV INT.   -50.830835172  VMT ZERO     0.886071166
+      rms-error for cell  1 :v+ + v- =  2.9072D-03
+      rms-error for cell  2 :v+ + v- =  1.4014D-03
+      rms-error for cell  3 :v+ + v- =  9.1289D-04
+      rms-error for cell  4 :v+ + v- =  2.6172D-03
+          iteration no.:  14 average rms-error : v+ + v- =  2.1271D-03
+  14 Mixing Factor used :     3.00D-01
+ broyden"s 2nd method used 
+      amj , ---> j=2, 13
+           3.54D-02 -3.35D-02  1.70D-01  3.46D-02 -3.70D-02  4.32D-01  5.47D-02
+          -6.46D-02  9.17D-01  1.47D-01 -3.78D-01  2.15D+00
+
+ ------------------------------ total energies ------------------------------
+
+             fermi energy in ryd :   0.881126
+ >
+ >
+   total energy of the   1-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s = -4625.10782019 p = -1904.70604082
+                                d =  -309.11557966 f =     0.00000000
+       valence  contribution :  s =     0.27006878 p =     0.37938863
+                                d =    -1.04018648 f =     0.04175263
+       total contribution of the single particle energies :  -6839.27841710
+       coulomb  contribution :   0   4623.17008574  1      0.00000000
+                                 2      0.00000000  3      0.00166709
+                                 4     -0.00051964  5      0.00000000
+                                 6      0.00000929
+       tot. coublomb contribution :   4623.17124248
+       ex.-cor. contribution :   0   -301.23434879  1      0.00000000
+                                 2      0.00000000  3     -0.01167972
+                                 4     -0.00155602  5     -0.00000000
+                                 6      0.00000244
+       tot. ex.-cor. contribution :   -301.24758209
+       eff. pot. contribution     :  -8957.32417256
+       total double counting contribution                 :  -4635.40051217
+
+   total contribution of the atom : -11474.67892927
+
+   total energy of the   2-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =   -52.84916149 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =    -0.03878429 p =     2.28660161
+                                d =     0.00538273 f =    -0.00046457
+       total contribution of the single particle energies :    -50.59642601
+       coulomb  contribution :   0     56.04774720  1     -0.00000000
+                                 2      0.00000000  3     -0.00746097
+                                 4     -0.00000082  5      0.00000000
+                                 6      0.00000574
+       tot. coublomb contribution :     56.04029115
+       ex.-cor. contribution :   0    -13.03333558  1      0.00000000
+                                 2     -0.00000000  3     -0.00200544
+                                 4     -0.00000263  5     -0.00000000
+                                 6      0.00000021
+       tot. ex.-cor. contribution :    -13.03534343
+       eff. pot. contribution     :   -100.81940571
+       total double counting contribution                 :    -57.81445799
+
+   total contribution of the atom :   -108.41088400
+
+   total energy of the   3-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.18140904 p =     0.22549544
+                                d =     0.11428810 f =     0.02687529
+       total contribution of the single particle energies :      0.54806787
+       coulomb  contribution :   0      0.11099208  1      0.00000000
+                                 2      0.00000000  3      0.00091344
+                                 4      0.00157841  5      0.00000000
+                                 6     -0.00001108
+       tot. coublomb contribution :      0.11347285
+       ex.-cor. contribution :   0     -0.56815796  1     -0.00000000
+                                 2     -0.00000000  3     -0.01590385
+                                 4     -0.00004902  5     -0.00000000
+                                 6      0.00001174
+       tot. ex.-cor. contribution :     -0.58409910
+       eff. pot. contribution     :     -0.51913992
+       total double counting contribution                 :     -0.98976617
+
+   total contribution of the atom :     -0.44169830
+
+   total energy of the   4-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.12556564 p =     0.07713703
+                                d =     0.01808327 f =     0.00166267
+       total contribution of the single particle energies :      0.22244861
+       coulomb  contribution :   0      0.02260960  1     -0.00000000
+                                 2     -0.00000000  3     -0.00543118
+                                 4      0.00008971  5      0.00000000
+                                 6     -0.00000693
+       tot. coublomb contribution :      0.01726120
+       ex.-cor. contribution :   0     -0.21935081  1     -0.00000000
+                                 2      0.00000000  3     -0.00255186
+                                 4     -0.00003111  5     -0.00000000
+                                 6      0.00000209
+       tot. ex.-cor. contribution :     -0.22193169
+       eff. pot. contribution     :     -0.19537516
+       total double counting contribution                 :     -0.40004564
+
+   total contribution of the atom :     -0.17759703
+
+
+   total energy in ryd. :   -11583.70910860
+                    eV  :  -157605.62938980
+
+   band  energy in ryd. :        2.67427552
+                    eV  :       36.38565788
+ ----------------------------------------------------------------------------------
+ TIME IN ITERATION      14 :     14.00
+ >>> NUMBER OF ITERATION :           15
+     1  NUCLEAR CHARGE   49.000000         CORE CHARGE =    36.000000
+     2  NUCLEAR CHARGE    7.000000         CORE CHARGE =     2.000000
+     3  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+     4  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+ >>> EMESHT: generates a complex E contour
+ The calculations are done with  85 points.
+ The temperature used is    800.000000 K.
+  15 poles and  10 and  50 and  10 points on the contours are used.
+ IE    =  40, E = (  1.034264D-01 ,  4.775466D-01)
+ IE    =  55, E = (  6.743539D-01 ,  4.775466D-01)
+ IE    =  28, E = ( -5.243251D-01 ,  4.775466D-01)
+ IE    =  64, E = (  7.835527D-01 ,  4.775466D-01)
+ IE    =  12, E = ( -9.948403D-01 ,  4.775466D-01)
+ IE    =  73, E = (  8.811258D-01 ,  3.979555D-01)
+ IE    =  22, E = ( -7.791002D-01 ,  4.775466D-01)
+ 
+ wait on MPI_REDUCE:   1.67632484436035     
+ 
+
+  ws-sphere valence-charges
+   1 sum= 11.21552907  s=  0.56557709  p=  0.65520870  d=  9.92056070  f=  0.07418258
+   2 sum=  5.10905388  s=  1.61594702  p=  3.43456586  d=  0.04384604  f=  0.01469496
+   3 sum=  1.16630455  s=  0.38410809  p=  0.47984873  d=  0.23292959  f=  0.06941814
+   4 sum=  0.49101892  s=  0.24397410  p=  0.17338768  d=  0.05660993  f=  0.01704720
+ TIME IN E-LOOP            :     13.71
+   1 charge in wigner seitz sphere = 47.215529
+   2 charge in wigner seitz sphere =  7.109054
+   3 charge in wigner seitz sphere =  1.166305
+   4 charge in wigner seitz sphere =  0.491019
+  15 ******   charge neutrality in unit cell =    -0.018094
+  15 E FERMI     0.884033          DEN OF ST     1.555889
+ spherically averaged madelung-potential for atom  1 :  1.401870D+00
+ spherically averaged madelung-potential for atom  2 : -6.645372D-02
+ spherically averaged madelung-potential for atom  3 : -8.644789D-01
+ spherically averaged madelung-potential for atom  4 : -4.654486D-01
+ Vacancies are ignored for VBC
+  VOL INT.    57.366537948  VAV INT.   -50.782639012  VMT ZERO     0.885231022
+      rms-error for cell  1 :v+ + v- =  1.9952D-03
+      rms-error for cell  2 :v+ + v- =  2.0638D-03
+      rms-error for cell  3 :v+ + v- =  1.2603D-03
+      rms-error for cell  4 :v+ + v- =  7.1927D-04
+          iteration no.:  15 average rms-error : v+ + v- =  1.6082D-03
+  15 Mixing Factor used :     3.00D-01
+ broyden"s 2nd method used 
+      amj , ---> j=2, 14
+          -3.04D-03  3.05D-03 -1.32D-02 -2.98D-03  3.25D-03 -3.72D-02 -4.93D-03
+           5.80D-03 -8.45D-02 -1.33D-02  3.53D-02 -1.87D-01 -8.60D-02
+
+ ------------------------------ total energies ------------------------------
+
+             fermi energy in ryd :   0.884033
+ >
+ >
+   total energy of the   1-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s = -4625.10957104 p = -1904.70856606
+                                d =  -309.11944525 f =     0.00000000
+       valence  contribution :  s =     0.25386802 p =     0.38184088
+                                d =    -1.02904655 f =     0.04266783
+       total contribution of the single particle energies :  -6839.28825217
+       coulomb  contribution :   0   4623.06586594  1      0.00000000
+                                 2      0.00000000  3      0.00179425
+                                 4     -0.00050672  5      0.00000000
+                                 6      0.00001033
+       tot. coublomb contribution :   4623.06716380
+       ex.-cor. contribution :   0   -301.23295781  1      0.00000000
+                                 2     -0.00000000  3     -0.01173646
+                                 4     -0.00156130  5     -0.00000000
+                                 6      0.00000267
+       tot. ex.-cor. contribution :   -301.24625289
+       eff. pot. contribution     :  -8957.21650110
+       total double counting contribution                 :  -4635.39559019
+
+   total contribution of the atom : -11474.68384236
+
+   total energy of the   2-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =   -52.85218620 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =    -0.05551035 p =     2.33469483
+                                d =     0.00542328 f =    -0.00045110
+       total contribution of the single particle energies :    -50.56802954
+       coulomb  contribution :   0     56.12306887  1     -0.00000000
+                                 2      0.00000000  3     -0.00745724
+                                 4     -0.00000081  5      0.00000000
+                                 6      0.00000576
+       tot. coublomb contribution :     56.11561657
+       ex.-cor. contribution :   0    -13.04236413  1      0.00000000
+                                 2     -0.00000000  3     -0.00199977
+                                 4     -0.00000262  5     -0.00000000
+                                 6      0.00000021
+       tot. ex.-cor. contribution :    -13.04436632
+       eff. pot. contribution     :   -100.88497561
+       total double counting contribution                 :    -57.81372536
+
+   total contribution of the atom :   -108.38175490
+
+   total energy of the   3-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.16539266 p =     0.22684798
+                                d =     0.11725753 f =     0.02755336
+       total contribution of the single particle energies :      0.53705154
+       coulomb  contribution :   0      0.11084448  1      0.00000000
+                                 2      0.00000000  3      0.00103593
+                                 4      0.00160361  5      0.00000000
+                                 6     -0.00001129
+       tot. coublomb contribution :      0.11347272
+       ex.-cor. contribution :   0     -0.56722528  1      0.00000000
+                                 2     -0.00000000  3     -0.01598697
+                                 4     -0.00005171  5     -0.00000000
+                                 6      0.00001210
+       tot. ex.-cor. contribution :     -0.58325186
+       eff. pot. contribution     :     -0.51816692
+       total double counting contribution                 :     -0.98794606
+
+   total contribution of the atom :     -0.45089453
+
+   total energy of the   4-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.10942144 p =     0.07724894
+                                d =     0.01834191 f =     0.00183271
+       total contribution of the single particle energies :      0.20684500
+       coulomb  contribution :   0      0.02228836  1     -0.00000000
+                                 2     -0.00000000  3     -0.00542607
+                                 4      0.00009082  5      0.00000000
+                                 6     -0.00000702
+       tot. coublomb contribution :      0.01694609
+       ex.-cor. contribution :   0     -0.21846451  1     -0.00000000
+                                 2      0.00000000  3     -0.00254864
+                                 4     -0.00003142  5     -0.00000000
+                                 6      0.00000211
+       tot. ex.-cor. contribution :     -0.22104247
+       eff. pot. contribution     :     -0.19502480
+       total double counting contribution                 :     -0.39912118
+
+   total contribution of the atom :     -0.19227618
+
+
+   total energy in ryd. :   -11583.70876796
+                    eV  :  -157605.62475517
+
+   band  energy in ryd. :        2.67738337
+                    eV  :       36.42794268
+ ----------------------------------------------------------------------------------
+ TIME IN ITERATION      15 :     13.97
+ >>> NUMBER OF ITERATION :           16
+     1  NUCLEAR CHARGE   49.000000         CORE CHARGE =    36.000000
+     2  NUCLEAR CHARGE    7.000000         CORE CHARGE =     2.000000
+     3  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+     4  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+ >>> EMESHT: generates a complex E contour
+ The calculations are done with  85 points.
+ The temperature used is    800.000000 K.
+  15 poles and  10 and  50 and  10 points on the contours are used.
+ IE    =  33, E = ( -2.681246D-01 ,  4.775466D-01)
+ IE    =  56, E = (  6.944498D-01 ,  4.775466D-01)
+ IE    =  55, E = (  6.771691D-01 ,  4.775466D-01)
+ IE    =  18, E = ( -9.012468D-01 ,  4.775466D-01)
+ IE    =   9, E = ( -1.000000D+00 ,  4.453274D-01)
+ IE    =  69, E = (  9.096882D-01 ,  4.775466D-01)
+ IE    =  11, E = ( -9.990183D-01 ,  4.775466D-01)
+ IE    =  85, E = (  8.840331D-01 ,  1.591822D-02)
+ 
+ wait on MPI_REDUCE:  9.748935699462891E-004
+ 
+
+  ws-sphere valence-charges
+   1 sum= 11.21787611  s=  0.56586375  p=  0.65613139  d=  9.92152506  f=  0.07435592
+   2 sum=  5.11615772  s=  1.61575786  p=  3.44181723  d=  0.04388118  f=  0.01470145
+   3 sum=  1.16800069  s=  0.38441575  p=  0.48042513  d=  0.23360422  f=  0.06955559
+   4 sum=  0.49146482  s=  0.24411962  p=  0.17356970  d=  0.05668851  f=  0.01708700
+ TIME IN E-LOOP            :     13.69
+   1 charge in wigner seitz sphere = 47.217876
+   2 charge in wigner seitz sphere =  7.116158
+   3 charge in wigner seitz sphere =  1.168001
+   4 charge in wigner seitz sphere =  0.491465
+  16 ******   charge neutrality in unit cell =    -0.006501
+  16 E FERMI     0.885155          DEN OF ST     1.448569
+ spherically averaged madelung-potential for atom  1 :  1.401586D+00
+ spherically averaged madelung-potential for atom  2 : -6.565691D-02
+ spherically averaged madelung-potential for atom  3 : -8.649288D-01
+ spherically averaged madelung-potential for atom  4 : -4.655101D-01
+ Vacancies are ignored for VBC
+  VOL INT.    57.366537948  VAV INT.   -50.792411638  VMT ZERO     0.885401376
+      rms-error for cell  1 :v+ + v- =  1.3203D-03
+      rms-error for cell  2 :v+ + v- =  1.1593D-03
+      rms-error for cell  3 :v+ + v- =  7.9641D-04
+      rms-error for cell  4 :v+ + v- =  6.1103D-04
+          iteration no.:  16 average rms-error : v+ + v- =  1.0118D-03
+  16 Mixing Factor used :     3.00D-01
+ broyden"s 2nd method used 
+      amj , ---> j=2, 15
+           8.34D-04 -7.83D-04  3.70D-03  8.02D-04 -8.72D-04  8.16D-03  1.24D-03
+          -1.48D-03  2.06D-02  3.41D-03 -8.40D-03  5.26D-02  2.49D-02 -1.57D-01
+
+ ------------------------------ total energies ------------------------------
+
+             fermi energy in ryd :   0.885155
+ >
+ >
+   total energy of the   1-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s = -4625.10913005 p = -1904.70713424
+                                d =  -309.11991072 f =     0.00000000
+       valence  contribution :  s =     0.25154312 p =     0.38269656
+                                d =    -1.02436775 f =     0.04284493
+       total contribution of the single particle energies :  -6839.28345815
+       coulomb  contribution :   0   4623.08587798  1      0.00000000
+                                 2      0.00000000  3      0.00178025
+                                 4     -0.00050933  5      0.00000000
+                                 6      0.00001037
+       tot. coublomb contribution :   4623.08715928
+       ex.-cor. contribution :   0   -301.23350148  1     -0.00000000
+                                 2      0.00000000  3     -0.01174047
+                                 4     -0.00156130  5     -0.00000000
+                                 6      0.00000268
+       tot. ex.-cor. contribution :   -301.24680057
+       eff. pot. contribution     :  -8957.24091266
+       total double counting contribution                 :  -4635.40055395
+
+   total contribution of the atom : -11474.68401210
+
+   total energy of the   2-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =   -52.85118092 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =    -0.05739455 p =     2.34218050
+                                d =     0.00545337 f =    -0.00044463
+       total contribution of the single particle energies :    -50.56138623
+       coulomb  contribution :   0     56.10977097  1     -0.00000000
+                                 2      0.00000000  3     -0.00745971
+                                 4     -0.00000077  5      0.00000000
+                                 6      0.00000576
+       tot. coublomb contribution :     56.10231625
+       ex.-cor. contribution :   0    -13.04074453  1      0.00000000
+                                 2     -0.00000000  3     -0.00200078
+                                 4     -0.00000260  5     -0.00000000
+                                 6      0.00000021
+       tot. ex.-cor. contribution :    -13.04274771
+       eff. pot. contribution     :   -100.87620632
+       total double counting contribution                 :    -57.81663778
+
+   total contribution of the atom :   -108.37802401
+
+   total energy of the   3-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.16305102 p =     0.22734874
+                                d =     0.11787964 f =     0.02768846
+       total contribution of the single particle energies :      0.53596786
+       coulomb  contribution :   0      0.11091173  1      0.00000000
+                                 2      0.00000000  3      0.00102306
+                                 4      0.00160282  5      0.00000000
+                                 6     -0.00001133
+       tot. coublomb contribution :      0.11352628
+       ex.-cor. contribution :   0     -0.56754765  1      0.00000000
+                                 2     -0.00000000  3     -0.01599316
+                                 4     -0.00005166  5     -0.00000000
+                                 6      0.00001211
+       tot. ex.-cor. contribution :     -0.58358036
+       eff. pot. contribution     :     -0.51800957
+       total double counting contribution                 :     -0.98806364
+
+   total contribution of the atom :     -0.45209579
+
+   total energy of the   4-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.10698008 p =     0.07740092
+                                d =     0.01841257 f =     0.00186892
+       total contribution of the single particle energies :      0.20466249
+       coulomb  contribution :   0      0.02231124  1     -0.00000000
+                                 2      0.00000000  3     -0.00542814
+                                 4      0.00009084  5      0.00000000
+                                 6     -0.00000703
+       tot. coublomb contribution :      0.01696691
+       ex.-cor. contribution :   0     -0.21854177  1     -0.00000000
+                                 2     -0.00000000  3     -0.00254979
+                                 4     -0.00003147  5     -0.00000000
+                                 6      0.00000211
+       tot. ex.-cor. contribution :     -0.22112093
+       eff. pot. contribution     :     -0.19516932
+       total double counting contribution                 :     -0.39932333
+
+   total contribution of the atom :     -0.19466084
+
+
+   total energy in ryd. :   -11583.70879273
+                    eV  :  -157605.62509218
+
+   band  energy in ryd. :        2.68314189
+                    eV  :       36.50629198
+ ----------------------------------------------------------------------------------
+ TIME IN ITERATION      16 :     13.95
+ >>> NUMBER OF ITERATION :           17
+     1  NUCLEAR CHARGE   49.000000         CORE CHARGE =    36.000000
+     2  NUCLEAR CHARGE    7.000000         CORE CHARGE =     2.000000
+     3  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+     4  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+ >>> EMESHT: generates a complex E contour
+ The calculations are done with  85 points.
+ The temperature used is    800.000000 K.
+  15 poles and  10 and  50 and  10 points on the contours are used.
+ IE    =  42, E = (  2.074960D-01 ,  4.775466D-01)
+ IE    =   7, E = ( -1.000000D+00 ,  3.422566D-01)
+ IE    =  65, E = (  8.146590D-01 ,  4.775466D-01)
+ IE    =  55, E = (  6.782555D-01 ,  4.775466D-01)
+ IE    =  70, E = (  9.474181D-01 ,  4.775466D-01)
+ IE    =   9, E = ( -1.000000D+00 ,  4.453274D-01)
+ IE    =  81, E = (  8.851550D-01 ,  1.432640D-01)
+ IE    =  85, E = (  8.851550D-01 ,  1.591822D-02)
+ 
+ wait on MPI_REDUCE:  9.820461273193359E-004
+ 
+
+  ws-sphere valence-charges
+   1 sum= 11.21909612  s=  0.56625086  p=  0.65687830  d=  9.92157647  f=  0.07439049
+   2 sum=  5.11551902  s=  1.61545959  p=  3.44142089  d=  0.04392847  f=  0.01471006
+   3 sum=  1.16934252  s=  0.38489383  p=  0.48096792  d=  0.23388294  f=  0.06959783
+   4 sum=  0.49192672  s=  0.24428408  p=  0.17378665  d=  0.05675183  f=  0.01710415
+ TIME IN E-LOOP            :     13.70
+   1 charge in wigner seitz sphere = 47.219096
+   2 charge in wigner seitz sphere =  7.115519
+   3 charge in wigner seitz sphere =  1.169343
+   4 charge in wigner seitz sphere =  0.491927
+  17 ******   charge neutrality in unit cell =    -0.004116
+  17 E FERMI     0.885878          DEN OF ST     1.423449
+ spherically averaged madelung-potential for atom  1 :  1.400871D+00
+ spherically averaged madelung-potential for atom  2 : -6.380290D-02
+ spherically averaged madelung-potential for atom  3 : -8.658872D-01
+ spherically averaged madelung-potential for atom  4 : -4.656961D-01
+ Vacancies are ignored for VBC
+  VOL INT.    57.366537948  VAV INT.   -50.814690306  VMT ZERO     0.885789733
+      rms-error for cell  1 :v+ + v- =  2.8975D-04
+      rms-error for cell  2 :v+ + v- =  6.2273D-04
+      rms-error for cell  3 :v+ + v- =  9.4739D-05
+      rms-error for cell  4 :v+ + v- =  4.9469D-04
+          iteration no.:  17 average rms-error : v+ + v- =  4.2586D-04
+  17 Mixing Factor used :     3.00D-01
+ broyden"s 2nd method used 
+      amj , ---> j=2, 16
+           1.60D-03 -1.52D-03  6.99D-03  1.54D-03 -1.68D-03  1.57D-02  2.40D-03
+          -2.86D-03  4.00D-02  6.59D-03 -1.63D-02  1.01D-01  4.79D-02 -3.16D-01
+           1.87D+00
+
+ ------------------------------ total energies ------------------------------
+
+             fermi energy in ryd :   0.885878
+ >
+ >
+   total energy of the   1-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s = -4625.10755892 p = -1904.70366700
+                                d =  -309.12046843 f =     0.00000000
+       valence  contribution :  s =     0.25132212 p =     0.38341422
+                                d =    -1.01764314 f =     0.04291140
+       total contribution of the single particle energies :  -6839.27168976
+       coulomb  contribution :   0   4623.13787497  1      0.00000000
+                                 2      0.00000000  3      0.00173984
+                                 4     -0.00051562  5      0.00000000
+                                 6      0.00001025
+       tot. coublomb contribution :   4623.13910944
+       ex.-cor. contribution :   0   -301.23482490  1      0.00000000
+                                 2      0.00000000  3     -0.01173509
+                                 4     -0.00155944  5     -0.00000000
+                                 6      0.00000266
+       tot. ex.-cor. contribution :   -301.24811678
+       eff. pot. contribution     :  -8957.30248764
+       total double counting contribution                 :  -4635.41149499
+
+   total contribution of the atom : -11474.68318475
+
+   total energy of the   2-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =   -52.84985349 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =    -0.05696718 p =     2.34343325
+                                d =     0.00549434 f =    -0.00043533
+       total contribution of the single particle energies :    -50.55832841
+       coulomb  contribution :   0     56.07925726  1     -0.00000000
+                                 2     -0.00000000  3     -0.00746451
+                                 4     -0.00000069  5      0.00000000
+                                 6      0.00000575
+       tot. coublomb contribution :     56.07179782
+       ex.-cor. contribution :   0    -13.03706068  1     -0.00000000
+                                 2      0.00000000  3     -0.00200316
+                                 4     -0.00000256  5     -0.00000000
+                                 6      0.00000021
+       tot. ex.-cor. contribution :    -13.03906620
+       eff. pot. contribution     :   -100.85277522
+       total double counting contribution                 :    -57.82004360
+
+   total contribution of the atom :   -108.37837201
+
+   total energy of the   3-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.16283348 p =     0.22780659
+                                d =     0.11816497 f =     0.02774606
+       total contribution of the single particle energies :      0.53655110
+       coulomb  contribution :   0      0.11105862  1      0.00000000
+                                 2      0.00000000  3      0.00098511
+                                 4      0.00159599  5      0.00000000
+                                 6     -0.00001134
+       tot. coublomb contribution :      0.11362838
+       ex.-cor. contribution :   0     -0.56822784  1     -0.00000000
+                                 2     -0.00000000  3     -0.01598611
+                                 4     -0.00005088  5     -0.00000000
+                                 6      0.00001208
+       tot. ex.-cor. contribution :     -0.58425276
+       eff. pot. contribution     :     -0.51784606
+       total double counting contribution                 :     -0.98847044
+
+   total contribution of the atom :     -0.45191934
+
+   total energy of the   4-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.10658410 p =     0.07758181
+                                d =     0.01847158 f =     0.00188647
+       total contribution of the single particle energies :      0.20452395
+       coulomb  contribution :   0      0.02238894  1     -0.00000000
+                                 2     -0.00000000  3     -0.00543230
+                                 4      0.00009059  5      0.00000000
+                                 6     -0.00000703
+       tot. coublomb contribution :      0.01704020
+       ex.-cor. contribution :   0     -0.21877437  1      0.00000000
+                                 2      0.00000000  3     -0.00255192
+                                 4     -0.00003144  5     -0.00000000
+                                 6      0.00000211
+       tot. ex.-cor. contribution :     -0.22135563
+       eff. pot. contribution     :     -0.19553834
+       total double counting contribution                 :     -0.39985376
+
+   total contribution of the atom :     -0.19532981
+
+
+   total energy in ryd. :   -11583.70880591
+                    eV  :  -157605.62527138
+
+   band  energy in ryd. :        2.69260472
+                    eV  :       36.63504135
+ ----------------------------------------------------------------------------------
+ TIME IN ITERATION      17 :     13.96
+ >>> NUMBER OF ITERATION :           18
+     1  NUCLEAR CHARGE   49.000000         CORE CHARGE =    36.000000
+     2  NUCLEAR CHARGE    7.000000         CORE CHARGE =     2.000000
+     3  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+     4  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+ >>> EMESHT: generates a complex E contour
+ The calculations are done with  85 points.
+ The temperature used is    800.000000 K.
+  15 poles and  10 and  50 and  10 points on the contours are used.
+ IE    =  53, E = (  6.350117D-01 ,  4.775466D-01)
+ IE    =  72, E = (  8.858778D-01 ,  4.297920D-01)
+ IE    =  73, E = (  8.858778D-01 ,  3.979555D-01)
+ IE    =  29, E = ( -4.741296D-01 ,  4.775466D-01)
+ IE    =  78, E = (  8.858778D-01 ,  2.387733D-01)
+ IE    =   6, E = ( -1.000000D+00 ,  2.743205D-01)
+ IE    =  24, E = ( -7.016846D-01 ,  4.775466D-01)
+ 
+ wait on MPI_REDUCE:   1.66803789138794     
+ 
+
+  ws-sphere valence-charges
+   1 sum= 11.21933400  s=  0.56613608  p=  0.65686305  d=  9.92189283  f=  0.07444204
+   2 sum=  5.11871754  s=  1.61552089  p=  3.44456278  d=  0.04392407  f=  0.01470979
+   3 sum=  1.16945382  s=  0.38483076  p=  0.48096173  d=  0.23402565  f=  0.06963569
+   4 sum=  0.49182002  s=  0.24420533  p=  0.17374824  d=  0.05675348  f=  0.01711298
+ TIME IN E-LOOP            :     13.71
+   1 charge in wigner seitz sphere = 47.219334
+   2 charge in wigner seitz sphere =  7.118718
+   3 charge in wigner seitz sphere =  1.169454
+   4 charge in wigner seitz sphere =  0.491820
+  18 ******   charge neutrality in unit cell =    -0.000675
+  18 E FERMI     0.885999          DEN OF ST     1.389702
+ spherically averaged madelung-potential for atom  1 :  1.401190D+00
+ spherically averaged madelung-potential for atom  2 : -6.445421D-02
+ spherically averaged madelung-potential for atom  3 : -8.656629D-01
+ spherically averaged madelung-potential for atom  4 : -4.655857D-01
+ Vacancies are ignored for VBC
+  VOL INT.    57.366537948  VAV INT.   -50.807683644  VMT ZERO     0.885667594
+      rms-error for cell  1 :v+ + v- =  1.6539D-04
+      rms-error for cell  2 :v+ + v- =  1.1710D-04
+      rms-error for cell  3 :v+ + v- =  3.4163D-05
+      rms-error for cell  4 :v+ + v- =  2.4133D-04
+          iteration no.:  18 average rms-error : v+ + v- =  1.5849D-04
+  18 Mixing Factor used :     3.00D-01
+ broyden"s 2nd method used 
+      amj , ---> j=2, 17
+          -4.97D-04  4.93D-04 -2.12D-03 -4.83D-04  5.28D-04 -5.65D-03 -7.92D-04
+           9.33D-04 -1.35D-02 -2.15D-03  5.62D-03 -3.09D-02 -1.43D-02  1.48D-01
+          -3.55D-01 -1.98D-01
+
+ ------------------------------ total energies ------------------------------
+
+             fermi energy in ryd :   0.885999
+ >
+ >
+   total energy of the   1-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s = -4625.10673562 p = -1904.70228741
+                                d =  -309.11975070 f =     0.00000000
+       valence  contribution :  s =     0.25048128 p =     0.38338547
+                                d =    -1.01713133 f =     0.04294859
+       total contribution of the single particle energies :  -6839.26908972
+       coulomb  contribution :   0   4623.11961286  1      0.00000000
+                                 2      0.00000000  3      0.00175677
+                                 4     -0.00051379  5      0.00000000
+                                 6      0.00001033
+       tot. coublomb contribution :   4623.12086617
+       ex.-cor. contribution :   0   -301.23444731  1     -0.00000000
+                                 2     -0.00000000  3     -0.01174045
+                                 4     -0.00155988  5     -0.00000000
+                                 6      0.00000267
+       tot. ex.-cor. contribution :   -301.24774496
+       eff. pot. contribution     :  -8957.28754817
+       total double counting contribution                 :  -4635.41442697
+
+   total contribution of the atom : -11474.68351669
+
+   total energy of the   2-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =   -52.85036451 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =    -0.05794427 p =     2.34581023
+                                d =     0.00549133 f =    -0.00043505
+       total contribution of the single particle energies :    -50.55744226
+       coulomb  contribution :   0     56.09009921  1     -0.00000000
+                                 2      0.00000000  3     -0.00746378
+                                 4     -0.00000069  5      0.00000000
+                                 6      0.00000575
+       tot. coublomb contribution :     56.08264049
+       ex.-cor. contribution :   0    -13.03836466  1     -0.00000000
+                                 2     -0.00000000  3     -0.00200238
+                                 4     -0.00000257  5     -0.00000000
+                                 6      0.00000021
+       tot. ex.-cor. contribution :    -13.04036939
+       eff. pot. contribution     :   -100.86172162
+       total double counting contribution                 :    -57.81945052
+
+   total contribution of the atom :   -108.37689278
+
+   total energy of the   3-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.16202219 p =     0.22779420
+                                d =     0.11827900 f =     0.02777434
+       total contribution of the single particle energies :      0.53586973
+       coulomb  contribution :   0      0.11103343  1      0.00000000
+                                 2      0.00000000  3      0.00100132
+                                 4      0.00159858  5      0.00000000
+                                 6     -0.00001135
+       tot. coublomb contribution :      0.11362198
+       ex.-cor. contribution :   0     -0.56807594  1      0.00000000
+                                 2     -0.00000000  3     -0.01599415
+                                 4     -0.00005113  5     -0.00000000
+                                 6      0.00001210
+       tot. ex.-cor. contribution :     -0.58410911
+       eff. pot. contribution     :     -0.51776570
+       total double counting contribution                 :     -0.98825284
+
+   total contribution of the atom :     -0.45238311
+
+   total energy of the   4-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.10577393 p =     0.07755295
+                                d =     0.01847358 f =     0.00189467
+       total contribution of the single particle energies :      0.20369514
+       coulomb  contribution :   0      0.02234707  1     -0.00000000
+                                 2     -0.00000000  3     -0.00543144
+                                 4      0.00009071  5      0.00000000
+                                 6     -0.00000703
+       tot. coublomb contribution :      0.01699930
+       ex.-cor. contribution :   0     -0.21865609  1     -0.00000000
+                                 2      0.00000000  3     -0.00255140
+                                 4     -0.00003146  5     -0.00000000
+                                 6      0.00000211
+       tot. ex.-cor. contribution :     -0.22123683
+       eff. pot. contribution     :     -0.19548555
+       total double counting contribution                 :     -0.39972308
+
+   total contribution of the atom :     -0.19602795
+
+
+   total energy in ryd. :   -11583.70882053
+                    eV  :  -157605.62547036
+
+   band  energy in ryd. :        2.69217112
+                    eV  :       36.62914177
+ ----------------------------------------------------------------------------------
+ TIME IN ITERATION      18 :     13.97
+ >>> NUMBER OF ITERATION :           19
+     1  NUCLEAR CHARGE   49.000000         CORE CHARGE =    36.000000
+     2  NUCLEAR CHARGE    7.000000         CORE CHARGE =     2.000000
+     3  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+     4  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+ >>> EMESHT: generates a complex E contour
+ The calculations are done with  85 points.
+ The temperature used is    800.000000 K.
+  15 poles and  10 and  50 and  10 points on the contours are used.
+ IE    =  70, E = (  9.482623D-01 ,  4.775466D-01)
+ IE    =  77, E = (  8.859992D-01 ,  2.706098D-01)
+ IE    =   4, E = ( -1.000000D+00 ,  1.352901D-01)
+ IE    =   6, E = ( -1.000000D+00 ,  2.743205D-01)
+ IE    =   6, E = ( -1.000000D+00 ,  2.743205D-01)
+ IE    =  82, E = (  8.859992D-01 ,  1.114275D-01)
+ 
+ wait on MPI_REDUCE:   1.66416597366333     
+ 
+
+  
+ wait on MPI_REDUCE:   1.59399294853210     
+ 
+
+  ws-sphere valence-charges
+   1 sum= 11.21936792  s=  0.56612106  p=  0.65687760  d=  9.92192019  f=  0.07444907
+   2 sum=  5.11911442  s=  1.61551814  p=  3.44495973  d=  0.04392616  f=  0.01471038
+   3 sum=  1.16952744  s=  0.38484897  p=  0.48098339  d=  0.23405263  f=  0.06964246
+   4 sum=  0.49179582  s=  0.24417832  p=  0.17374675  d=  0.05675594  f=  0.01711481
+ TIME IN E-LOOP            :     13.63
+   1 charge in wigner seitz sphere = 47.219368
+   2 charge in wigner seitz sphere =  7.119114
+   3 charge in wigner seitz sphere =  1.169527
+   4 charge in wigner seitz sphere =  0.491796
+  19 ******   charge neutrality in unit cell =    -0.000194
+  19 E FERMI     0.886034          DEN OF ST     1.384850
+ spherically averaged madelung-potential for atom  1 :  1.401231D+00
+ spherically averaged madelung-potential for atom  2 : -6.450386D-02
+ spherically averaged madelung-potential for atom  3 : -8.656793D-01
+ spherically averaged madelung-potential for atom  4 : -4.655609D-01
+ Vacancies are ignored for VBC
+  VOL INT.    57.366537948  VAV INT.   -50.807392286  VMT ZERO     0.885662515
+      rms-error for cell  1 :v+ + v- =  4.4779D-05
+      rms-error for cell  2 :v+ + v- =  7.3282D-05
+      rms-error for cell  3 :v+ + v- =  2.2357D-05
+      rms-error for cell  4 :v+ + v- =  1.0977D-04
+          iteration no.:  19 average rms-error : v+ + v- =  7.0578D-05
+  19 Mixing Factor used :     3.00D-01
+ broyden"s 2nd method used 
+      amj , ---> j=2, 18
+          -3.63D-05  4.25D-05 -1.53D-04 -3.70D-05  4.04D-05 -7.03D-04 -7.26D-05
+           8.30D-05 -1.33D-03 -1.92D-04  5.96D-04 -2.00D-03 -8.12D-04  2.85D-02
+           5.66D-02  2.69D-02  1.28D-01
+
+ ------------------------------ total energies ------------------------------
+
+             fermi energy in ryd :   0.886034
+ >
+ >
+   total energy of the   1-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s = -4625.10560147 p = -1904.70030466
+                                d =  -309.11886787 f =     0.00000000
+       valence  contribution :  s =     0.25036913 p =     0.38339859
+                                d =    -1.01633270 f =     0.04295469
+       total contribution of the single particle energies :  -6839.26438428
+       coulomb  contribution :   0   4623.11742837  1      0.00000000
+                                 2      0.00000000  3      0.00175868
+                                 4     -0.00051380  5      0.00000000
+                                 6      0.00001033
+       tot. coublomb contribution :   4623.11868359
+       ex.-cor. contribution :   0   -301.23439324  1     -0.00000000
+                                 2      0.00000000  3     -0.01174132
+                                 4     -0.00155973  5     -0.00000000
+                                 6      0.00000268
+       tot. ex.-cor. contribution :   -301.24769161
+       eff. pot. contribution     :  -8957.29009425
+       total double counting contribution                 :  -4635.41910227
+
+   total contribution of the atom : -11474.68348654
+
+   total energy of the   2-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =   -52.85043397 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =    -0.05805373 p =     2.34614515
+                                d =     0.00549357 f =    -0.00043412
+       total contribution of the single particle energies :    -50.55728309
+       coulomb  contribution :   0     56.09099820  1     -0.00000000
+                                 2      0.00000000  3     -0.00746404
+                                 4     -0.00000068  5      0.00000000
+                                 6      0.00000575
+       tot. coublomb contribution :     56.08353923
+       ex.-cor. contribution :   0    -13.03847225  1      0.00000000
+                                 2     -0.00000000  3     -0.00200238
+                                 4     -0.00000256  5     -0.00000000
+                                 6      0.00000021
+       tot. ex.-cor. contribution :    -13.04047698
+       eff. pot. contribution     :   -100.86255378
+       total double counting contribution                 :    -57.81949153
+
+   total contribution of the atom :   -108.37677462
+
+   total energy of the   3-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.16192397 p =     0.22780934
+                                d =     0.11830183 f =     0.02778010
+       total contribution of the single particle energies :      0.53581523
+       coulomb  contribution :   0      0.11103979  1      0.00000000
+                                 2      0.00000000  3      0.00100317
+                                 4      0.00159853  5      0.00000000
+                                 6     -0.00001135
+       tot. coublomb contribution :      0.11363013
+       ex.-cor. contribution :   0     -0.56808994  1      0.00000000
+                                 2     -0.00000000  3     -0.01599552
+                                 4     -0.00005109  5     -0.00000000
+                                 6      0.00001211
+       tot. ex.-cor. contribution :     -0.58412445
+       eff. pot. contribution     :     -0.51772630
+       total double counting contribution                 :     -0.98822062
+
+   total contribution of the atom :     -0.45240539
+
+   total energy of the   4-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.10565490 p =     0.07755369
+                                d =     0.01847647 f =     0.00189674
+       total contribution of the single particle energies :      0.20358179
+       coulomb  contribution :   0      0.02233949  1     -0.00000000
+                                 2     -0.00000000  3     -0.00543154
+                                 4      0.00009070  5      0.00000000
+                                 6     -0.00000703
+       tot. coublomb contribution :      0.01699162
+       ex.-cor. contribution :   0     -0.21863506  1     -0.00000000
+                                 2      0.00000000  3     -0.00255142
+                                 4     -0.00003146  5     -0.00000000
+                                 6      0.00000211
+       tot. ex.-cor. contribution :     -0.22121583
+       eff. pot. contribution     :     -0.19551438
+       total double counting contribution                 :     -0.39973859
+
+   total contribution of the atom :     -0.19615680
+
+
+   total energy in ryd. :   -11583.70882335
+                    eV  :  -157605.62550874
+
+   band  energy in ryd. :        2.69293762
+                    eV  :       36.63957065
+ ----------------------------------------------------------------------------------
+ TIME IN ITERATION      19 :     13.89
+ >>> NUMBER OF ITERATION :           20
+     1  NUCLEAR CHARGE   49.000000         CORE CHARGE =    36.000000
+     2  NUCLEAR CHARGE    7.000000         CORE CHARGE =     2.000000
+     3  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+     4  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+ >>> EMESHT: generates a complex E contour
+ The calculations are done with  85 points.
+ The temperature used is    800.000000 K.
+  15 poles and  10 and  50 and  10 points on the contours are used.
+ IE    =  40, E = (  1.065588D-01 ,  4.775466D-01)
+ IE    =  83, E = (  8.860343D-01 ,  7.959111D-02)
+ IE    =  21, E = ( -8.132071D-01 ,  4.775466D-01)
+ IE    =   9, E = ( -1.000000D+00 ,  4.453274D-01)
+ IE    =  66, E = (  8.434258D-01 ,  4.775466D-01)
+ IE    =  18, E = ( -9.011327D-01 ,  4.775466D-01)
+ 
+ wait on MPI_REDUCE:   1.65258312225342     
+ 
+
+  
+ wait on MPI_REDUCE:   1.66228699684143     
+ 
+
+  ws-sphere valence-charges
+   1 sum= 11.21935071  s=  0.56610105  p=  0.65686344  d=  9.92193429  f=  0.07445193
+   2 sum=  5.11935815  s=  1.61552545  p=  3.44519636  d=  0.04392589  f=  0.01471045
+   3 sum=  1.16952784  s=  0.38484502  p=  0.48097879  d=  0.23405904  f=  0.06964498
+   4 sum=  0.49176291  s=  0.24415368  p=  0.17373852  d=  0.05675538  f=  0.01711532
+ TIME IN E-LOOP            :     13.70
+   1 charge in wigner seitz sphere = 47.219351
+   2 charge in wigner seitz sphere =  7.119358
+   3 charge in wigner seitz sphere =  1.169528
+   4 charge in wigner seitz sphere =  0.491763
+  20 ******   charge neutrality in unit cell =    -0.000000
+  20 E FERMI     0.886034          DEN OF ST     1.382939
+ spherically averaged madelung-potential for atom  1 :  1.401275D+00
+ spherically averaged madelung-potential for atom  2 : -6.459045D-02
+ spherically averaged madelung-potential for atom  3 : -8.656596D-01
+ spherically averaged madelung-potential for atom  4 : -4.655375D-01
+ Vacancies are ignored for VBC
+  VOL INT.    57.366537948  VAV INT.   -50.806522428  VMT ZERO     0.885647352
+      rms-error for cell  1 :v+ + v- =  1.9105D-05
+      rms-error for cell  2 :v+ + v- =  8.8920D-06
+      rms-error for cell  3 :v+ + v- =  1.6403D-05
+      rms-error for cell  4 :v+ + v- =  1.9255D-05
+          iteration no.:  20 average rms-error : v+ + v- =  1.6461D-05
+  20 Mixing Factor used :     3.00D-01
+ broyden"s 2nd method used 
+      amj , ---> j=2, 19
+          -7.24D-05  7.35D-05 -3.14D-04 -7.08D-05  7.72D-05 -9.19D-04 -1.20D-04
+           1.41D-04 -2.07D-03 -3.25D-04  8.84D-04 -4.38D-03 -1.99D-03  2.81D-02
+          -2.03D-02 -1.29D-02  1.67D-01  5.49D-01
+
+ ------------------------------ total energies ------------------------------
+
+             fermi energy in ryd :   0.886034
+ >
+ >
+   total energy of the   1-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s = -4625.10463524 p = -1904.69863971
+                                d =  -309.11793336 f =     0.00000000
+       valence  contribution :  s =     0.25031546 p =     0.38338641
+                                d =    -1.01606805 f =     0.04295627
+       total contribution of the single particle energies :  -6839.26061822
+       coulomb  contribution :   0   4623.11408246  1      0.00000000
+                                 2      0.00000000  3      0.00176116
+                                 4     -0.00051362  5      0.00000000
+                                 6      0.00001034
+       tot. coublomb contribution :   4623.11534034
+       ex.-cor. contribution :   0   -301.23429269  1      0.00000000
+                                 2      0.00000000  3     -0.01174206
+                                 4     -0.00155968  5     -0.00000000
+                                 6      0.00000268
+       tot. ex.-cor. contribution :   -301.24759175
+       eff. pot. contribution     :  -8957.29061634
+       total double counting contribution                 :  -4635.42286776
+
+   total contribution of the atom : -11474.68348598
+
+   total energy of the   2-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =   -52.85048424 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =    -0.05812318 p =     2.34630589
+                                d =     0.00549369 f =    -0.00043386
+       total contribution of the single particle energies :    -50.55724170
+       coulomb  contribution :   0     56.09247744  1     -0.00000000
+                                 2      0.00000000  3     -0.00746407
+                                 4     -0.00000068  5      0.00000000
+                                 6      0.00000575
+       tot. coublomb contribution :     56.08501843
+       ex.-cor. contribution :   0    -13.03864976  1     -0.00000000
+                                 2     -0.00000000  3     -0.00200233
+                                 4     -0.00000256  5     -0.00000000
+                                 6      0.00000021
+       tot. ex.-cor. contribution :    -13.04065444
+       eff. pot. contribution     :   -100.86382833
+       total double counting contribution                 :    -57.81946433
+
+   total contribution of the atom :   -108.37670603
+
+   total energy of the   3-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.16187762 p =     0.22780522
+                                d =     0.11830642 f =     0.02778175
+       total contribution of the single particle energies :      0.53577101
+       coulomb  contribution :   0      0.11103890  1      0.00000000
+                                 2      0.00000000  3      0.00100550
+                                 4      0.00159866  5      0.00000000
+                                 6     -0.00001135
+       tot. coublomb contribution :      0.11363171
+       ex.-cor. contribution :   0     -0.56807719  1     -0.00000000
+                                 2     -0.00000000  3     -0.01599658
+                                 4     -0.00005109  5     -0.00000000
+                                 6      0.00001211
+       tot. ex.-cor. contribution :     -0.58411275
+       eff. pot. contribution     :     -0.51771051
+       total double counting contribution                 :     -0.98819155
+
+   total contribution of the atom :     -0.45242054
+
+   total energy of the   4-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.10559948 p =     0.07754868
+                                d =     0.01847645 f =     0.00189739
+       total contribution of the single particle energies :      0.20352201
+       coulomb  contribution :   0      0.02233198  1     -0.00000000
+                                 2     -0.00000000  3     -0.00543147
+                                 4      0.00009071  5      0.00000000
+                                 6     -0.00000703
+       tot. coublomb contribution :      0.01698418
+       ex.-cor. contribution :   0     -0.21861340  1      0.00000000
+                                 2      0.00000000  3     -0.00255138
+                                 4     -0.00003146  5     -0.00000000
+                                 6      0.00000211
+       tot. ex.-cor. contribution :     -0.22119412
+       eff. pot. contribution     :     -0.19552395
+       total double counting contribution                 :     -0.39973389
+
+   total contribution of the atom :     -0.19621188
+
+
+   total energy in ryd. :   -11583.70882443
+                    eV  :  -157605.62552345
+
+   band  energy in ryd. :        2.69312564
+                    eV  :       36.64212881
+ ----------------------------------------------------------------------------------
+ TIME IN ITERATION      20 :     13.96
+ >>> NUMBER OF ITERATION :           21
+     1  NUCLEAR CHARGE   49.000000         CORE CHARGE =    36.000000
+     2  NUCLEAR CHARGE    7.000000         CORE CHARGE =     2.000000
+     3  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+     4  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+ >>> EMESHT: generates a complex E contour
+ The calculations are done with  85 points.
+ The temperature used is    800.000000 K.
+  15 poles and  10 and  50 and  10 points on the contours are used.
+ IE    =  36, E = ( -1.060241D-01 ,  4.775466D-01)
+ IE    =  30, E = ( -4.238699D-01 ,  4.775466D-01)
+ IE    =  53, E = (  6.351593D-01 ,  4.775466D-01)
+ IE    =  50, E = (  5.472336D-01 ,  4.775466D-01)
+ IE    =  52, E = (  6.086822D-01 ,  4.775466D-01)
+ IE    =   8, E = ( -1.000000D+00 ,  4.009982D-01)
+ 
+ wait on MPI_REDUCE:   1.61541080474854     
+ 
+
+  
+ wait on MPI_REDUCE:   1.66095900535583     
+ 
+
+  ws-sphere valence-charges
+   1 sum= 11.21935198  s=  0.56610128  p=  0.65686206  d=  9.92193671  f=  0.07445193
+   2 sum=  5.11936477  s=  1.61552648  p=  3.44520235  d=  0.04392556  f=  0.01471038
+   3 sum=  1.16952145  s=  0.38484238  p=  0.48097613  d=  0.23405812  f=  0.06964482
+   4 sum=  0.49175982  s=  0.24415195  p=  0.17373750  d=  0.05675511  f=  0.01711526
+ TIME IN E-LOOP            :     13.71
+   1 charge in wigner seitz sphere = 47.219352
+   2 charge in wigner seitz sphere =  7.119365
+   3 charge in wigner seitz sphere =  1.169521
+   4 charge in wigner seitz sphere =  0.491760
+  21 ******   charge neutrality in unit cell =    -0.000002
+  21 E FERMI     0.886035          DEN OF ST     1.382957
+ spherically averaged madelung-potential for atom  1 :  1.401274D+00
+ spherically averaged madelung-potential for atom  2 : -6.459654D-02
+ spherically averaged madelung-potential for atom  3 : -8.656546D-01
+ spherically averaged madelung-potential for atom  4 : -4.655355D-01
+ Vacancies are ignored for VBC
+  VOL INT.    57.366537948  VAV INT.   -50.806424883  VMT ZERO     0.885645652
+      rms-error for cell  1 :v+ + v- =  9.6693D-06
+      rms-error for cell  2 :v+ + v- =  7.0562D-06
+      rms-error for cell  3 :v+ + v- =  8.3210D-06
+      rms-error for cell  4 :v+ + v- =  1.2982D-05
+          iteration no.:  21 average rms-error : v+ + v- =  9.7603D-06
+  21 Mixing Factor used :     3.00D-01
+ broyden"s 2nd method used 
+      amj , ---> j=2, 20
+          -6.10D-06  5.40D-06 -2.81D-05 -5.64D-06  6.16D-06 -4.34D-05 -8.47D-06
+           1.02D-05 -1.38D-04 -2.40D-05  5.90D-05 -3.81D-04 -1.83D-04  1.02D-03
+          -7.67D-03 -4.01D-03  1.03D-02 -1.09D-02  3.39D-02
+
+ ------------------------------ total energies ------------------------------
+
+             fermi energy in ryd :   0.886035
+ >
+ >
+   total energy of the   1-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s = -4625.10448739 p = -1904.69838167
+                                d =  -309.11771946 f =     0.00000000
+       valence  contribution :  s =     0.25031683 p =     0.38338650
+                                d =    -1.01613651 f =     0.04295632
+       total contribution of the single particle energies :  -6839.26006538
+       coulomb  contribution :   0   4623.11377574  1      0.00000000
+                                 2      0.00000000  3      0.00176134
+                                 4     -0.00051359  5      0.00000000
+                                 6      0.00001034
+       tot. coublomb contribution :   4623.11503383
+       ex.-cor. contribution :   0   -301.23427563  1     -0.00000000
+                                 2     -0.00000000  3     -0.01174212
+                                 4     -0.00155969  5     -0.00000000
+                                 6      0.00000268
+       tot. ex.-cor. contribution :   -301.24757477
+       eff. pot. contribution     :  -8957.29088099
+       total double counting contribution                 :  -4635.42342192
+
+   total contribution of the atom : -11474.68348730
+
+   total energy of the   2-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =   -52.85046057 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =    -0.05812211 p =     2.34631487
+                                d =     0.00549347 f =    -0.00043394
+       total contribution of the single particle energies :    -50.55720829
+       coulomb  contribution :   0     56.09257714  1     -0.00000000
+                                 2      0.00000000  3     -0.00746405
+                                 4     -0.00000068  5      0.00000000
+                                 6      0.00000575
+       tot. coublomb contribution :     56.08511815
+       ex.-cor. contribution :   0    -13.03866140  1     -0.00000000
+                                 2     -0.00000000  3     -0.00200233
+                                 4     -0.00000256  5     -0.00000000
+                                 6      0.00000021
+       tot. ex.-cor. contribution :    -13.04066609
+       eff. pot. contribution     :   -100.86394671
+       total double counting contribution                 :    -57.81949464
+
+   total contribution of the atom :   -108.37670293
+
+   total energy of the   3-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.16187752 p =     0.22780449
+                                d =     0.11830610 f =     0.02778170
+       total contribution of the single particle energies :      0.53576982
+       coulomb  contribution :   0      0.11103780  1      0.00000000
+                                 2      0.00000000  3      0.00100565
+                                 4      0.00159868  5      0.00000000
+                                 6     -0.00001135
+       tot. coublomb contribution :      0.11363078
+       ex.-cor. contribution :   0     -0.56807336  1      0.00000000
+                                 2     -0.00000000  3     -0.01599661
+                                 4     -0.00005109  5     -0.00000000
+                                 6      0.00001211
+       tot. ex.-cor. contribution :     -0.58410895
+       eff. pot. contribution     :     -0.51771477
+       total double counting contribution                 :     -0.98819294
+
+   total contribution of the atom :     -0.45242313
+
+   total energy of the   4-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.10559945 p =     0.07754825
+                                d =     0.01847628 f =     0.00189732
+       total contribution of the single particle energies :      0.20352130
+       coulomb  contribution :   0      0.02233145  1     -0.00000000
+                                 2     -0.00000000  3     -0.00543144
+                                 4      0.00009071  5      0.00000000
+                                 6     -0.00000703
+       tot. coublomb contribution :      0.01698369
+       ex.-cor. contribution :   0     -0.21861166  1     -0.00000000
+                                 2      0.00000000  3     -0.00255137
+                                 4     -0.00003146  5     -0.00000000
+                                 6      0.00000211
+       tot. ex.-cor. contribution :     -0.22119238
+       eff. pot. contribution     :     -0.19552356
+       total double counting contribution                 :     -0.39973225
+
+   total contribution of the atom :     -0.19621095
+
+
+   total energy in ryd. :   -11583.70882430
+                    eV  :  -157605.62552172
+
+   band  energy in ryd. :        2.69306655
+                    eV  :       36.64132483
+ ----------------------------------------------------------------------------------
+ TIME IN ITERATION      21 :     13.97
+ >>> NUMBER OF ITERATION :           22
+     1  NUCLEAR CHARGE   49.000000         CORE CHARGE =    36.000000
+     2  NUCLEAR CHARGE    7.000000         CORE CHARGE =     2.000000
+     3  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+     4  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+ >>> EMESHT: generates a complex E contour
+ The calculations are done with  85 points.
+ The temperature used is    800.000000 K.
+  15 poles and  10 and  50 and  10 points on the contours are used.
+ IE    =  38, E = (  1.305670D-03 ,  4.775466D-01)
+ IE    =  64, E = (  7.884616D-01 ,  4.775466D-01)
+ IE    =  13, E = ( -9.873018D-01 ,  4.775466D-01)
+ IE    =  10, E = ( -1.000000D+00 ,  4.713162D-01)
+ IE    =  19, E = ( -8.746557D-01 ,  4.775466D-01)
+ IE    =  46, E = (  3.939001D-01 ,  4.775466D-01)
+ IE    =  17, E = ( -9.246379D-01 ,  4.775466D-01)
+ 
+ wait on MPI_REDUCE:   1.64761209487915     
+ 
+
+  ws-sphere valence-charges
+   1 sum= 11.21935569  s=  0.56610303  p=  0.65686256  d=  9.92193831  f=  0.07445179
+   2 sum=  5.11935687  s=  1.61552657  p=  3.44519466  d=  0.04392532  f=  0.01471031
+   3 sum=  1.16951742  s=  0.38484105  p=  0.48097462  d=  0.23405718  f=  0.06964458
+   4 sum=  0.49175743  s=  0.24415026  p=  0.17373701  d=  0.05675497  f=  0.01711519
+ TIME IN E-LOOP            :     13.68
+   1 charge in wigner seitz sphere = 47.219356
+   2 charge in wigner seitz sphere =  7.119357
+   3 charge in wigner seitz sphere =  1.169517
+   4 charge in wigner seitz sphere =  0.491757
+  22 ******   charge neutrality in unit cell =    -0.000013
+  22 E FERMI     0.886037          DEN OF ST     1.383058
+ spherically averaged madelung-potential for atom  1 :  1.401269D+00
+ spherically averaged madelung-potential for atom  2 : -6.459590D-02
+ spherically averaged madelung-potential for atom  3 : -8.656526D-01
+ spherically averaged madelung-potential for atom  4 : -4.655338D-01
+ Vacancies are ignored for VBC
+  VOL INT.    57.366537948  VAV INT.   -50.806400931  VMT ZERO     0.885645234
+      rms-error for cell  1 :v+ + v- =  1.4455D-06
+      rms-error for cell  2 :v+ + v- =  1.7107D-06
+      rms-error for cell  3 :v+ + v- =  1.6798D-06
+      rms-error for cell  4 :v+ + v- =  3.5195D-06
+          iteration no.:  22 average rms-error : v+ + v- =  2.2486D-06
+  22 Mixing Factor used :     3.00D-01
+ broyden"s 2nd method used 
+      amj , ---> j=2, 21
+          -7.52D-07  2.71D-07 -4.05D-06 -3.96D-07  5.03D-07  1.73D-05 -2.65D-07
+           5.42D-07 -1.49D-06 -1.90D-06  4.33D-06 -4.36D-05 -2.39D-05 -3.10D-05
+          -1.38D-03 -6.31D-04  1.45D-03  5.30D-03  2.86D-02  8.63D-01
+
+ ------------------------------ total energies ------------------------------
+
+             fermi energy in ryd :   0.886037
+ >
+ >
+   total energy of the   1-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s = -4625.10432947 p = -1904.69809673
+                                d =  -309.11747865 f =     0.00000000
+       valence  contribution :  s =     0.25032176 p =     0.38338899
+                                d =    -1.01619405 f =     0.04295643
+       total contribution of the single particle energies :  -6839.25943171
+       coulomb  contribution :   0   4623.11374692  1      0.00000000
+                                 2      0.00000000  3      0.00176138
+                                 4     -0.00051359  5      0.00000000
+                                 6      0.00001034
+       tot. coublomb contribution :   4623.11500505
+       ex.-cor. contribution :   0   -301.23426572  1     -0.00000000
+                                 2      0.00000000  3     -0.01174216
+                                 4     -0.00155969  5     -0.00000000
+                                 6      0.00000268
+       tot. ex.-cor. contribution :   -301.24756490
+       eff. pot. contribution     :  -8957.29149265
+       total double counting contribution                 :  -4635.42405249
+
+   total contribution of the atom : -11474.68348421
+
+   total energy of the   2-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =   -52.85042484 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =    -0.05811471 p =     2.34631991
+                                d =     0.00549336 f =    -0.00043400
+       total contribution of the single particle energies :    -50.55716029
+       coulomb  contribution :   0     56.09256706  1     -0.00000000
+                                 2      0.00000000  3     -0.00746405
+                                 4     -0.00000068  5      0.00000000
+                                 6      0.00000575
+       tot. coublomb contribution :     56.08510808
+       ex.-cor. contribution :   0    -13.03865972  1     -0.00000000
+                                 2      0.00000000  3     -0.00200235
+                                 4     -0.00000256  5     -0.00000000
+                                 6      0.00000021
+       tot. ex.-cor. contribution :    -13.04066442
+       eff. pot. contribution     :   -100.86399122
+       total double counting contribution                 :    -57.81954756
+
+   total contribution of the atom :   -108.37670785
+
+   total energy of the   3-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.16188066 p =     0.22780520
+                                d =     0.11830611 f =     0.02778171
+       total contribution of the single particle energies :      0.53577368
+       coulomb  contribution :   0      0.11103709  1      0.00000000
+                                 2     -0.00000000  3      0.00100566
+                                 4      0.00159867  5      0.00000000
+                                 6     -0.00001135
+       tot. coublomb contribution :      0.11363006
+       ex.-cor. contribution :   0     -0.56807156  1     -0.00000000
+                                 2      0.00000000  3     -0.01599660
+                                 4     -0.00005109  5     -0.00000000
+                                 6      0.00001211
+       tot. ex.-cor. contribution :     -0.58410714
+       eff. pot. contribution     :     -0.51771969
+       total double counting contribution                 :     -0.98819677
+
+   total contribution of the atom :     -0.45242309
+
+   total energy of the   4-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.10560180 p =     0.07754843
+                                d =     0.01847626 f =     0.00189726
+       total contribution of the single particle energies :      0.20352376
+       coulomb  contribution :   0      0.02233115  1     -0.00000000
+                                 2      0.00000000  3     -0.00543142
+                                 4      0.00009071  5      0.00000000
+                                 6     -0.00000703
+       tot. coublomb contribution :      0.01698340
+       ex.-cor. contribution :   0     -0.21861052  1      0.00000000
+                                 2     -0.00000000  3     -0.00255137
+                                 4     -0.00003146  5     -0.00000000
+                                 6      0.00000211
+       tot. ex.-cor. contribution :     -0.22119124
+       eff. pot. contribution     :     -0.19552484
+       total double counting contribution                 :     -0.39973268
+
+   total contribution of the atom :     -0.19620893
+
+
+   total energy in ryd. :   -11583.70882407
+                    eV  :  -157605.62551857
+
+   band  energy in ryd. :        2.69303513
+                    eV  :       36.64089737
+ ----------------------------------------------------------------------------------
+ TIME IN ITERATION      22 :     13.94
+ >>> NUMBER OF ITERATION :           23
+     1  NUCLEAR CHARGE   49.000000         CORE CHARGE =    36.000000
+     2  NUCLEAR CHARGE    7.000000         CORE CHARGE =     2.000000
+     3  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+     4  NUCLEAR CHARGE    0.000000         CORE CHARGE =     0.000000
+ >>> EMESHT: generates a complex E contour
+ The calculations are done with  85 points.
+ The temperature used is    800.000000 K.
+  15 poles and  10 and  50 and  10 points on the contours are used.
+ IE    =  74, E = (  8.860370D-01 ,  3.661191D-01)
+ IE    =  83, E = (  8.860370D-01 ,  7.959111D-02)
+ IE    =  78, E = (  8.860370D-01 ,  2.387733D-01)
+ IE    =  75, E = (  8.860370D-01 ,  3.342826D-01)
+ IE    =   8, E = ( -1.000000D+00 ,  4.009982D-01)
+ IE    =  77, E = (  8.860370D-01 ,  2.706098D-01)
+ 
+ wait on MPI_REDUCE:   1.62393712997437     
+ 
+
+  
+ wait on MPI_REDUCE:   1.67615103721619     
+ 
+
+  ws-sphere valence-charges
+   1 sum= 11.21935745  s=  0.56610329  p=  0.65686289  d=  9.92193940  f=  0.07445187
+   2 sum=  5.11936204  s=  1.61552664  p=  3.44519983  d=  0.04392527  f=  0.01471030
+   3 sum=  1.16951717  s=  0.38484077  p=  0.48097442  d=  0.23405736  f=  0.06964462
+   4 sum=  0.49175667  s=  0.24414963  p=  0.17373688  d=  0.05675496  f=  0.01711520
+ TIME IN E-LOOP            :     13.71
+   1 charge in wigner seitz sphere = 47.219357
+   2 charge in wigner seitz sphere =  7.119362
+   3 charge in wigner seitz sphere =  1.169517
+   4 charge in wigner seitz sphere =  0.491757
+  23 ******   charge neutrality in unit cell =    -0.000007
+  23 E FERMI     0.886038          DEN OF ST     1.382997
+ spherically averaged madelung-potential for atom  1 :  1.401269D+00
+ spherically averaged madelung-potential for atom  2 : -6.459671D-02
+ spherically averaged madelung-potential for atom  3 : -8.656519D-01
+ spherically averaged madelung-potential for atom  4 : -4.655331D-01
+ Vacancies are ignored for VBC
+  VOL INT.    57.366537948  VAV INT.   -50.806385845  VMT ZERO     0.885644971
+      rms-error for cell  1 :v+ + v- =  5.7520D-07
+      rms-error for cell  2 :v+ + v- =  1.9973D-07
+      rms-error for cell  3 :v+ + v- =  1.6972D-07
+      rms-error for cell  4 :v+ + v- =  6.4239D-07
+          iteration no.:  23 average rms-error : v+ + v- =  4.5062D-07
+  23 Mixing Factor used :     3.00D-01
+
+ ------------------------------ total energies ------------------------------
+
+             fermi energy in ryd :   0.886038
+ >
+ >
+   total energy of the   1-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s = -4625.10431237 p = -1904.69805861
+                                d =  -309.11743464 f =     0.00000000
+       valence  contribution :  s =     0.25032106 p =     0.38338984
+                                d =    -1.01620197 f =     0.04295657
+       total contribution of the single particle energies :  -6839.25934012
+       coulomb  contribution :   0   4623.11377281  1      0.00000000
+                                 2      0.00000000  3      0.00176142
+                                 4     -0.00051358  5      0.00000000
+                                 6      0.00001034
+       tot. coublomb contribution :   4623.11503098
+       ex.-cor. contribution :   0   -301.23426592  1     -0.00000000
+                                 2      0.00000000  3     -0.01174218
+                                 4     -0.00155970  5     -0.00000000
+                                 6      0.00000268
+       tot. ex.-cor. contribution :   -301.24756512
+       eff. pot. contribution     :  -8957.29160946
+       total double counting contribution                 :  -4635.42414360
+
+   total contribution of the atom : -11474.68348372
+
+   total energy of the   2-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =   -52.85041650 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =    -0.05811481 p =     2.34632737
+                                d =     0.00549335 f =    -0.00043401
+       total contribution of the single particle energies :    -50.55714459
+       coulomb  contribution :   0     56.09258132  1     -0.00000000
+                                 2      0.00000000  3     -0.00746405
+                                 4     -0.00000068  5      0.00000000
+                                 6      0.00000575
+       tot. coublomb contribution :     56.08512233
+       ex.-cor. contribution :   0    -13.03866132  1     -0.00000000
+                                 2     -0.00000000  3     -0.00200235
+                                 4     -0.00000256  5     -0.00000000
+                                 6      0.00000021
+       tot. ex.-cor. contribution :    -13.04066603
+       eff. pot. contribution     :   -100.86401783
+       total double counting contribution                 :    -57.81956152
+
+   total contribution of the atom :   -108.37670611
+
+   total energy of the   3-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.16187960 p =     0.22780556
+                                d =     0.11830649 f =     0.02778180
+       total contribution of the single particle energies :      0.53577344
+       coulomb  contribution :   0      0.11103692  1      0.00000000
+                                 2      0.00000000  3      0.00100569
+                                 4      0.00159866  5      0.00000000
+                                 6     -0.00001135
+       tot. coublomb contribution :      0.11362992
+       ex.-cor. contribution :   0     -0.56807103  1      0.00000000
+                                 2     -0.00000000  3     -0.01599661
+                                 4     -0.00005109  5     -0.00000000
+                                 6      0.00001211
+       tot. ex.-cor. contribution :     -0.58410662
+       eff. pot. contribution     :     -0.51772072
+       total double counting contribution                 :     -0.98819741
+
+   total contribution of the atom :     -0.45242397
+
+   total energy of the   4-th. atom :
+     single particle energies  paramagnetic
+         core   contribution :  s =     0.00000000 p =     0.00000000
+                                d =     0.00000000 f =     0.00000000
+       valence  contribution :  s =     0.10560041 p =     0.07754848
+                                d =     0.01847629 f =     0.00189728
+       total contribution of the single particle energies :      0.20352246
+       coulomb  contribution :   0      0.02233098  1     -0.00000000
+                                 2      0.00000000  3     -0.00543142
+                                 4      0.00009071  5      0.00000000
+                                 6     -0.00000703
+       tot. coublomb contribution :      0.01698325
+       ex.-cor. contribution :   0     -0.21861000  1     -0.00000000
+                                 2     -0.00000000  3     -0.00255137
+                                 4     -0.00003146  5     -0.00000000
+                                 6      0.00000211
+       tot. ex.-cor. contribution :     -0.22119072
+       eff. pot. contribution     :     -0.19552523
+       total double counting contribution                 :     -0.39973270
+
+   total contribution of the atom :     -0.19621024
+
+
+   total energy in ryd. :   -11583.70882404
+                    eV  :  -157605.62551814
+
+   band  energy in ryd. :        2.69303330
+                    eV  :       36.64087246
+ ----------------------------------------------------------------------------------
+ ITERATION FINISHED +++
+ TIME in TMATRX            :      0.00
+ TOTAL TIME in KLOOP       :     11.58
+ TIME IN RHO  0.138213396072388     
+ TOTAL TIME                :    321.51
+ End of KKR

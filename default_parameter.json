@@ -7,18 +7,14 @@
     "testopt" : [
         "ie"
         ],
-    "LMAX": 3,
-    "NSPIN": 1,
-    "NATYP": "None",
-    "KMT": 3,
     "general": {
         "LMAX": 3,
         "NSPIN": 1,
         "KMT": 3
     },
     "k-points": {
-        "K_MAX": [32, 32, 32],
-        "K_MIN": [5, 5, 5],
+        "KMAX": [32, 32, 32],
+        "KMIN": [5, 5, 5],
         "MESHDECAY": 20
         },
     "scf-cycle": {

@@ -1,0 +1,108 @@
+#!/bin/bash -l
+#SBATCH --job-name=conv_step1-InN
+#SBATCH --time=2-00:00:00
+#SBATCH --partition=serial
+# #SBATCH --qos=short
+#SBATCH --error=slurm_logs/slurm_log_%j.err
+#SBATCH --output=slurm_logs/slurm_log_%j.out
+#SBATCH --ntasks-per-core=1
+
+#SBATCH --mail-type=END,FAIL
+#SBATCH --mail-user=maximilian.lauer@materialwiss.uni-giessen.de
+
+# set up array
+#SBATCH --array=0-CHANGE
+
+PRE_PY='/home/agHeiliger/lauerm/bin/kkr_workflows/inputcard-converter/scf_pre.py'
+POST_PY='/home/agHeiliger/lauerm/bin/kkr_workflows/inputcard-converter/scf_post.py'
+
+SER_KKR=/home/agHeiliger/lauerm/bin/kkr/kkr.x
+PARA_KKR=/home/agHeiliger/lauerm/bin/kkr/parakkr.x
+
+# default parameter
+use_para=false
+out_file="kkr.out"
+
+while getopts "p:e:w:out_file:para:" opt
+do
+  case $opt in 
+    p) path="$OPTARG"
+    ;;
+    e) en_points="$OPTARG"
+    ;;
+    w) weight_rel="$OPTARG"
+    ;;
+    out_file) out_file="$OPTARG"
+    ;;
+    para) use_para=true
+    ;;
+    \?) echo "Invalid option -$OPTARG" >&2
+    ;;
+  esac
+done
+
+if use_para
+then
+  kkr_bin=$PARA_KKR
+else
+  kkr_bin=$SER_KKR
+fi
+
+# split the weight_relation into an array
+IFS=',' read -r -a weight_rel_array <<< "$weight_rel"
+
+# determine task ID
+grp_idx=$(($SLURM_ARRAY_TASK_ID / $en_points))
+tsk_idx=$(($SLURM_ARRAY_TASK_ID % $en_points))
+
+#determine groups and tasks
+groups=($(ls $path))
+group=${groups[$grp_idx]}
+
+tasks=($(ls $path/$group))
+task=${tasks[$tsk_idx]}
+
+task_path=$path/$group/$task
+
+# set up calculation environment
+module purge
+module load slurm
+module load ALL-SUBMODULES
+module load agHeiliger
+module load openmpi/4.0.0/intel/2020
+module load openblas/0.3.9/skylake-openmp/gcc/9.2.0
+
+# print information
+echo "Starting at $(date)"
+
+# Slurm environmental variables
+echo "Step           = 1"
+echo "SLURM_NODELIST = $SLURM_NODELIST"
+echo "SLURM_NNODES   = $SLURM_NNODES"
+echo "SLURM_JOB_ID   = $SLURM_JOB_ID"
+echo "SLURM_JOB_NAME = $SLURM_JOB_NAME"
+echo "SLURM_TASK_ID  = $SLURM_TASK_ID"
+echo "Task Directory = $task_path"
+
+#activate conda environment
+conda activate kkr-workflows
+
+#perform the preprocessing step
+calc_path=`python $PRE_PY -p $task_path -i $task_path"/inputcard.json" -w ${weight_rel_array[@]}`
+
+# copy as an example
+cd $calc_path
+echo $kkr_bin > TEST
+echo "run $kkr_bin inputcard.scf > $out_file" >> TEST
+srun $kkr_bin "inputcard.scf" > $out_file 
+cd - > /dev/null
+
+#echo "python $POST_PY -p $calc_path -i $input"
+exit_code=`python $POST_PY -p $calc_path -i $task_path"/inputcard.json"`
+
+echo "Finished at $(date)"
+
+cp "slurm_logs/slurm_log_"$SLURM_JOB_ID"."* $calc_path
+
+echo $exit_code
+#exit $exit_code
