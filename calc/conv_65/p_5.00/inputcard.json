@@ -1,0 +1,169 @@
+{
+    "testopt": [
+        "ie",
+        "full inv",
+        "ie",
+        "VBCZERO"
+    ],
+    "runopt": [
+        "full inv",
+        "PARA-E",
+        "JELLDATA"
+    ],
+    "general": {
+        "LMAX": 3,
+        "NSPIN": 1,
+        "KMT": 3
+    },
+    "lattice": {
+        "bravais-lattice": [
+            [
+                0.7071067811865475,
+                0.7071067811865475,
+                0
+            ],
+            [
+                0.7071067811865475,
+                0,
+                0.7071067811865475
+            ],
+            [
+                0,
+                0.7071067811865475,
+                0.7071067811865475
+            ]
+        ],
+        "lattice-constant": 6.825,
+        "lattice-scaling": [
+            1,
+            1,
+            1
+        ],
+        "atom-basis": [
+            [
+                0,
+                0,
+                0
+            ],
+            [
+                0.35355339059327373,
+                0.35355339059327373,
+                0.35355339059327373
+            ],
+            [
+                0.7071067811865475,
+                0.7071067811865475,
+                0.7071067811865475
+            ],
+            [
+                -0.35355339059327373,
+                -0.35355339059327373,
+                -0.35355339059327373
+            ]
+        ],
+        "CARTESIAN": "T",
+        "NEMB": 0,
+        "NEMBZ": 0,
+        "KAOEZ": 0,
+        "basis-scaling": [
+            1,
+            1,
+            1
+        ]
+    },
+    "atominfo": [
+        {
+            "CLS": 1,
+            "REFPOT": 1,
+            "NTC": 1,
+            "FAC": 1.0,
+            "IRNS": 208,
+            "SCALD": 2.0,
+            "WEIGHT": 1.0,
+            "Z": 49,
+            "LMXC": 2,
+            "KFG": "4 4 3 0"
+        },
+        {
+            "CLS": 1,
+            "REFPOT": 1,
+            "NTC": 1,
+            "FAC": 1.0,
+            "IRNS": 208,
+            "SCALD": 2.0,
+            "WEIGHT": 1.0,
+            "Z": 7,
+            "LMXC": 0,
+            "KFG": "1 0 0 0"
+        },
+        {
+            "CLS": 1,
+            "REFPOT": 1,
+            "NTC": 1,
+            "FAC": 1.0,
+            "IRNS": 208,
+            "SCALD": 2.0,
+            "WEIGHT": 1.0,
+            "Z": 0,
+            "LMXC": 0,
+            "KFG": "0 0 0 0"
+        },
+        {
+            "CLS": 1,
+            "REFPOT": 1,
+            "NTC": 1,
+            "FAC": 1.0,
+            "IRNS": 208,
+            "SCALD": 2.0,
+            "WEIGHT": 1.0,
+            "Z": 0,
+            "LMXC": 0,
+            "KFG": "0 0 0 0"
+        }
+    ],
+    "cluster": {
+        "RCLUSTZ": 2.0,
+        "RCLUSTXY": 2.0
+    },
+    "scf-cycle": {
+        "NSTEPS": 400,
+        "IMIX": 4,
+        "STRMIX": 0.1,
+        "FCM": 5.0,
+        "QBOUND": 1e-06,
+        "BRYMIX": 0.3,
+        "ITDBRY": 50
+    },
+    "energy-contour": {
+        "EMIN": -1.0,
+        "EMAX": 1.0,
+        "TEMPR": 800,
+        "NPOL": 10,
+        "NPTS": [
+            5,
+            40,
+            5
+        ]
+    },
+    "voro-opts": {
+        "DetermineWeights": 0,
+        "FindEmptySpheres": 0,
+        "SuggestEmptySpheres": 0,
+        "OutputJelliumPotentials": 0,
+        "CustomPotentialInterpolation": 0,
+        "MinimumSpaceFilling": 0.65
+    },
+    "k-points": {
+        "KMAX": [
+            65,
+            65,
+            65
+        ],
+        "KMIN": [
+            65,
+            65,
+            65
+        ],
+        "MESHDECAY": 20
+    }
+}

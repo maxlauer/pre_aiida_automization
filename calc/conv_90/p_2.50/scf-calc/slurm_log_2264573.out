@@ -1,0 +1,9 @@
+Starting at Do 4. Jul 09:42:12 CEST 2024
+Step           = 1
+SLURM_NODELIST = node2-194
+SLURM_NNODES   = 1
+SLURM_JOB_ID   = 2264573
+SLURM_JOB_NAME = conv_step1-InN
+SLURM_TASK_ID  = 
+Task Directory = calc/conv/InN/l_3/step_1/conv_90/p_2.50
+Finished at Do 4. Jul 17:59:01 CEST 2024

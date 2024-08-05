@@ -1,0 +1,96 @@
+         ***** Input file for TB-KKR code *****
+***** Generated using the Aiida Inputcard-parser *****
+               ***Running options***
+RUNOPT
+full inv PARA-E   JELLDATA 
++-------+-------+-------+-------+-------+-------+-------+
+               ***test options*** (2 lines)
+TESTOPT
+ie       full inv ie       VBCZERO  
++-------+-------+-------+-------+-------+-------+-------+
+       LMAX=3     NSPIN=1     NATYP=4     KMT=3
++-------+-------+-------+-------+-------+-------+-------+
+JELLPATH='/home/agHeiliger/shared/atomic-start-potentials/'
+
++-------+-------+-------+-------+-------+-------+-------+
+            ** Description of lattice **
+ALATBASIS= 6.5000    1.0000    1.0000    lattice constant
+BASISCALE= 1.0000    1.0000    1.0000    scaling factor
+LATTICE=1
+BRAVAIS
+        0.7071067812   0.7071067812   0.0000000000 
+        0.7071067812   0.0000000000   0.7071067812 
+        0.0000000000   0.7071067812   0.7071067812 
++-------+-------+-------+-------+-------+-------+-------+
+     NAEZ=4        NEMB=0       NEMBZ=0       KAOEZ=0      
+CARTESIAN= T     //T - Cartesian Basis | F - Direct Basis
+RBASIS
+          0.0000000000     0.0000000000     0.0000000000 
+          0.3535533906     0.3535533906     0.3535533906 
+          0.7071067812     0.7071067812     0.7071067812 
+         -0.3535533906    -0.3535533906    -0.3535533906
+SCALING=  1.0000           1.0000           1.0000          
++-------+-------+-------+-------+-------+-------+-------+
+ATOMINFO
+Z        LMXC     KFG      CLS      REFPOT   NTC      FAC      IRNS     SCALD    WEIGHT   
+49       2        4 4 3 0  1        1        1        1.0      208      2.0      1.0      
+7        0        1 0 0 0  1        2        1        1.0      208      2.0      0.949327  
+0        0        0 0 0 0  1        3        1        1.0      208      2.0      1.0      
+0        0        0 0 0 0  1        4        1        1.0      208      2.0      0.949327  
++-------+-------+-------+-------+-------+-------+-------+
+EMIN    EMAX    TEMPR   NPOL    NPT1    NPT2    NPT3    
+-1.00   1.00    800     10      5       40      5       
++-------+-------+-------+-------+-------+-------+-------+
+NSTEPS  IMIX    STRMIX  FCM    QBOUND   BRYMIX  ITDBRY  
+400     4       0.1     5.0    1.0d-06  0.3     50      
++-------+-------+-------+-------+-------+-------+-------+
+Parameters for the clusters (same: spherical else cylindical)
+RCLUSTZ=2.0d0     RCLUSTXY=2.0d0     
++-------+-------+-------+-------+-------+-------+-------+
+BZDIVIDE=  85   85   85     85   85   85   
+MESHDECAY= 20
++-------+-------+-------+-------+-------+-------+-------+
+  IRNUMX= 10    ITCCOR= 40    IPRCOR= 0    IFILE= 13      IPE= 0
+     KWS= 2     KSHAPE= 0        IRM= 353      INS= 0     ICST= 2
+  INSREF= 0       KCOR= 2      KVREL= 0     KEXCOR= 2
+ KHYPERF= 0    KHFIELD= 0       KEFG= 0
+     KTE= 1       KPRE= 0      KVMAD= 0   KSCOEF= 0
+ IPOTOUT= 1  IGREENFUN= 0        ICC= 0   ISHIFT= 0
+  HFIELD= 0.0   VCONST= 0.0d0  KFORCE=0
++-------+-------+-------+-------+-------+-------+-------+
+INTERFACE= F
+NRIGHTHO= 10    NLBASIS= 1
+NLEFTHOS= 10    NRBASIS= 1
+LEFTASIS    X         Y         Z       REFPOT
+        0.500000  0.500000  0.500000      1
+RIGHTBASIS
+        0.500000  0.500000  0.500000      1
++-------+-------+-------+-------+-------+-------+-------+
+ZPERIODL= 0.50000000   0.50000000  -0.50000000
+ZPERIODR= 0.50000000   0.50000000   0.50000000
++-------+-------+-------+-------+-------+-------+-------+
+LINIPOL= f      LRHOSYM= f    LCOMPLEX= f
+Center of inversion :      NZ=1     LCENTER= t
+ LOGINV= f      INIPOL= 0     IXIPOL= 0
+ CENTROFIN=   0.0     0.0     0.0
++-------+-------+-------+-------+-------+-------+-------+
+MMIN= 1    MMAX=6
+SRINOUT=   0   0   0  00
++-------+-------+-------+-------+-------+-------+-------+
+FILES
+ref.pot                                               I12
+start.pot                                             I13
+-----                                                 I40
+                                                      I19
+                                                      I25
++-------+-------+-------+-------+-------+-------+-------+
+
+*********************************************************
+This is used for decimation, put vacuum in the file to have vacuum
+DECIFILES
+codeci.fp1                              left (up) host
+codeci.fp2                              right (down) host
++-------+-------+-------+-------+-------+-------+-------+
+Parameters for ewald sums
+RMAX=7.0d       GMAX=65.0d0     (fcc 7  65)
++-------+-------+-------+-------+-------+-------+-------+

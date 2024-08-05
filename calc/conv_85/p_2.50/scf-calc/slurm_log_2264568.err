@@ -1,0 +1,18 @@
+MODULE: Adding module /shared/modulefiles-compilers/gcc/9.2.0
+MODULE: Adding module /shared/modulefiles-compilers/intel/2020/compilers+mkl
+MODULE: Adding module /shared/modulefiles-libraries/openmpi/4.0.0/intel/2020
+MODULE: Adding module /shared/modulefiles-compilers/gcc/9.2.0
+MODULE: Adding module /shared/modulefiles-libraries/openblas/0.3.9/skylake-openmp/gcc/9.2.0
+/var/spool/slurm/job2264568/slurm_script: line 44: use_para: command not found
+openblas/0.3.9/skylake-openmp/gcc/9.2.0(4):ERROR:105: Unable to locate a modulefile for 'gcc/9.2.0'
+MODULE: Removing module /shared/modulefiles-libraries/openblas/0.3.9/skylake-openmp/gcc/9.2.0
+openmpi/4.0.0/intel/2020(22):ERROR:105: Unable to locate a modulefile for 'intel/2020/compilers+mkl'
+MODULE: Removing module /shared/modulefiles-libraries/openmpi/4.0.0/intel/2020
+intel/2020/compilers+mkl(8):ERROR:105: Unable to locate a modulefile for 'gcc/9.2.0'
+MODULE: Removing module /shared/modulefiles-compilers/intel/2020/compilers+mkl
+MODULE: Removing module /shared/modulefiles-compilers/gcc/9.2.0
+MODULE: Adding module /shared/modulefiles-compilers/gcc/9.2.0
+MODULE: Adding module /shared/modulefiles-compilers/intel/2020/compilers+mkl
+MODULE: Adding module /shared/modulefiles-libraries/openmpi/4.0.0/intel/2020
+MODULE: Adding module /shared/modulefiles-compilers/gcc/9.2.0
+MODULE: Adding module /shared/modulefiles-libraries/openblas/0.3.9/skylake-openmp/gcc/9.2.0

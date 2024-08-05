@@ -1,0 +1,253 @@
+**********************************************************************
+*                                                                    *
+*  SCREENED KKR POTENTIAL PREPARATION AND                            *
+*  LATTICE VISUALIZATION UTILITY                                     *
+*                                                                    *
+*                                                                    *
+*                                                                    *
+**********************************************************************
+            Reading inputcard: inputcard.voro_old                      
+ number of lines in inputcard:          96
+ 
+ NSPIN 
+   1
+---+---------------------------------------------------------------------------
+ NATYP 
+   4
+   Z lmx     KFG cls pot  MTFAC irns   MT      Size
+---+---------------------------------------------------------------------------
+ 49.   1 208  2.0000  1.0000
+  7.   1 208  2.0000  0.9483
+  0.   1 208  2.0000  1.0000
+  0.   1 208  2.0000  0.9483
+---+---+-------+---+---+---+-------+---+---------------------------------------
+ NO FP-Calc. Please ignore IRNS and NTCELL.These are dummy variables.
+---+---------------------------------------------------------------------------
+ lmax
+   3
+---+---------------------------------------------------------------------------
+-----------+-----------+-----------+-------------------------------------------
+------+------+------+------+---------------------------------------------------
+------+------+------+----------------------------------------------------------
+------+------+------+-----------+----------------------------------------------
+ KSHAPE    IRM    INS
+      0    353      0
+------+------+------+------+------+--------------------------------------------
+    KXC
+      2
+------+------+------+------+------+------+-------------------------------------
+------+------+------+------+------+--------------------------------------------
+------+------+------+------+---------------------------------------------------
+------+------------------------------------------------------------------------
+-----------+-------------------------------------------------------------------
+
+
+                    non-spin polarized calculation
+                      Vosko,Wilk,Nusair      exchange-correlation potential
+ *******************************************************************************
+    NAEZ    NEMB   NEMBZ
+       4       0       0
+-------+-------+-------+-------------------------------------------------------
+ NZ    
+   0
+---+---------------------------------------------------------------------------
+ Parameters Used for the cluster calculation
+ Clusters inside spheres with radious R =    1.50000000000000     
+ RBASIS
+     0.00000000     0.00000000     0.00000000     1
+     0.35355339     0.35355339     0.35355339     2
+     0.70710678     0.70710678     0.70710678     3
+    -0.35355339    -0.35355339    -0.35355339     4
+
+---+--------------+--------------+--------------+------------------------------
+ KAOEZ 
+   1   2   3   4
+---+---+---+---+---+---+---+---+---+---+---------------------------------------
+         ABASIS         BBASIS         CBASIS
+     1.00000000     1.00000000     1.00000000
+---+---------------------------------------------------------------------------
+          ALATC
+     6.82500000
+--------------+--------------+--------------+----------------------------------
+---------+---------+---------+-------------------------------------------------
+ I13="                                        "
+ I19="                                        "
+ /home/agHeiliger/shared/atomic-start-potentials/                               
+                      
+-------+-------+-------+-------------------------------------------------------
+  >>>>>>>>> READINPUT EXITS NOW <<<<<<<<<< 
+ True basis vectors (not normalized):
+    4.82600378    4.82600378    0.00000000
+    4.82600378    0.00000000    4.82600378
+    0.00000000    4.82600378    4.82600378
+ Reciprocal lattice vectors, in units 2pi/a:
+    0.70710678    0.70710678   -0.70710678
+    0.70710678   -0.70710678    0.70710678
+   -0.70710678    0.70710678    0.70710678
+  Before rrgen in lattix
+ >>> RRGEN: generation of real space mesh rr(nr)
+ r        :      9.23
+ r**2     :     85.23
+ n1,n2,n3 :    9    9    9
+  4206 real space vectors created.
+  After rrgen in lattix
+ position of atoms in unit cell :
+     0.00000000     0.00000000     0.00000000     1
+     0.35355339     0.35355339     0.35355339     2
+     0.70710678     0.70710678     0.70710678     3
+    -0.35355339    -0.35355339    -0.35355339     4
+ >>> CLSGEN: generation of cluster coordinates
+ RCUTZ =    1.50000000000000       RCUTXY =    1.50000000000000     
+ Spherical Clusters are created
+ Atom            1  has cluster            1   with           65  sites
+ Atom            2  has cluster            1   with           65  sites
+ Atom            3  has cluster            1   with           65  sites
+ Atom            4  has cluster            1   with           65  sites
+   1 1111
+   2 1111
+   3 1111
+   4 1111
+ 
+  NCLS=           1
+ 
+ Checking sparsity of TAU matrix
+ >> S P A R S I T Y :   0.00 %      <<--------    <<
+ * Please ignore any principal layer warnings  
+ ****** NEW POLYHEDRON AND SHAPE FUNCTION ******
+
+
+Shape...   1 has cluster..   1 extra shift..  0.0000  0.0000  0.0000 for atom..   1
+  Polyhedron properties 
+  Number of faces :           14
+ Face    1   has    6 vertices 
+ Face    2   has    6 vertices 
+ Face    3   has    6 vertices 
+ Face    4   has    6 vertices 
+ Face    5   has    6 vertices 
+ Face    6   has    6 vertices 
+ Face    7   has    6 vertices 
+ Face    8   has    6 vertices 
+ Face    9   has    4 vertices 
+ Face   10   has    4 vertices 
+ Face   11   has    4 vertices 
+ Face   12   has    4 vertices 
+ Face   13   has    4 vertices 
+ Face   14   has    4 vertices 
+ Total number of vertices   :           24
+ The Volume is :   0.230599548130765     
+ <<<<<<<<<<<<<<<<<<<<<<--->>>>>>>>>>>>>>>>>>>>>
+ ****** NEW POLYHEDRON AND SHAPE FUNCTION ******
+
+
+Shape...   2 has cluster..   1 extra shift..  0.0000  0.0000  0.0000 for atom..   2
+  Polyhedron properties 
+  Number of faces :           14
+ Face    1   has    6 vertices 
+ Face    2   has    6 vertices 
+ Face    3   has    6 vertices 
+ Face    4   has    6 vertices 
+ Face    5   has    6 vertices 
+ Face    6   has    6 vertices 
+ Face    7   has    6 vertices 
+ Face    8   has    6 vertices 
+ Face    9   has    4 vertices 
+ Face   10   has    4 vertices 
+ Face   11   has    4 vertices 
+ Face   12   has    4 vertices 
+ Face   13   has    4 vertices 
+ Face   14   has    4 vertices 
+ Total number of vertices   :           24
+ The Volume is :   0.122953842482689     
+ <<<<<<<<<<<<<<<<<<<<<<--->>>>>>>>>>>>>>>>>>>>>
+ *******************************************
+  Analyzing lattice finised ...     
+  Number of ATOMS..............           4
+  Number of CLUSTERS ..........           1
+  Number of SHAPES.. ..........           2
+Shape...   1 has cluster..   1 extra shift..  0.0000  0.0000  0.0000 for atom..   1
+Shape...   2 has cluster..   1 extra shift..  0.0000  0.0000  0.0000 for atom..   2
+Shape...   1 has cluster..   1 extra shift..  0.0000  0.0000  0.0000 for atom..   3
+Shape...   2 has cluster..   1 extra shift..  0.0000  0.0000  0.0000 for atom..   4
+  ****** Volume for each atom ******
+ RMAX is the Atomic Sphere radious
+ Atom ..    1 Volume(alat^3)  :   0.23059955   RMT :   2.37798540   RMAX :   2.59632628
+ Atom ..    2 Volume(alat^3)  :   0.12295384   RMT :   1.80145647   RMAX :   2.10533150
+ Atom ..    3 Volume(alat^3)  :   0.23059955   RMT :   2.37798540   RMAX :   2.59632628
+ Atom ..    4 Volume(alat^3)  :   0.12295384   RMT :   1.80145647   RMAX :   2.10533150
+
+Total volume (alat^3)    ...      0.70710678
+Total Volume (a.u.^3)   ....    224.79827241
+
+Bravais cross prod.(alat^3):      0.70710678
+ 
+ +++++++++++ Note about volumes +++++++++++++++++
+  Volume is probably different if you are in 2d mode 
+  In case of 3d mode and volume inconsistency 
+  try increasing the cluster atoms by changing 
+  RCLUSTZ and RCLUSTXY  in the inputcard
+ ++++++++++++++++++++++++++++++++++++++++
+ 
+ 
+ Preparing potentials ................. 
+  No potential file specified I will use jellium potentials
+  Spherical Potential Output 
+  ****  READING  POTENTIAL  **** 
+ Using database ....: /home/agHeiliger/shared/atomic-start-potentials/In49.pot  
+ *************************************
+    Potential Interpolation Program   
+    Using the Jellium Database v1.0   
+ *************************************
+Jellium Fermi Energy :   0.40924 Ry
+Potential Atomic Number :  49.00
+Number of Core   States :   9
+  ** Position of the Core States ** 
+  1s    -1966.561600 Ry
+  2s     -287.428550 Ry
+  3s      -53.713624 Ry
+  4s       -7.398185 Ry
+  2p     -268.528840 Ry
+  3p      -45.963909 Ry
+  4p       -4.864545 Ry
+  3d      -31.552222 Ry
+  4d       -0.738540 Ry
+All other states are above : -0.4000 Ry in Energy
+ **********************************************
+ Jellium Potential Read In         1501  points
+ Using database ....: /home/agHeiliger/shared/atomic-start-potentials/N_07.pot  
+ *************************************
+    Potential Interpolation Program   
+    Using the Jellium Database v1.0   
+ *************************************
+Jellium Fermi Energy :   0.40924 Ry
+Potential Atomic Number :   7.00
+Number of Core   States :   2
+  ** Position of the Core States ** 
+  1s      -26.999893 Ry
+  2s       -0.429582 Ry
+All other states are above : -0.2000 Ry in Energy
+ **********************************************
+ Jellium Potential Read In         1501  points
+ Using database ....: /home/agHeiliger/shared/atomic-start-potentials/Vac0.pot  
+ *************************************
+    Potential Interpolation Program   
+    Using the Jellium Database v1.0   
+ *************************************
+Jellium Fermi Energy :   0.40924 Ry
+Potential Atomic Number :   0.00
+Number of Core   States :   0
+  ** Position of the Core States ** 
+All other states are above :  0.0000 Ry in Energy
+ **********************************************
+ Jellium Potential Read In         1501  points
+ Using database ....: /home/agHeiliger/shared/atomic-start-potentials/Vac0.pot  
+ *************************************
+    Potential Interpolation Program   
+    Using the Jellium Database v1.0   
+ *************************************
+Jellium Fermi Energy :   0.40924 Ry
+Potential Atomic Number :   0.00
+Number of Core   States :   0
+  ** Position of the Core States ** 
+All other states are above :  0.0000 Ry in Energy
+ **********************************************
+ Jellium Potential Read In         1501  points

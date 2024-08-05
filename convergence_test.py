@@ -12,11 +12,11 @@ def main():
     parser = argparse.ArgumentParser("Automated Convergence Tests for the Giessen KKR code")
 
     parser.add_argument('-p', '--path', dest='path', 
-                        help='path where the calculation is supposed to be performed. Will create subdirectories <path>/voro and <path>/scf')
+                        help='path where the calculation is supposed to be performed. Will create subdirectories path/voro and path/scf')
     parser.add_argument('-i', '--json_input_path', dest='json_inp_path',
-                        help='path to the json input to be used as the template for the inputcard. [The lattice constant of this inputcard is taken as the inital guess of the lat-con calculation]')
+                        help='path to the json input to be used as the template for the inputcard. - The lattice constant of this inputcard is taken as the inital guess of the lat-con calculation')
     parser.add_argument('-w', '--weight_relation', dest='weight_rel', nargs='*', default=[],
-                        help='The indices of the atoms, from which the empty spheres should take the weights [amount = # of empty spheres]. The default behaviour is all weights =1')
+                        help='The indices of the atoms, from which the empty spheres should take the weights - amount = # of empty spheres - The default behaviour is all weights =1')
 
 
     parser.add_argument('-c','--convergence_parameter', dest='conv_paras', nargs='*',
@@ -30,14 +30,23 @@ def main():
     parser.add_argument('--perform_lat_relaxation', dest='lat_bool', action='store_true',
                         help='flag for calculating the lattice constant, while not taking the convergence on lattice constant as the convergence criterion')
     parser.add_argument('--max_deviation', dest='max_dev', default=5,
-                        help='max deviation of the lattice constant if > 1 in %')
+                        help='max deviation of the lattice constant if > 1 in percent')
     parser.add_argument('--num_energy_points', dest='en_points', type=int, default=5,
                         help='number of energy points to be calculated for the lattice relaxation')
 
     parser.add_argument('--slurm_script', dest='slurm_script', default='/home/agHeiliger/lauerm/bin/kkr_workflows/inputcard-converter/slurm_conv_s1.job',
                         help='path to the slurm script to be started at the end of the directory creation')
 
+    parser.add_argument('--slurm_script_save_name', dest='slurm_name', default='',
+                        help='name how the slurm_script is saved in path')
+    # parser.add_argument('--slurm_script_name', dest='slurm_job_name', default='',
+    #                     help='name how the slurm job is named')
+    # This should definitly be a option in the new one yeah this would be very useful
+    
+    
     args = parser.parse_args()
+
+
 
     inputcard = Inputcard()
     inputcard.read_in_json(args.json_inp_path) 
@@ -67,11 +76,16 @@ def main():
             prepare_lattice_relaxation(para_path, inputcard, args.max_dev, args.en_points)
 
     slurm_path = pl.Path(args.slurm_script)
+    if args.slurm_name == '':
+        slurm_name = slurm_path.name
+    else:
+        slurm_name = args.slurm_name 
+    
     task_num = int(args.en_points) * len(conv_check) - 1
     #change the array size of the slurm script and save it in the specified path
-    change_slurm_script_cmd = f"sed 's/CHANGE/{task_num}/g' {args.slurm_script} > {path.parent / slurm_path.name}"
+    change_slurm_script_cmd = f"sed 's/CHANGE/{task_num}/g' {args.slurm_script} > {path.parent / slurm_name}"
     run(change_slurm_script_cmd, shell=True)
-    sbatch_cmd = f"sbatch {path.parent / slurm_path.name} -p {path} -w {",".join(args.weight_rel)} -e {args.en_points}"
+    sbatch_cmd = f"sbatch {path.parent / slurm_name} -p {path} -w {",".join(args.weight_rel)} -e {args.en_points}"
     run(sbatch_cmd, shell=True)
 
 
