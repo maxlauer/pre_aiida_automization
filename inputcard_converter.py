@@ -4,7 +4,8 @@ import pathlib as pl
 
 from hardcoded import interface, zperiodl, linpol, mmin, decimation, ewald, constant_block
 
-default_path = '/home/agHeiliger/lauerm/bin/kkr_workflows/inputcard-converter/default_parameter.json'
+#default_path = '/home/agHeiliger/lauerm/bin/kkr_workflows/inputcard-converter/default_parameter.json'
+default_path = '/home/mlauer/Documents/pre_aiida_automization/default_parameter.json'
 # default values for Inputcard
 with open(default_path, 'r') as jfile:
     default = json.load(jfile)
